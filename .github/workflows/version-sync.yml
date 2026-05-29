@@ -4,41 +4,138 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to sync (e.g., 4.1.2)'
+        description: 'Version to set (e.g., 4.2.0)'
         required: true
+      create_tag:
+        description: 'Create git tag and GitHub Release'
+        required: false
+        type: boolean
+        default: true
+      create_release:
+        description: 'Create GitHub Release with auto-generated notes'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
+  validate-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate version format
+        run: |
+          VERSION="${{ github.event.inputs.version }}"
+          if ! echo "$VERSION" | grep -qP '^\d+\.\d+\.\d+$'; then
+            echo "::error::Invalid version format '$VERSION'. Expected: X.Y.Z (e.g., 4.2.0)"
+            exit 1
+          fi
+          echo "Version format validated: v$VERSION"
+
   sync-version:
+    needs: validate-version
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract version
-        id: extract_version
-        run: |
-          VERSION=${{ github.event.inputs.version }}
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Detected version: $VERSION"
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-      - name: Update version in files
+      - name: Sync version across all files
         run: |
-          VERSION=${{ steps.extract_version.outputs.version }}
-          
-          # Update README.md
-          sed -i "s/multi-CyberSecurity v[0-9]\+\.[0-9]\+\(\.[0-9]\+\)\?/multi-CyberSecurity v$VERSION/g" README.md
-          sed -i "s/version-[0-9]\+\.[0-9]\+\(\.[0-9]\+\)\?-/version-$VERSION-/g" README.md
-          
-          # Update cli.py
-          sed -i "s/multi-CyberSecurity v[0-9]\+\.[0-9]\+\(\.[0-9]\+\)\?/multi-CyberSecurity v$VERSION/g" cli.py
-          
-          # Update framework/skills/index.md
-          sed -i "s/Framework Version: v[0-9]\+\.[0-9]\+\(\.[0-9]\+\)\?/Framework Version: v$VERSION/g" framework/skills/index.md
-          
-          echo "Version updated to v$VERSION"
+          VERSION="${{ github.event.inputs.version }}"
+
+          python3 << 'PYEOF'
+          import json, re, sys
+          from pathlib import Path
+
+          version = "${{ github.event.inputs.version }}"
+          project_root = Path(".")
+
+          updated_files = []
+
+          # 1. README.md - title and badge
+          readme_path = project_root / "README.md"
+          content = readme_path.read_text(encoding="utf-8")
+          original = content
+          content = re.sub(r"multi-CyberSecurity v[\d.]+", f"multi-CyberSecurity v{version}", content)
+          content = re.sub(r"version-[\d.]+-", f"version-{version}-", content)
+          if content != original:
+              readme_path.write_text(content, encoding="utf-8")
+              updated_files.append("README.md")
+
+          # 2. cli.py - banner and description
+          cli_path = project_root / "cli.py"
+          content = cli_path.read_text(encoding="utf-8")
+          original = content
+          content = re.sub(r"multi-CyberSecurity v[\d.]+(?: Enhanced)?", f"multi-CyberSecurity v{version} Enhanced", content)
+          content = re.sub(r"multi-CyberSecurity v[\d.]+ - AI", f"multi-CyberSecurity v{version} - AI", content)
+          if content != original:
+              cli_path.write_text(content, encoding="utf-8")
+              updated_files.append("cli.py")
+
+          # 3. framework/skills/index.md
+          index_md_path = project_root / "framework" / "skills" / "index.md"
+          if index_md_path.exists():
+              content = index_md_path.read_text(encoding="utf-8")
+              original = content
+              content = re.sub(r"Framework Version: v[\d.]+", f"Framework Version: v{version}", content)
+              if content != original:
+                  index_md_path.write_text(content, encoding="utf-8")
+                  updated_files.append("framework/skills/index.md")
+
+          # 4. index.json - meta.version
+          index_json_path = project_root / "index.json"
+          if index_json_path.exists():
+              content = index_json_path.read_text(encoding="utf-8")
+              original = content
+              content = re.sub(r'"version":\s*"[^"]+"', f'"version": "{version}"', content)
+              if content != original:
+                  index_json_path.write_text(content, encoding="utf-8")
+                  updated_files.append("index.json")
+
+          # 5. version_manager.py - self-document (no functional version)
+          vm_path = project_root / "scripts" / "version_manager.py"
+          if vm_path.exists():
+              content = vm_path.read_text(encoding="utf-8")
+              original = content
+              # Update example versions in docstring
+              content = re.sub(r"multi-CyberSecurity v[\d.]+", f"multi-CyberSecurity v{version}", content)
+              if content != original:
+                  vm_path.write_text(content, encoding="utf-8")
+                  updated_files.append("scripts/version_manager.py")
+
+          # Report
+          if updated_files:
+              print(f"Updated {len(updated_files)} files:")
+              for f in updated_files:
+                  print(f"  - {f}")
+          else:
+              print("No files needed updating")
+
+          # Verify consistency
+          print("\nVerifying version consistency...")
+          all_content = ""
+          for f in updated_files:
+              all_content += (project_root / f).read_text(encoding="utf-8")
+          found_versions = set(re.findall(r'\b\d+\.\d+\.\d+\b', all_content))
+          # Filter out non-project versions (tool versions etc.)
+          project_versions = set()
+          for v in found_versions:
+              major = int(v.split(".")[0])
+              if major >= 3:  # project versions are 3.x+
+                  project_versions.add(v)
+          if len(project_versions) <= 1:
+              print(f"All files consistent at v{version}")
+          else:
+              print(f"WARNING: Multiple versions found: {project_versions}")
+              sys.exit(1)
+          PYEOF
 
       - name: Check for changes
         id: check_changes
@@ -51,11 +148,27 @@ jobs:
             echo "Version changes detected"
           fi
 
-      - name: Commit and push changes
+      - name: Commit and push
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add -A
-          git commit -m "chore: sync version to v${{ steps.extract_version.outputs.version }}"
+          git commit -m "chore: sync version to v${{ github.event.inputs.version }}"
           git push origin main
+
+      - name: Create git tag
+        if: steps.check_changes.outputs.has_changes == 'true' && github.event.inputs.create_tag == 'true'
+        run: |
+          git tag -a "v${{ github.event.inputs.version }}" -m "Release v${{ github.event.inputs.version }}"
+          git push origin "v${{ github.event.inputs.version }}"
+
+      - name: Create GitHub Release
+        if: steps.check_changes.outputs.has_changes == 'true' && github.event.inputs.create_release == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "v${{ github.event.inputs.version }}" \
+            --title "v${{ github.event.inputs.version }}" \
+            --generate-notes \
+            --verify-tag
