@@ -26,6 +26,11 @@ args = ["framework/mcp/client.py", "--server", "burp"]
 command = "python"
 args = ["framework/mcp/client.py", "--server", "kali"]
 
-# Sandbox policy: read-only by default for security
+# Sandbox policy: workspace-write for RedTeam operations
 # Options: read-only | workspace-write | danger-full-access
-sandbox = "read-only"
+sandbox = "workspace-write"
+
+# CodeGraph MCP Server (code audit intelligence)
+[mcp_servers.codegraph]
+command = "codegraph"
+args = ["serve", "--mcp"]

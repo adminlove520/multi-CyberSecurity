@@ -7,3 +7,6 @@
 [submodule "external/AboutSecurity"]
 	path = external/AboutSecurity
 	url = https://github.com/wgpsec/AboutSecurity.git
+[submodule "vendor/codegraph"]
+	path = vendor/codegraph
+	url = https://github.com/colbymchenry/codegraph.git
