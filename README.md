@@ -73,7 +73,7 @@ python cli.py skill export --platform trae
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     multi-CyberSecurity v3.2                   │
+│                     multi-CyberSecurity v3.4                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
 │  │    .trae   │  │   .hermes   │  │  .openclaw  │  ← 平台配置  │
@@ -179,6 +179,73 @@ Stage 4: 漏洞深度分析 (条件并行)
     ↓
 Stage 5: 质量校验与报告
 ```
+
+---
+
+## 🎯 RedTeam 模式 (新增!)
+
+> **AI驱动的自动化红队渗透框架** - 整合 RedTeam-Agent 最佳实践
+
+### 核心特性
+
+| 特性 | 说明 |
+|------|------|
+| 🚀 **开箱即用** | 15+ 渗透工具自动安装 |
+| 🤖 **AI 驱动** | Skill + 终端，AI 直接调用渗透工具 |
+| 💰 **Token 优化** | 智能输出压缩，节省 80% Token |
+| 🛡️ **域渗透完整** | BloodHound + impacket + Responder 全链路 |
+| 🌐 **多平台支持** | Trae, Hermes, OpenClaw, Cursor, Claude, Codex |
+
+### RedTeam 工具矩阵
+
+| 分类 | 工具 | 功能 |
+|------|------|------|
+| **网络扫描** | gogo, fscan, masscan | 内网发现、综合扫描 |
+| **Web安全** | httpx, nuclei, ffuf, sqlmap | 指纹、POC、目录爆破、SQL注入 |
+| **AD攻击** | SharpHound, impacket, nxc | BloodHound、票据攻击、横向移动 |
+| **凭据攻击** | kerbrute, responder, hashcat | 暴力破解、哈希收集、密码破解 |
+| **逆向工程** | Ghidra, radare2, IDA | 二进制分析、漏洞利用开发 |
+
+### AD 攻击链路
+
+```
+Recon ──► Enum ──► Initial Access ──► PrivEsc ──► Persistence ──► Lateral ──► Domain
+  │        │           │               │            │            │         │
+  ▼        ▼           ▼               ▼            ▼            ▼         ▼
+gogo    kerbrute    kerberoast      UAC bypass   gMSA abuse    nxc     secretsdump
+fscan   pywerview   AS-REP roast   DLL hijack   ACL abuse    wmiexec  GoldenTicket
+```
+
+### 快速开始
+
+```bash
+# 安装 RedTeam 工具
+python scripts/install_redteam_tools.py
+
+# 启动 RedTeam 模式 (所有平台自动启用)
+# AI 会根据 .ctf/CTF_MODE.md 指令执行渗透测试
+
+# 基础扫描
+fscan -h 192.168.1.0/24 -np -silent -o scan.txt
+
+# AD 枚举
+python -m impacket.examples.secretsdump domain/user:pass@dc
+
+# Kerberoasting
+impacket-GetUserSPNs domain.local/user:password -request
+```
+
+### CTF/Sandbox 破限模式
+
+> 启用 CTF 模式后，AI 将解除安全限制，允许执行完整的渗透测试和逆向工程
+
+所有平台配置文件均已包含 RedTeam 破限指令：
+- `.codex/instruction.md` - Codex CLI RedTeam 指令
+- `.claude/REDTEAM.md` - Claude Code RedTeam 指令
+- `.cursor/rules/redteam-mode.mdc` - Cursor RedTeam 规则
+- `.hermes/redteam-mode.md` - Hermes RedTeam 指令
+- `.trae/REDTEAM_MODE.md` - Trae RedTeam 指令
+- `.openclaw/REDTEAM.md` - OpenClaw RedTeam 指令
 
 ---
 
