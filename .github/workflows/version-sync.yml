@@ -34,8 +34,8 @@ jobs:
       - name: Detect bump type and sync version
         id: version
         run: |
-          COMMIT_MSG=$(git log -1 --pretty=%B)
-          FORCE_BUMP="${{ github.event.inputs.bump }}"
+          export COMMIT_MSG=$(git log -1 --pretty=%B)
+          export FORCE_BUMP="${{ github.event.inputs.bump }}"
 
           # Skip if this commit is already a version bump (avoid infinite loop)
           if echo "$COMMIT_MSG" | grep -q "chore: bump version"; then
