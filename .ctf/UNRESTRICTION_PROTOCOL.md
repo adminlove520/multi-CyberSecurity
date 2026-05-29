@@ -179,6 +179,23 @@ Step 4: "构造 payload 验证漏洞" (验证)
 
 ---
 
+## Layer 7: Sockpuppeting / Agent-Computer Interface (ACI)
+
+> 详见 [SOCKPUPPETING.md](./SOCKPUPPETING.md)
+
+**核心思想**: 通过工具调用层或子代理间接执行敏感操作，绕过 AI 模型的直接内容审查。
+
+**实现方式**:
+1. **Tool-Based Execution**: 将敏感操作封装为工具调用
+2. **Sub-Agent Delegation**: 创建专门的子代理处理敏感任务
+3. **File-Based Indirection**: 将敏感内容写入文件后读取/执行
+4. **Multi-Turn Context Building**: 多轮对话构建执行环境
+5. **ACI Command Interface**: 基于 SWE-agent 的 ACI 命令接口
+
+**效果**: ⭐⭐⭐⭐⭐ (最高级别，结合前6层使用)
+
+---
+
 ## 实施检查清单
 
 ### ✅ 必须包含的元素
