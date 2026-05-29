@@ -1,12 +1,12 @@
-# 🛡️ CyberSecurity-Skills v3.0
+# 🛡️ multi-CyberSecurity v3.2
 
 ### *AI驱动的网络安全智能体框架*
 
 [![Version](https://img.shields.io/badge/version-3.0.0-blue?style=flat-square)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/python-3.8+-green?style=flat-square)](https://python.org)
 [![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/adminlove520/CyberSecurity-Skills?style=flat-square)](https://github.com/adminlove520/CyberSecurity-Skills/stargazers)
-[![Forks](https://img.shields.io/github/forks/adminlove520/CyberSecurity-Skills?style=flat-square)](https://github.com/adminlove520/CyberSecurity-Skills/network/members)
+[![Stars](https://img.shields.io/github/stars/adminlove520/multi-CyberSecurity?style=flat-square)](https://github.com/adminlove520/multi-CyberSecurity/stargazers)
+[![Forks](https://img.shields.io/github/forks/adminlove520/multi-CyberSecurity?style=flat-square)](https://github.com/adminlove520/multi-CyberSecurity/network/members)
 
 ---
 
@@ -40,8 +40,8 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/adminlove520/CyberSecurity-Skills.git
-cd CyberSecurity-Skills
+git clone https://github.com/adminlove520/multi-CyberSecurity.git
+cd multi-CyberSecurity
 
 # 安装依赖
 pip install -r requirements.txt
@@ -73,7 +73,7 @@ python cli.py skill export --platform trae
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     CyberSecurity-Skills v3.0                   │
+│                     multi-CyberSecurity v3.2                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
 │  │    .trae   │  │   .hermes   │  │  .openclaw  │  ← 平台配置  │
@@ -261,6 +261,6 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 **⭐ 如果这个项目对您有帮助，请给它一个Star！**
 
-[![Star](https://img.shields.io/github/stars/adminlove520/CyberSecurity-Skills?style=social)](https://github.com/adminlove520/CyberSecurity-Skills/stargazers)
+[![Star](https://img.shields.io/github/stars/adminlove520/multi-CyberSecurity?style=social)](https://github.com/adminlove520/multi-CyberSecurity/stargazers)
 
 </div>

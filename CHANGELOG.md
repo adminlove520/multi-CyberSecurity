@@ -1,5 +1,29 @@
 # Changelog
 
+## [3.2.0] - 2026-05-29
+
+### 🏷️ 项目重命名
+
+**项目名称从 `CyberSecurity-Skills` 正式更名为 `multi-CyberSecurity`**
+
+#### 更新内容
+- 更新了所有配置文件中的项目名称引用
+  - `agent-manifest.json` - 项目元数据
+  - `index.json` - 技能库索引
+  - `README.md` - 完整文档
+- 更新了GitHub仓库链接
+- 更新了所有徽章和shields链接
+
+#### 重命名原因
+- 更好地反映项目多平台、多Agent、多技能集成的特点
+- "multi" 代表：
+  - **Multi-Platform**: 支持 Trae, Hermes, OpenClaw, Cursor, Claude, Codex
+  - **Multi-Agent**: 7个核心智能体 + 专项审计Agent
+  - **Multi-Skill**: 39个安全模块，195+技能
+  - **Multi-Protocol**: MCP服务集集成
+
+---
+
 ## [3.1.0] - 2026-05-29
 
 ### 🚀 新增功能

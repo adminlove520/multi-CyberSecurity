@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/adminlove520/CyberSecurity-Skills/main/index.schema.json",
   "meta": {
-    "title": "CyberSecurity-Skills · 网络安全技能库",
+    "title": "multi-CyberSecurity · 网络安全技能库",
     "description": "渗透测试全流程技能体系 — 从信息收集到报告撰写的完整知识框架",
     "version": "2.2.0",
     "total_skills": 146,

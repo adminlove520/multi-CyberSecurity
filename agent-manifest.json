@@ -2,7 +2,7 @@
   "$schema": "./index.schema.json",
   "agent_manifest_version": "1.1.0",
   "project": {
-    "name": "CyberSecurity-Skills",
+    "name": "multi-CyberSecurity",
 "description": "网络安全渗透测试全流程技能库 — 39大模块，195个技能",
     "total_skills": 195,
     "total_modules": 39,
