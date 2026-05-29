@@ -25,23 +25,23 @@ jobs:
       - name: Validate index.json against schema
         run: |
           pip install -q jsonschema
-          python -c "
-import json, sys
-from jsonschema import validate, ValidationError
+          python3 << 'PYEOF'
+          import json, sys
+          from jsonschema import validate, ValidationError
 
-with open('index.json', 'r', encoding='utf-8') as f:
-    index = json.load(f)
+          with open('index.json', 'r', encoding='utf-8') as f:
+              index = json.load(f)
 
-with open('index.schema.json', 'r', encoding='utf-8') as f:
-    schema = json.load(f)
+          with open('index.schema.json', 'r', encoding='utf-8') as f:
+              schema = json.load(f)
 
-try:
-    validate(instance=index, schema=schema)
-    print('  index.json: ' + ('\u2705' if True else '') + ' Schema 验证通过')
-except ValidationError as e:
-    print('  index.json: ' + ('\u274c' if True else '') + f' Schema 验证失败: {e.message}')
-    sys.exit(1)
-"
+          try:
+              validate(instance=index, schema=schema)
+              print('  index.json: ✅ Schema 验证通过')
+          except ValidationError as e:
+              print(f'  index.json: ❌ Schema 验证失败: {e.message}')
+              sys.exit(1)
+          PYEOF
 
       - name: Run validate CLI
         run: python skill_query.py validate

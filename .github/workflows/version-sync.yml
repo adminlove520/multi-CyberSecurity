@@ -1,13 +1,10 @@
 name: Sync Version
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to sync (e.g., 4.1.1)'
+        description: 'Version to sync (e.g., 4.1.2)'
         required: true
 
 jobs:
@@ -16,15 +13,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract version
         id: extract_version
         run: |
-          if [ "${{ github.event_name }}" == "push" ]; then
-            VERSION=${GITHUB_REF#refs/tags/v}
-          else
-            VERSION=${{ github.event.inputs.version }}
-          fi
+          VERSION=${{ github.event.inputs.version }}
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           echo "Detected version: $VERSION"
 
@@ -62,4 +58,4 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add -A
           git commit -m "chore: sync version to v${{ steps.extract_version.outputs.version }}"
-          git push
+          git push origin main

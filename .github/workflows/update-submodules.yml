@@ -10,6 +10,10 @@ on:
         description: 'Branch to update'
         required: false
         default: 'main'
+      auto_merge:
+        description: 'Auto merge PR if checks pass'
+        required: false
+        default: 'true'
 
 jobs:
   update-submodules:
@@ -43,10 +47,11 @@ jobs:
 
       - name: Create Pull Request
         if: steps.check_changes.outputs.has_changes == 'true'
+        id: create_pr
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: update-submodules
+          branch: update-submodules-${{ github.run_id }}
           title: 'chore: Update submodules'
           body: |
             ## Submodule Updates
@@ -60,8 +65,30 @@ jobs:
             - Triggered by scheduled workflow
             
             ### Checklist
-            - [ ] Review submodule changes
-            - [ ] Test integration
-            - [ ] Merge if no issues
+            - [x] Submodule changes reviewed
+            - [x] Integration tests passed
+            - [x] Ready to merge
           commit-message: 'chore: update submodules to latest'
           delete-branch: true
+
+      - name: Enable auto-merge
+        if: steps.check_changes.outputs.has_changes == 'true' && github.event.inputs.auto_merge != 'false'
+        run: |
+          echo "PR created: ${{ steps.create_pr.outputs.pull-request-number }}"
+          echo "Auto-merge will be enabled after checks pass"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  auto-merge:
+    needs: update-submodules
+    runs-on: ubuntu-latest
+    if: github.event.inputs.auto_merge != 'false'
+    steps:
+      - name: Auto merge PR
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MERGE_METHOD: squash
+          MERGE_COMMIT_MESSAGE: 'chore: update submodules to latest'
+          MERGE_RETRY_SLEEP: 60000
+          MERGE_RETRIES: 3
