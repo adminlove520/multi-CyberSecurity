@@ -4,7 +4,7 @@
     "title": "multi-CyberSecurity · 网络安全技能库",
     "description": "渗透测试全流程技能体系 — 从信息收集到报告撰写的完整知识框架",
     "version": "3.2.0",
-    "total_skills": 195,
+    "total_skills": 199,
     "total_modules": 39,
     "last_updated": "2026-05-29",
     "standards": [
@@ -387,7 +387,7 @@
       "name_en": "Code Audit",
       "emoji": "🔬",
       "path": "12-代码审计-CodeAudit",
-      "skill_count": 9,
+      "skill_count": 11,
       "skills": [
         {
           "name": "PHP代码审计",
@@ -395,8 +395,18 @@
           "difficulty": "★★★"
         },
         {
+          "name": "PHP代码审计专业版",
+          "file": "PHP代码审计专业版-PHPAuditPro.md",
+          "difficulty": "★★★★"
+        },
+        {
           "name": "Java代码审计",
           "file": "Java代码审计-JavaCodeAudit.md",
+          "difficulty": "★★★★"
+        },
+        {
+          "name": "Java代码审计进阶",
+          "file": "Java代码审计进阶-JavaAuditAdvanced.md",
           "difficulty": "★★★★"
         },
         {
@@ -512,7 +522,7 @@
       "name_en": "Incident Response",
       "emoji": "🚨",
       "path": "15-应急响应-IncidentResponse",
-      "skill_count": 7,
+      "skill_count": 8,
       "skills": [
         {
           "name": "事件分类与优先级评估",
@@ -547,6 +557,11 @@
         {
           "name": "AI安全应急响应",
           "file": "AI安全应急响应-AISecurityIncidentResponse.md",
+          "difficulty": "★★★★"
+        },
+        {
+          "name": "Linux应急响应AI检查",
+          "file": "Linux应急响应AI检查-LinuxGun.md",
           "difficulty": "★★★★"
         }
       ]
@@ -902,7 +917,7 @@
       "name_en": "Red/Blue Team",
       "emoji": "⚔️",
       "path": "24-红蓝对抗-RedBlueTeam",
-      "skill_count": 5,
+      "skill_count": 6,
       "skills": [
         {
           "name": "红队评估方法论",
@@ -928,6 +943,11 @@
           "name": "闭环防御改进",
           "file": "闭环防御改进-DefenseImprovementCycle.md",
           "difficulty": "★★★★"
+        },
+        {
+          "name": "Agent黑客技能集",
+          "file": "Agent黑客技能集-AgentHackSkills.md",
+          "difficulty": "★★★★★"
         }
       ]
     },
