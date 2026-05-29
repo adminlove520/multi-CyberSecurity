@@ -21,7 +21,7 @@
 - [`skills/云安全审计-CloudSecurityAudit.md`](skills/云安全审计-CloudSecurityAudit.md)
 - [`skills/容器安全审计-ContainerSecurityAudit.md`](skills/容器安全审计-ContainerSecurityAudit.md)
 - [`skills/网络安全合规评估-NetworkComplianceAssessment.md`](skills/网络安全合规评估-NetworkComplianceAssessment.md)
-- [`skills/AI Agent安全审计-AIAgentSecurityAudit.md`](skills/AI%20Agent安全审计-AIAgentSecurityAudit.md)
+- [`skills/AI Agent安全审计-AIAgentSecurityAudit.md`](skills/AI Agent安全审计-AIAgentSecurityAudit.md)
 
 ## 参考资源
 - [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks/)

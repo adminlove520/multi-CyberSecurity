@@ -17,7 +17,7 @@
 - [`skills/SBOM生成与验证-SBOMGeneration.md`](skills/SBOM生成与验证-SBOMGeneration.md)
 - [`skills/软件依赖与开源合规审计-DependencyLicenseCompliance.md`](skills/软件依赖与开源合规审计-DependencyLicenseCompliance.md)
 - [`skills/代码签名与供应链完整性-CodeSigningIntegrity.md`](skills/代码签名与供应链完整性-CodeSigningIntegrity.md)
-- [`skills/容器镜像安全扫描-ContainerImageScan.md`](skills/容器镜像安全扫描-ContainerImageScan.md)
+- [`skills/容器镜像安全扫描-ContainerImageScan.md`](../33-容器安全-ContainerSecurity/skills/容器镜像安全与漏洞扫描-ContainerImageSecurityScanning.md)
 - [`skills/第三方供应商风险评估-ThirdPartyVendorRisk.md`](skills/第三方供应商风险评估-ThirdPartyVendorRisk.md)
 - [`skills/供应链攻击检测与响应-SupplyChainAttackResponse.md`](skills/供应链攻击检测与响应-SupplyChainAttackResponse.md)
 

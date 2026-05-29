@@ -14,4 +14,4 @@
 - **[CLI 命令参考](reference/CLI_REFERENCE.md)**：`skill.py` 的所有参数详解。
 
 ## 安全与合规
-- **[法律与伦理守则](../../framework/SAFETY.md)**：必须遵守的操作红线。
+- **[法律与伦理守则](../framework/SAFETY.md)**：必须遵守的操作红线。

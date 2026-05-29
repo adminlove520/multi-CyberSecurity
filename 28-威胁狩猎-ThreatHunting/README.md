@@ -8,10 +8,10 @@
 
 | # | 技能名称 | 难度 |
 |:---:|---------|:---:|
-| 1 | [威胁狩猎方法论与假设驱动](skills/威胁狩猎方法论与假设驱动-ThreatHuntingMethodology.md) | ★★★★ |
+| 1 | [威胁狩猎方法论与假设驱动](skills/威胁狩猎方法论-ThreatHuntingMethodology.md) | ★★★★ |
 | 2 | [基于Sigma规则的检测工程](skills/Sigma规则检测工程-SigmaRuleEngineering.md) | ★★★★ |
 | 3 | [基于ATT&CK的威胁狩猎](skills/ATT&CK威胁狩猎-MITREAttackHunting.md) | ★★★★★ |
-| 4 | [网络流量与日志异常检测](skills/流量与日志异常检测-TrafficLogAnomalyDetection.md) | ★★★★ |
+| 4 | [网络流量与日志异常检测](skills/网络流量与日志异常检测-TrafficLogAnomalyDetection.md) | ★★★★ |
 
 ## 关键工具
 

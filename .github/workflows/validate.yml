@@ -114,6 +114,12 @@ jobs:
                           continue
                       if link.startswith('mailto:'):
                           continue
+                      # Skip code snippet artifacts
+                      if '{' in link or '}' in link:
+                          continue
+                      # Skip template placeholder paths
+                      if link.startswith('./attachments/'):
+                          continue
                       # Skip anchor-only links (no path separator)
                       if '/' not in link and '.' not in link:
                           continue
