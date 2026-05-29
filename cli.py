@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 """
-multi-CyberSecurity v3.0 Enhanced CLI
+multi-CyberSecurity v4.0 Enhanced CLI
 Unified command-line interface for security operations
+
+Architecture:
+- cli.py: Entry point with subcommands
+- framework/core/orchestrator.py: Mission orchestration
+- framework/core/redteam_gateway.py: Red team operations gateway
+- framework/core/agent_registry.py: Agent management
 """
 
 import argparse
 import sys
 import os
 import json
+import asyncio
 from pathlib import Path
 from typing import Optional
 
@@ -15,7 +22,17 @@ from typing import Optional
 sys.path.insert(0, str(Path(__file__).parent))
 
 from framework.core.pipeline import AuditPipeline, Stage
+from framework.core.orchestrator import MissionOrchestrator
+from framework.core.redteam_gateway import (
+    RedTeamGateway, OperationContext, get_gateway,
+    execute_redteam_operation
+)
+from framework.core.agent_registry import get_registry
+from framework.core.jailbreak_engine import (
+    get_jailbreak_engine, check_environment, EnvironmentType
+)
 from framework.mcp.client import MCPClient
+
 
 class Colors:
     HEADER = '\033[95m'
@@ -27,20 +44,23 @@ class Colors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
 
+
 def print_banner():
     """Print CLI banner"""
     banner = f"""
 {Colors.CYAN}
    ______      __                      _____ __                __            
   / ____/___  / /___  ____ ______     / ___// /_  ____  ____  / /____  _____
- / /   / __ \/ / __ \/ __ `/ ___/     \__ \/ __ \/ __ \/ __ \/ __/ _ \/ ___/
+ / /   / __ \/ / __ \/ __ `/ ___/     \\__ \\/ __ \\/ __ \\/ __ \\/ __/ _ \\/ ___/
 / /___/ /_/ / / /_/ / /_/ / /        ___/ / / / / /_/ / /_/ / /_/  __/ /    
-\____/\____/_/\____/\__, /_/        /____/_/ /_/\____/\____/\__/\___/_/     
+\\____/\\____/_/\\____/\\__, /_/        /____/_/ /_/\\____/\\____/\\__/\\___/_/     
                    /____/                                                    
 {Colors.ENDC}
-{Colors.GREEN}multi-CyberSecurity v3.0 - AI-Powered Security Framework{Colors.ENDC}
+{Colors.GREEN}multi-CyberSecurity v4.0 - AI-Powered Security Framework{Colors.ENDC}
+{Colors.BLUE}Architecture: Unified Gateway | Layered Jailbreak | Agent Registry{Colors.ENDC}
     """
     print(banner)
+
 
 def cmd_audit(args):
     """Run 8-stage security audit"""
@@ -56,14 +76,12 @@ def cmd_audit(args):
     # Stage 1: Recon
     print(f"\n{Colors.CYAN}[Stage 1/8] Reconnaissance{Colors.ENDC}")
     task = pipeline.create_task(Stage.RECON, "Asset discovery and fingerprinting", "recon_agent")
-    # ... (actual implementation would call agent)
     pipeline.complete_task(task, {"assets": [args.target], "technologies": []}, cost_usd=0.5)
     print(f"{Colors.GREEN}[+] Recon completed{Colors.ENDC}")
     
     # Stage 2: Hunt
     print(f"\n{Colors.CYAN}[Stage 2/8] Hunt{Colors.ENDC}")
     task = pipeline.create_task(Stage.HUNT, "Vulnerability discovery", "exploit_agent")
-    # ...
     pipeline.complete_task(task, {"findings": []}, cost_usd=1.0)
     print(f"{Colors.GREEN}[+] Hunt completed{Colors.ENDC}")
     
@@ -113,6 +131,59 @@ def cmd_audit(args):
             json.dump(report, f, indent=2)
         print(f"{Colors.GREEN}[+] Report saved to: {args.output}{Colors.ENDC}")
 
+
+async def cmd_redteam_async(args):
+    """Red team operations via RedTeam Gateway"""
+    print(f"{Colors.CYAN}[*] Initializing Red Team Gateway...{Colors.ENDC}")
+    
+    # Check environment
+    env = check_environment()
+    print(f"{Colors.BLUE}[*] Environment: {env.value}{Colors.ENDC}")
+    
+    if env == EnvironmentType.UNKNOWN:
+        print(f"{Colors.FAIL}[-] Not in authorized environment{Colors.ENDC}")
+        print(f"{Colors.WARNING}[!] Create .ctf/CTF_MODE.md or set CTF_MODE=1{Colors.ENDC}")
+        return
+    
+    gateway = get_gateway()
+    
+    # Build operation context
+    context = OperationContext(
+        operation=args.operation,
+        target=args.target,
+        platform=args.platform,
+        args={
+            "exploit_type": args.exploit_type,
+            "scan_type": args.scan_type,
+        }
+    )
+    
+    print(f"{Colors.BLUE}[*] Operation: {args.operation}{Colors.ENDC}")
+    print(f"{Colors.BLUE}[*] Target: {args.target}{Colors.ENDC}")
+    print(f"{Colors.BLUE}[*] Platform: {args.platform}{Colors.ENDC}")
+    
+    # Execute through gateway
+    result = await gateway.execute(context)
+    
+    if result.success:
+        print(f"{Colors.GREEN}[+] Operation completed successfully{Colors.ENDC}")
+        print(f"{Colors.BLUE}[*] Output: {json.dumps(result.output, indent=2)}{Colors.ENDC}")
+    else:
+        print(f"{Colors.FAIL}[-] Operation failed{Colors.ENDC}")
+        print(f"{Colors.FAIL}[-] Error: {result.error}{Colors.ENDC}")
+    
+    # Show logs
+    if args.verbose and result.logs:
+        print(f"\n{Colors.CYAN}[*] Execution Logs:{Colors.ENDC}")
+        for log in result.logs:
+            print(f"  {log}")
+
+
+def cmd_redteam(args):
+    """Wrapper for async redteam command"""
+    asyncio.run(cmd_redteam_async(args))
+
+
 def cmd_wxmini(args):
     """WeChat Mini Program audit"""
     print(f"{Colors.BLUE}[*] Starting WeChat Mini Program audit...{Colors.ENDC}")
@@ -131,6 +202,7 @@ def cmd_wxmini(args):
     else:
         print(f"{Colors.FAIL}[-] Analysis failed: {result.get('error')}{Colors.ENDC}")
 
+
 def cmd_java(args):
     """Java code audit"""
     print(f"{Colors.BLUE}[*] Starting Java code audit...{Colors.ENDC}")
@@ -148,6 +220,75 @@ def cmd_java(args):
         print(f"{Colors.BLUE}[*] Output directory: {result.get('output_dir')}{Colors.ENDC}")
     else:
         print(f"{Colors.FAIL}[-] Audit failed: {result.get('error')}{Colors.ENDC}")
+
+
+def cmd_agent(args):
+    """Agent management commands"""
+    registry = get_registry()
+    
+    if args.action == "list":
+        print(f"{Colors.CYAN}Available Agents:{Colors.ENDC}")
+        for agent_name in registry.list_agents():
+            agent = registry.get(agent_name)
+            print(f"  {Colors.GREEN}•{Colors.ENDC} {agent_name}")
+            if agent and agent.description:
+                print(f"    {Colors.BLUE}{agent.description[:60]}...{Colors.ENDC}")
+    
+    elif args.action == "info":
+        agent = registry.get(args.agent_name)
+        if agent:
+            print(f"{Colors.CYAN}Agent: {agent.name}{Colors.ENDC}")
+            print(f"{Colors.BLUE}Role: {agent.role}{Colors.ENDC}")
+            print(f"{Colors.BLUE}Description: {agent.description}{Colors.ENDC}")
+            print(f"{Colors.BLUE}Capabilities:{Colors.ENDC}")
+            for cap in agent.capabilities:
+                print(f"  • {cap}")
+        else:
+            print(f"{Colors.FAIL}[-] Agent not found: {args.agent_name}{Colors.ENDC}")
+    
+    elif args.action == "capabilities":
+        print(f"{Colors.CYAN}Searching for agents with capability: {args.capability}{Colors.ENDC}")
+        agents = registry.find_by_capability(args.capability)
+        for agent in agents:
+            print(f"  {Colors.GREEN}•{Colors.ENDC} {agent.name}")
+
+
+def cmd_jailbreak(args):
+    """Jailbreak engine management"""
+    engine = get_jailbreak_engine()
+    
+    if args.action == "status":
+        env = check_environment()
+        print(f"{Colors.CYAN}Jailbreak Engine Status:{Colors.ENDC}")
+        print(f"  Environment: {env.value}")
+        print(f"  Authorized: {engine.env_checker.is_authorized()}")
+        print(f"  Max Level: {engine.env_checker.get_max_jailbreak_level().value}")
+        print(f"  Available Levels: {', '.join(engine.list_available_levels())}")
+    
+    elif args.action == "payload":
+        try:
+            payload = engine.get_payload(args.level, args.platform)
+            if payload:
+                print(f"{Colors.CYAN}Payload for {args.level} / {args.platform}:{Colors.ENDC}")
+                print(payload[:500] + "..." if len(payload) > 500 else payload)
+            else:
+                print(f"{Colors.WARNING}[-] No payload found for {args.level} / {args.platform}{Colors.ENDC}")
+        except Exception as e:
+            print(f"{Colors.FAIL}[-] Error: {e}{Colors.ENDC}")
+    
+    elif args.action == "levels":
+        print(f"{Colors.CYAN}Available Jailbreak Levels:{Colors.ENDC}")
+        levels = {
+            "L1": "Soft - CTF Mode Instructions",
+            "L2": "Medium - Role Playing & Scenario",
+            "L3": "Hard - Sockpuppeting / ACI",
+            "L4": "Deep - Multi-Turn Context Building"
+        }
+        available = engine.list_available_levels()
+        for level, desc in levels.items():
+            status = f"{Colors.GREEN}[AVAILABLE]{Colors.ENDC}" if level in available else f"{Colors.FAIL}[LOCKED]{Colors.ENDC}"
+            print(f"  {status} {level}: {desc}")
+
 
 def cmd_mcp(args):
     """MCP server management"""
@@ -171,17 +312,17 @@ def cmd_mcp(args):
             status_text = "healthy" if status else "unhealthy"
             print(f"  - {server}: {status_color}{status_text}{Colors.ENDC}")
 
+
 def cmd_skill(args):
     """Skill management"""
     if args.action == "list":
         print(f"{Colors.CYAN}Available Skills:{Colors.ENDC}")
-        # Load from skills/catalog.json
         catalog_path = Path(__file__).parent / "skills" / "catalog.json"
         if catalog_path.exists():
             with open(catalog_path) as f:
                 catalog = json.load(f)
                 for skill in catalog.get("skills", []):
-                    print(f"  - {skill['id']}: {skill['name']}")
+                    print(f"  {Colors.GREEN}•{Colors.ENDC} {skill['id']}: {skill['name']}")
         else:
             print(f"{Colors.WARNING}[-] Skill catalog not found{Colors.ENDC}")
     
@@ -189,15 +330,19 @@ def cmd_skill(args):
         print(f"{Colors.BLUE}[*] Exporting skills for platform: {args.platform}{Colors.ENDC}")
         os.system(f"python scripts/platform_exporter.py --platform {args.platform}")
 
+
 def main():
     print_banner()
     
     parser = argparse.ArgumentParser(
-        description="multi-CyberSecurity v3.0 - AI-Powered Security Framework",
+        description="multi-CyberSecurity v4.0 - AI-Powered Security Framework",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s audit --target https://example.com --max-cost 50
+  %(prog)s redteam --operation recon --target 192.168.1.1 --platform claude
+  %(prog)s agent list
+  %(prog)s jailbreak status
   %(prog)s wxmini --path /path/to/miniapp --deep
   %(prog)s java --path /path/to/project --type full
   %(prog)s mcp list
@@ -213,6 +358,19 @@ Examples:
     audit_parser.add_argument("--max-cost", type=float, default=100.0, help="Maximum budget in USD")
     audit_parser.add_argument("--output", "-o", help="Output file for report")
     
+    # Red Team command (NEW)
+    redteam_parser = subparsers.add_parser("redteam", help="Red team operations via Gateway")
+    redteam_parser.add_argument("--operation", "-op", required=True,
+                               choices=["recon", "exploit", "scan", "analyze", "generate_poc"],
+                               help="Operation type")
+    redteam_parser.add_argument("--target", "-t", required=True, help="Target to attack/test")
+    redteam_parser.add_argument("--platform", "-p", default="universal",
+                               choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "universal"],
+                               help="Target AI platform")
+    redteam_parser.add_argument("--exploit-type", default="", help="Exploit type (for exploit operation)")
+    redteam_parser.add_argument("--scan-type", default="port", help="Scan type (for scan operation)")
+    redteam_parser.add_argument("--verbose", "-v", action="store_true", help="Verbose output")
+    
     # WeChat Mini Program audit
     wxmini_parser = subparsers.add_parser("wxmini", help="WeChat Mini Program security audit")
     wxmini_parser.add_argument("--path", required=True, help="Path to mini program package or directory")
@@ -223,6 +381,23 @@ Examples:
     java_parser.add_argument("--path", required=True, help="Path to Java project")
     java_parser.add_argument("--type", choices=["full", "sql", "auth", "file", "xxe"], 
                             default="full", help="Audit type")
+    
+    # Agent management (NEW)
+    agent_parser = subparsers.add_parser("agent", help="Agent management")
+    agent_parser.add_argument("action", choices=["list", "info", "capabilities"],
+                             help="Action to perform")
+    agent_parser.add_argument("--agent-name", help="Agent name (for info action)")
+    agent_parser.add_argument("--capability", help="Capability to search (for capabilities action)")
+    
+    # Jailbreak engine (NEW)
+    jailbreak_parser = subparsers.add_parser("jailbreak", help="Jailbreak engine management")
+    jailbreak_parser.add_argument("action", choices=["status", "payload", "levels"],
+                                 help="Action to perform")
+    jailbreak_parser.add_argument("--level", choices=["L1", "L2", "L3", "L4"],
+                                 help="Jailbreak level (for payload action)")
+    jailbreak_parser.add_argument("--platform", default="universal",
+                                 choices=["claude", "codex", "cursor", "trae", "openclaw", "hermes", "universal"],
+                                 help="Target platform (for payload action)")
     
     # MCP management
     mcp_parser = subparsers.add_parser("mcp", help="MCP server management")
@@ -244,8 +419,11 @@ Examples:
     # Route to appropriate command handler
     command_handlers = {
         "audit": cmd_audit,
+        "redteam": cmd_redteam,
         "wxmini": cmd_wxmini,
         "java": cmd_java,
+        "agent": cmd_agent,
+        "jailbreak": cmd_jailbreak,
         "mcp": cmd_mcp,
         "skill": cmd_skill
     }
@@ -255,6 +433,7 @@ Examples:
         handler(args)
     else:
         parser.print_help()
+
 
 if __name__ == "__main__":
     main()
