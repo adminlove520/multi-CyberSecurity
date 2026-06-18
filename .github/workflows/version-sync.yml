@@ -1,3 +1,5 @@
+# multi-CyberSecurity 版本自动同步
+# push到main时自动检测并更新版本号，同时打tag
 name: Release
 
 on:
@@ -6,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       bump:
-        description: 'Force bump type (override auto-detect)'
+        description: 'Force bump type (patch|minor|major)'
         required: false
         type: choice
         options:
@@ -31,51 +33,57 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Detect bump type and sync version
+      - name: Detect bump and sync version
         id: version
         run: |
-          export COMMIT_MSG=$(git log -1 --pretty=%B)
-          export FORCE_BUMP="${{ github.event.inputs.bump }}"
-
-          # Skip if this commit is already a version bump (avoid infinite loop)
-          if echo "$COMMIT_MSG" | grep -q "chore: bump version"; then
-            echo "Skipping: this is already a version bump commit"
-            echo "version=" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
           python3 << 'PYEOF'
-          import re, sys, os
+          import json, re, sys, os
           from pathlib import Path
 
-          commit_msg = os.environ["COMMIT_MSG"]
-          force_bump = os.environ["FORCE_BUMP"]
           project_root = Path(".")
 
-          # --- Step 1: Read current version ---
-          readme = (project_root / "README.md").read_text(encoding="utf-8")
-          match = re.search(r"multi-CyberSecurity v(\d+\.\d+\.\d+)", readme)
-          if not match:
-              print("ERROR: Cannot detect current version from README.md")
+          # Read current version from index.json (source of truth)
+          try:
+              with open(project_root / "index.json", "r", encoding="utf-8") as f:
+                  index_data = json.load(f)
+              current_ver = index_data.get("meta", {}).get("version", "")
+              if not current_ver:
+                  print("WARNING: No version in index.json meta, skipping release")
+                  with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                      f.write("version=\n")
+                  sys.exit(0)
+          except Exception as e:
+              print(f"ERROR reading index.json: {e}")
               sys.exit(1)
-          parts = match.group(1).split(".")
-          major, minor, patch = int(parts[0]), int(parts[1]), int(parts[2])
-          old_ver = f"{major}.{minor}.{patch}"
 
-          # --- Step 2: Determine bump type ---
-          # Priority: force_bump > commit message keywords > default patch
+          parts = current_ver.split(".")
+          if len(parts) != 3:
+              print(f"ERROR: Invalid version format '{current_ver}'")
+              sys.exit(1)
+          major, minor, patch = int(parts[0]), int(parts[1]), int(parts[2])
+
+          # Determine bump type
+          commit_msg = os.environ.get("COMMIT_MSG", "")
+          force_bump = os.environ.get("FORCE_BUMP", "")
           msg_lower = commit_msg.lower()
+
+          # Skip if already a version bump commit (prevent infinite loop)
+          if "chore: bump version" in commit_msg.lower():
+              print("Skipping: already a version bump commit")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("version=\n")
+              sys.exit(0)
 
           if force_bump:
               bump = force_bump
-          elif any(kw in msg_lower for kw in ["breaking", "major", " incompatible"]):
+          elif any(kw in msg_lower for kw in ["breaking", "major", "incompatible"]):
               bump = "major"
-          elif any(kw in msg_lower for kw in ["feat:", "feature", "minor", "new module", "new skill"]):
+          elif any(kw in msg_lower for kw in ["feat:", "feature", "new module", "new skill"]):
               bump = "minor"
           else:
               bump = "patch"
 
-          # --- Step 3: Calculate new version ---
+          # Calculate new version
           if bump == "major":
               new_ver = f"{major + 1}.0.0"
           elif bump == "minor":
@@ -83,84 +91,56 @@ jobs:
           else:
               new_ver = f"{major}.{minor}.{patch + 1}"
 
-          print(f"Current: v{old_ver}  ->  New: v{new_ver} (bump: {bump})")
+          old_ver = current_ver
+          print(f"Version: v{old_ver} -> v{new_ver} (bump: {bump})")
           print(f"Commit: {commit_msg[:80]}")
 
-          # --- Step 4: Update all files ---
-          updated_files = []
+          # Update index.json
+          with open(project_root / "index.json", "r", encoding="utf-8") as f:
+              index_data = json.load(f)
+          index_data["meta"]["version"] = new_ver
+          with open(project_root / "index.json", "w", encoding="utf-8") as f:
+              json.dump(index_data, f, indent=2, ensure_ascii=False)
 
-          def try_update(filepath, patterns):
-              if not filepath.exists():
-                  return
-              content = filepath.read_text(encoding="utf-8")
-              original = content
-              for pat, repl in patterns:
-                  content = re.sub(pat, repl, content)
-              if content != original:
-                  filepath.write_text(content, encoding="utf-8")
-                  updated_files.append(str(filepath.relative_to(project_root)))
+          # Update README title if it has a version
+          readme_path = project_root / "README.md"
+          if readme_path.exists():
+              content = readme_path.read_text(encoding="utf-8")
+              new_content = re.sub(
+                  r"(# multi-CyberSecurity) v\d+\.\d+\.\d+",
+                  rf"\1 v{new_ver}",
+                  content
+              )
+              if new_content != content:
+                  readme_path.write_text(new_content, encoding="utf-8")
+                  print("Updated README.md")
 
-          try_update(project_root / "README.md", [
-              (r"multi-CyberSecurity v\d+\.\d+\.\d+", f"multi-CyberSecurity v{new_ver}"),
-              (r"version-\d+\.\d+\.\d+-", f"version-{new_ver}-"),
-          ])
-          try_update(project_root / "cli.py", [
-              (r"multi-CyberSecurity v\d+\.\d+\.\d+(?: Enhanced)?", f"multi-CyberSecurity v{new_ver} Enhanced"),
-              (r"multi-CyberSecurity v\d+\.\d+\.\d+ - AI", f"multi-CyberSecurity v{new_ver} - AI"),
-          ])
-          try_update(project_root / "framework" / "skills" / "index.md", [
-              (r"Framework Version: v\d+\.\d+\.\d+", f"Framework Version: v{new_ver}"),
-          ])
-          try_update(project_root / "index.json", [
-              (r'"version":\s*"[^"]+"', f'"version": "{new_ver}"'),
-          ])
+          # Update skills_index.json version for all skills
+          skills_path = project_root / "skills_index.json"
+          if skills_path.exists():
+              with open(skills_path, "r", encoding="utf-8") as f:
+                  skills_data = json.load(f)
+              for skill in skills_data:
+                  skill["version"] = new_ver
+              with open(skills_path, "w", encoding="utf-8") as f:
+                  json.dump(skills_data, f, indent=2, ensure_ascii=False)
+              print(f"Updated {len(skills_data)} skills to v{new_ver}")
 
-          if not updated_files:
-              print("No files needed updating (version already current)")
-              sys.exit(0)
+          # Write outputs
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"version={new_ver}\n")
+              f.write(f"old_version={old_ver}\n")
+              f.write(f"bump={bump}\n")
 
-          print(f"Updated {len(updated_files)} files:")
-          for f in updated_files:
-              print(f"  - {f}")
-
-          # --- Step 5: Verify ---
-          print("\nVerifying consistency...")
-          for f in updated_files:
-              content = (project_root / f).read_text(encoding="utf-8")
-              for pattern in [r"multi-CyberSecurity v(\d+\.\d+\.\d+)",
-                             r"version-(\d+\.\d+\.\d+)-",
-                             r"Framework Version: v(\d+\.\d+\.\d+)",
-                             r'"version":\s*"(\d+\.\d+\.\d+)"']:
-                  for m in re.finditer(pattern, content):
-                      found = m.group(1)
-                      if found != new_ver:
-                          print(f"ERROR: {f} has v{found}, expected v{new_ver}")
-                          sys.exit(1)
-          print(f"All files consistent at v{new_ver}")
-
-          # Write for shell
-          with open("/tmp/ver_new.txt", "w") as f:
-              f.write(new_ver)
-          with open("/tmp/ver_old.txt", "w") as f:
-              f.write(old_ver)
-          with open("/tmp/ver_bump.txt", "w") as f:
-              f.write(bump)
+          print(f"Done: v{old_ver} -> v{new_ver}")
           PYEOF
-
-          # Read outputs
-          VERSION_NEW=$(cat /tmp/ver_new.txt)
-          VERSION_OLD=$(cat /tmp/ver_old.txt)
-          VERSION_BUMP=$(cat /tmp/ver_bump.txt)
-          echo "version=$VERSION_NEW" >> "$GITHUB_OUTPUT"
-          echo "old_version=$VERSION_OLD" >> "$GITHUB_OUTPUT"
-          echo "bump=$VERSION_BUMP" >> "$GITHUB_OUTPUT"
 
       - name: Commit version bump
         if: steps.version.outputs.version != ''
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md cli.py framework/skills/index.md index.json
+          git add index.json README.md skills_index.json
           git commit -m "chore: bump version v${{ steps.version.outputs.old_version }} -> v${{ steps.version.outputs.version }}"
           git push origin main
 
@@ -169,20 +149,21 @@ jobs:
         run: |
           TAG="v${{ steps.version.outputs.version }}"
           if git rev-parse "$TAG" >/dev/null 2>&1; then
-            echo "Tag $TAG already exists, skipping"
+            echo "Tag $TAG already exists"
           else
             git tag -a "$TAG" -m "Release $TAG"
             git push origin "$TAG"
+            echo "Created tag $TAG"
           fi
 
-      - name: Create GitHub Release
+      - name: GitHub Release
         if: steps.version.outputs.version != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="v${{ steps.version.outputs.version }}"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            echo "Release $TAG already exists, skipping"
+            echo "Release $TAG already exists"
           else
             gh release create "$TAG" \
               --title "$TAG" \
@@ -190,24 +171,13 @@ jobs:
               --verify-tag
           fi
 
-      - name: Generate release summary
-        if: always() && steps.version.outputs.version != ''
+      - name: Summary
+        if: steps.version.outputs.version != ''
         run: |
-          cat >> "$GITHUB_STEP_SUMMARY" << EOF
-          ## Release v${{ steps.version.outputs.version }}
-
-          | Field | Value |
-          |-------|-------|
-          | **Previous** | v${{ steps.version.outputs.old_version }} |
-          | **New** | v${{ steps.version.outputs.version }} |
-          | **Bump Type** | ${{ steps.version.outputs.bump }} |
-          | **Trigger** | ${{ github.event_name }} |
-          | **Commit** | ${{ github.sha }} |
-
-          ### Auto-detect Rules
-          - \`major\`: commit contains "breaking", "major", "incompatible"
-          - \`minor\`: commit contains "feat:", "feature", "minor", "new module", "new skill"
-          - \`patch\`: all other commits (default)
-
-          Use \`workflow_dispatch\` with \`bump\` input to override auto-detect.
-          EOF
+          echo "## Release: v${{ steps.version.outputs.version }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| | |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Previous | v${{ steps.version.outputs.old_version }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| New | v${{ steps.version.outputs.version }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Bump | ${{ steps.version.outputs.bump }} |" >> "$GITHUB_STEP_SUMMARY"

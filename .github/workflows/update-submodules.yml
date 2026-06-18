@@ -1,6 +1,5 @@
 # Submodule 手动更新工作流
 # 需要更新时在 GitHub Actions 页面手动触发即可
-# 不再每天自动运行，避免 PR 堆积
 name: Update Submodules
 
 on:
@@ -41,42 +40,26 @@ jobs:
             git diff --stat
           fi
 
-      - name: Push updates
+      - name: Create commit and push
         if: steps.check_changes.outputs.has_changes == 'true'
         run: |
-          git checkout -b update-submodules-${{ github.run_id }}
+          BRANCH="update-submodules-$(date +%s)"
+          git checkout -b "$BRANCH"
           git add .
           git commit -m "${{ github.event.inputs.message || 'chore: update submodules' }}"
-          git push --force-with-lease origin update-submodules-${{ github.run_id }}
-          echo "branch=update-submodules-${{ github.run_id }}" >> $GITHUB_OUTPUT
+          git push origin "$BRANCH"
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
 
       - name: Create PR
         if: steps.check_changes.outputs.has_changes == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.push.outputs.branch }}
-          title: "${{ github.event.inputs.message || 'chore: update submodules' }}"
-          body: |
-            ## Submodule Updates
-
-            Automated submodule update triggered manually.
-
-            ### Checklist
-            - [ ] Changes reviewed
-            - [ ] Ready to merge
-          delete-branch: true
-          draft: false
-
-      - name: Auto-merge PR
-        if: steps.check_changes.outputs.has_changes == 'true'
-        run: |
-          PR_NUM=$(gh pr list --head update-submodules-${{ github.run_id }} --repo adminlove520/multi-CyberSecurity --json number --jq '.[0].number')
-          echo "PR Number: $PR_NUM"
-          # Wait for CI, then merge
-          echo "Waiting 30s for CI to start..."
-          sleep 30
-          # Enable auto-merge (requires branch protection rules to allow this)
-          gh pr merge --admin --squash --repo adminlove520/multi-CyberSecurity $PR_NUM 2>&1 || echo "Merge failed or requires approval - PR created for manual review"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_URL=$(gh pr create \
+            --repo adminlove520/multi-CyberSecurity \
+            --head "${{ steps.push.outputs.branch }}" \
+            --base main \
+            --title "${{ github.event.inputs.message || 'chore: update submodules' }}" \
+            --body "Automated submodule update" \
+            --fill)
+          echo "PR created: $PR_URL"
