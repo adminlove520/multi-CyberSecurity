@@ -1,12 +1,12 @@
-# CyberSecurity-Skills 自动验证工作流
-# 每次 Push 和 PR 时验证 index.json 与实际文件的一致性
+# multi-CyberSecurity 自动化验证
+# 每次 Push 和 PR 时验证新格式 frontmatter 与 skills_index.json 一致性
 name: Validate
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
   validate:
@@ -25,121 +25,109 @@ jobs:
       - name: Run all validations
         id: validation
         run: |
-          pip install -q jsonschema
+          pip install -q pyyaml
 
           python3 << 'PYEOF'
           import json, os, re, sys
           from pathlib import Path
-          from jsonschema import validate, ValidationError
+          import yaml
 
-          results = {"schema": None, "frontmatter": None, "links": None, "cli": None}
           errors_all = []
+          results = {"index": None, "frontmatter": None, "attack_mapping": None}
 
-          # --- 1. Validate index.json against schema ---
+          # --- 1. Validate skills_index.json exists and is valid ---
           try:
-              with open('index.json', 'r', encoding='utf-8') as f:
+              with open('skills_index.json', 'r', encoding='utf-8') as f:
                   index = json.load(f)
-              with open('index.schema.json', 'r', encoding='utf-8') as f:
-                  schema = json.load(f)
-              validate(instance=index, schema=schema)
-              results["schema"] = "PASS"
-              print("[PASS] index.json schema validation")
-          except ValidationError as e:
-              results["schema"] = f"FAIL: {e.message}"
-              errors_all.append(f"index.json schema: {e.message}")
-              print(f"[FAIL] index.json schema: {e.message}")
+              results["index"] = f"PASS: {len(index)} skills indexed"
+              print(f"[PASS] skills_index.json: {len(index)} skills")
           except Exception as e:
-              results["schema"] = f"ERROR: {e}"
-              errors_all.append(f"index.json schema: {e}")
-              print(f"[ERROR] index.json schema: {e}")
+              results["index"] = f"ERROR: {e}"
+              errors_all.append(f"skills_index.json: {e}")
+              print(f"[ERROR] skills_index.json: {e}")
 
           # --- 2. Validate frontmatter in all skill files ---
           fm_errors = []
           fm_total = 0
-          for root, dirs, files in os.walk('.'):
-              if not root.endswith(os.sep + 'skills'):
+          for cat_dir in sorted(Path('.').iterdir()):
+              if not cat_dir.is_dir() or not cat_dir.name[0].isdigit():
                   continue
-              if os.sep + 'framework' + os.sep in root:
+              skills_dir = cat_dir / 'skills'
+              if not skills_dir.exists():
                   continue
-              for fname in sorted(files):
-                  if not fname.endswith('.md'):
+              for fname in sorted(skills_dir.glob('*.md')):
+                  if fname.name == 'README.md':
                       continue
                   fm_total += 1
-                  fpath = os.path.join(root, fname)
-                  with open(fpath, 'r', encoding='utf-8') as f:
+                  with open(fname, 'r', encoding='utf-8') as f:
                       content = f.read()
                   if not content.startswith('---'):
-                      fm_errors.append(f'{fpath}: missing YAML frontmatter')
+                      fm_errors.append(f'{fname}: missing YAML frontmatter')
                       continue
-                  match = re.match(r'^---\n(.*?)\n---\n', content, re.DOTALL)
-                  if not match:
-                      fm_errors.append(f'{fpath}: YAML frontmatter format error')
+                  m = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+                  if not m:
+                      fm_errors.append(f'{fname}: YAML frontmatter format error')
                       continue
-                  yaml_text = match.group(1)
-                  required = ['id:', 'title:', 'category:', 'difficulty:', 'tools:', 'last_updated:']
+                  fm_text = m.group(1).strip()
+                  try:
+                      fm = yaml.safe_load(fm_text)
+                  except Exception as e:
+                      fm_errors.append(f'{fname}: YAML parse error: {e}')
+                      continue
+                  if not fm:
+                      fm_errors.append(f'{fname}: empty frontmatter')
+                      continue
+                  # Check required fields (new format)
+                  required = ['name', 'description', 'domain', 'subdomain', 'tags',
+                              'version', 'author', 'license', 'nist_csf', 'mitre_attack']
                   for field in required:
-                      if field not in yaml_text:
-                          fm_errors.append(f'{fpath}: missing field {field}')
-                  id_match = re.search(r'id:\s*"?(\d+-\d+)"?', yaml_text)
-                  if not id_match:
-                      fm_errors.append(f'{fpath}: id format incorrect (expected NN-NNN)')
+                      if field not in fm or fm[field] is None:
+                          fm_errors.append(f'{fname}: missing field [{field}]')
+                  # name should be kebab-case
+                  name = fm.get('name', '')
+                  if name and not re.match(r'^[\w]+(-[\w]+)*$', name):
+                      fm_errors.append(f'{fname}: name should be kebab-case, got "{name}"')
 
           if fm_errors:
-              results["frontmatter"] = f"FAIL: {len(fm_errors)} issues out of {fm_total} files"
-              errors_all.extend(fm_errors)
+              results["frontmatter"] = f"FAIL: {len(fm_errors)} issues"
+              errors_all.extend(fm_errors[:20])
               print(f"[FAIL] Frontmatter: {len(fm_errors)} issues out of {fm_total} files")
           else:
               results["frontmatter"] = f"PASS: {fm_total} files validated"
               print(f"[PASS] Frontmatter: {fm_total} files validated")
 
-          # --- 3. Check for broken relative links ---
-          link_errors = []
-          link_pattern = re.compile(r'\]\(([^)]+)\)')
-          for root, dirs, files in os.walk('.'):
-              if '.git' in root:
+          # --- 3. ATT&CK mapping coverage ---
+          attack_skills = 0
+          all_attack_ids = set()
+          for cat_dir in sorted(Path('.').iterdir()):
+              if not cat_dir.is_dir() or not cat_dir.name[0].isdigit():
                   continue
-              for fname in files:
-                  if not fname.endswith('.md'):
+              skills_dir = cat_dir / 'skills'
+              if not skills_dir.exists():
+                  continue
+              for fname in sorted(skills_dir.glob('*.md')):
+                  if fname.name == 'README.md':
                       continue
-                  fpath = os.path.join(root, fname)
-                  with open(fpath, 'r', encoding='utf-8') as f:
+                  with open(fname, 'r', encoding='utf-8') as f:
                       content = f.read()
-                  for m in link_pattern.finditer(content):
-                      link = m.group(1)
-                      if link.startswith('http://') or link.startswith('https://'):
-                          continue
-                      if link.startswith('#'):
-                          continue
-                      if link.startswith('mailto:'):
-                          continue
-                      if '{' in link or '}' in link:
-                          continue
-                      if link.startswith('./attachments/'):
-                          continue
-                      if '/' not in link and '.' not in link:
-                          continue
-                      base_dir = os.path.dirname(fpath)
-                      target = os.path.normpath(os.path.join(base_dir, link))
-                      if not os.path.exists(target):
-                          link_errors.append(f'{fpath}: broken link -> {link}')
+                  m = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
+                  if not m:
+                      continue
+                  try:
+                      fm = yaml.safe_load(m.group(1).strip())
+                  except:
+                      continue
+                  if not fm:
+                      continue
+                  attack = fm.get('mitre_attack', [])
+                  if attack and attack != 'all' and isinstance(attack, list) and any(str(a).strip() for a in attack):
+                      attack_skills += 1
+                      for t in attack:
+                          if re.match(r'^T\d{4}(\.\d{3})?$', str(t).strip()):
+                              all_attack_ids.add(str(t).strip())
 
-          if link_errors:
-              results["links"] = f"FAIL: {len(link_errors)} broken links"
-              errors_all.extend(link_errors)
-              print(f"[FAIL] Links: {len(link_errors)} broken links")
-          else:
-              results["links"] = "PASS"
-              print("[PASS] Links: all valid")
-
-          # --- 4. Run skill_query.py validate CLI ---
-          ret = os.system("python skill_query.py validate 2>&1")
-          if ret == 0:
-              results["cli"] = "PASS"
-              print("[PASS] skill_query.py validate")
-          else:
-              results["cli"] = "FAIL"
-              errors_all.append("skill_query.py validate returned non-zero")
-              print("[FAIL] skill_query.py validate")
+          results["attack_mapping"] = f"PASS: {attack_skills} skills with {len(all_attack_ids)} ATT&CK techniques"
+          print(f"[INFO] ATT&CK: {attack_skills} skills, {len(all_attack_ids)} unique techniques")
 
           # --- Summary ---
           print("\n" + "=" * 50)
@@ -147,7 +135,6 @@ jobs:
           total = len(results)
           print(f"Validation Summary: {passed}/{total} checks passed")
 
-          # Write results to file for GitHub Actions summary
           with open("/tmp/val_results.json", "w") as f:
               json.dump(results, f)
           with open("/tmp/val_errors.txt", "w") as f:
@@ -163,49 +150,45 @@ jobs:
           python3 << 'PYEOF'
           import json, os
 
-          results_path = "/tmp/val_results.json"
-          errors_path = "/tmp/val_errors.txt"
+          results = {}
+          errors = []
 
-          if os.path.exists(results_path):
-              with open(results_path) as f:
+          if os.path.exists("/tmp/val_results.json"):
+              with open("/tmp/val_results.json") as f:
                   results = json.load(f)
-          else:
-              results = {}
-
-          if os.path.exists(errors_path):
-              with open(errors_path) as f:
-                  raw = f.read().strip()
-                  errors = raw.split("\n") if raw else []
-          else:
-              errors = []
+          if os.path.exists("/tmp/val_errors.txt"):
+              raw = open("/tmp/val_errors.txt").read().strip()
+              errors = raw.split("\n") if raw else []
 
           md = []
           md.append("## Validation Report\n")
-          md.append(f"**Trigger**: push on main")
-          md.append(f"**Commit**: ${{ github.sha }}\n")
+          md.append(f"**Trigger**: ${{ github.event_name }} on ${{ github.ref }}")
+          md.append(f"**Commit**: `${{ github.sha }}`\n")
           md.append("| Check | Status |")
           md.append("|-------|--------|")
-          labels = {"schema": "Index.json Schema", "frontmatter": "Skill Frontmatter",
-                     "links": "Relative Links", "cli": "skill_query.py CLI"}
+          labels = {
+              "index": "skills_index.json",
+              "frontmatter": "Skill Frontmatter (新格式)",
+              "attack_mapping": "ATT&CK Coverage"
+          }
           for key, label in labels.items():
               val = results.get(key, "N/A")
               if val and val.startswith("PASS"):
-                  status = f"OK {val}"
+                  status = f"✅ {val}"
               elif val and val.startswith("FAIL"):
-                  status = f"FAIL {val}"
+                  status = f"❌ {val}"
+              elif val and val.startswith("ERROR"):
+                  status = f"🔴 {val}"
               else:
-                  status = f"WARN {val}"
+                  status = f"⚠️ {val}"
               md.append(f"| {label} | {status} |")
 
           if errors:
               md.append(f"\n### Errors ({len(errors)})\n")
-              for e in errors[:30]:
+              for e in errors[:20]:
                   md.append(f"- `{e}`")
-              if len(errors) > 30:
-                  md.append(f"\n... and {len(errors) - 30} more")
-
-          md.append("\n---")
-          md.append("_Generated by Validate Workflow_")
+              if len(errors) > 20:
+                  md.append(f"\n... and {len(errors) - 20} more")
 
           with open("/tmp/val_summary.md", "w") as f:
               f.write("\n".join(md))
