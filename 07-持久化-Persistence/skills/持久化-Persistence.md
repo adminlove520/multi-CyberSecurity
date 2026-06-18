@@ -1,5 +1,5 @@
 ---
-name: 持久化---长期控制-persistence---long-term-access
+name: 持久化-长期控制-persistence-long-term-access
 description: 在目标系统上建立持久化后门，确保在系统重启、凭证更改后仍能维持访问控制权。
 domain: cybersecurity
 subdomain: persistence

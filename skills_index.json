@@ -449,7 +449,7 @@
     "file": "03-漏洞利用-Exploitation/skills/文件包含利用-FileInclusion.md"
   },
   {
-    "name": "ssrf---服务端请求伪造-server-side-request-forgery",
+    "name": "ssrf服务端请求伪造-server-side-request-forgery",
     "description": "SSRF漏洞允许攻击者诱使服务器向任意地址发起请求，攻击内部系统、读取云元数据或进行内网端口扫描。",
     "domain": "cybersecurity",
     "subdomain": "exploitation",
@@ -1022,7 +1022,7 @@
     "file": "07-持久化-Persistence/skills/Bootkit与固件持久化-BootkitFirmwarePersistence.md"
   },
   {
-    "name": "持久化---长期控制-persistence---long-term-access",
+    "name": "持久化-长期控制-persistence-long-term-access",
     "description": "在目标系统上建立持久化后门，确保在系统重启、凭证更改后仍能维持访问控制权。",
     "domain": "cybersecurity",
     "subdomain": "persistence",
@@ -1203,7 +1203,7 @@
     "file": "09-报告撰写-Reporting/skills/报告编写-PentestReport.md"
   },
   {
-    "name": "安全报告模板---word-pdf格式-security-report-template---word-pdf",
+    "name": "安全报告模板-word-pdf格式-security-report-template-word-pdf",
     "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **依赖**: python-docx | **输出**: .docx → 可转为 PDF",
     "domain": "cybersecurity",
     "subdomain": "reporting",
@@ -1226,7 +1226,7 @@
     "file": "09-报告撰写-Reporting/skills/安全报告模板-Word.md"
   },
   {
-    "name": "安全报告模板---markdown格式-security-report-template---markdown",
+    "name": "安全报告模板-markdown格式-security-report-template-markdown",
     "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **兼容**: CVSS 3.1 / 4.0, OWASP Top 10 2021, CWE, PCI DSS, 等保2.0",
     "domain": "cybersecurity",
     "subdomain": "reporting",
@@ -1249,7 +1249,7 @@
     "file": "09-报告撰写-Reporting/skills/安全报告模板-Markdown.md"
   },
   {
-    "name": "安全报告模板---html格式-security-report-template---html",
+    "name": "安全报告模板-html格式-security-report-template-html",
     "description": "> **版本**: v2.0 | **更新**: 2025-Q1 | **特性**: 响应式设计、Chart.js图表、暗色模式、侧边栏导航、打印/PDF导出、AI Agent原生接口",
     "domain": "cybersecurity",
     "subdomain": "reporting",
@@ -2745,7 +2745,7 @@
     "file": "19-工控安全-ICS-OT-Security/skills/PLC与RTU安全测试-PLC-RTU-SecurityTesting.md"
   },
   {
-    "name": "工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443",
+    "name": "工控安全合规审计-iec-62443-ics-compliance-audit",
     "description": "按照IEC 62443系列标准进行工控安全合规审计，涵盖安全等级(SL)评估、风险管理、安全策略审计与安全能力成熟度评估。",
     "domain": "cybersecurity",
     "subdomain": "ics-ot-security",
@@ -4530,7 +4530,7 @@
     "file": "31-SOC运营-SOCOperations/skills/SOC指标与运营效能度量-SOCMetricsKPIs.md"
   },
   {
-    "name": "安全自动化与编排-security-automation-orchestration---soar",
+    "name": "安全自动化与编排-security-automation-orchestration-soar",
     "description": "SOAR（Security Orchestration, Automation and Response）是将安全运营自动化的核心平台。通过工作流编排、API 联动和自动化响应，SOAR 能够大幅缩短平均响应时间（MTTR），提升 SOC 运营效率。本技能覆盖 SOAR 工作流设计、常见集成场景、自动化剧本开发和运营指标。",
     "domain": "cybersecurity",
     "subdomain": "soc-operations",

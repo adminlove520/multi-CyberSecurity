@@ -1,5 +1,5 @@
 ---
-name: 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443
+name: 工控安全合规审计-iec-62443-ics-compliance-audit
 description: 按照IEC 62443系列标准进行工控安全合规审计，涵盖安全等级(SL)评估、风险管理、安全策略审计与安全能力成熟度评估。
 domain: cybersecurity
 subdomain: ics-ot-security

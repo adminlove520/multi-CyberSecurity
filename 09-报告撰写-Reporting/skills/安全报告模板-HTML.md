@@ -1,5 +1,5 @@
 ---
-name: 安全报告模板---html格式-security-report-template---html
+name: 安全报告模板-html格式-security-report-template-html
 description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **特性**: 响应式设计、Chart.js图表、暗色模式、侧边栏导航、打印/PDF导出、AI Agent原生接口'
 domain: cybersecurity
 subdomain: reporting

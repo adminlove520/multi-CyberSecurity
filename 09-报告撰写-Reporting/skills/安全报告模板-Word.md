@@ -1,5 +1,5 @@
 ---
-name: 安全报告模板---word-pdf格式-security-report-template---word-pdf
+name: 安全报告模板-word-pdf格式-security-report-template-word-pdf
 description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **依赖**: python-docx | **输出**: .docx → 可转为 PDF'
 domain: cybersecurity
 subdomain: reporting

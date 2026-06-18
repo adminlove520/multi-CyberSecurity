@@ -1,5 +1,5 @@
 ---
-name: 安全自动化与编排-security-automation-orchestration---soar
+name: 安全自动化与编排-security-automation-orchestration-soar
 description: 'SOAR（Security Orchestration, Automation and Response）是将安全运营自动化的核心平台。通过工作流编排、API 联动和自动化响应，SOAR 能够大幅缩短平均响应时间（MTTR），提升 SOC 运营效率。本技能覆盖 SOAR 工作流设计、常见集成场景、自动化剧本开发和运营指标。'
 domain: cybersecurity
 subdomain: soc-operations

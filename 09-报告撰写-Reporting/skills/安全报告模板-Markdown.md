@@ -1,5 +1,5 @@
 ---
-name: 安全报告模板---markdown格式-security-report-template---markdown
+name: 安全报告模板-markdown格式-security-report-template-markdown
 description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **兼容**: CVSS 3.1 / 4.0, OWASP Top 10 2021, CWE, PCI DSS, 等保2.0'
 domain: cybersecurity
 subdomain: reporting
