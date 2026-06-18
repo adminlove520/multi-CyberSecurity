@@ -1,17 +1,32 @@
 ---
-id: "31-004"
-title: "SOC指标与运营效能度量 (SOC Metrics & Operational KPIs)"
-category: "SOC运营"
-category_en: "SOC Operations"
-difficulty: "★★★"
-tools: "Splunk Dashboards, Elastic, Grafana, Power BI, SOC Dashboard"
-last_updated: "2026-05"
-tags: [soc, metrics, kpi, reporting, performance-measurement]
+name: soc指标与运营效能度量-soc-metrics-operational-kpis
+description: 安全运营中心的效能需要通过关键绩效指标（KPI）进行量化度量。本技能覆盖 SOC 运营的核心指标，包括检测覆盖率、响应时效、告警质量、团队效能和整体安全态势评估，以及可视化仪表盘构建。
+domain: cybersecurity
 subdomain: soc-operations
-nist_csf: [DE.DP-01, RS.IM-01, RS.IM-02]
-mitre_attack: []
+tags:
+    - soc
+    - metrics
+    - kpi
+    - reporting
+    - 'performance-measurement'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.DP-01'
+    - 'RS.IM-01'
+    - 'RS.IM-02'
+mitre_attack:
+  []
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: SOC指标与运营效能度量 (SOC Metrics & Operational KPIs)
+# original_category: SOC运营
+# original_category_en: SOC Operations
+# original_difficulty: ★★★
+# original_tools: Splunk Dashboards, Elastic, Grafana, Power BI, SOC Dashboard
+# original_last_updated: 2026-05
 # SOC指标与运营效能度量 (SOC Metrics & Operational KPIs)
 
 ## 概述

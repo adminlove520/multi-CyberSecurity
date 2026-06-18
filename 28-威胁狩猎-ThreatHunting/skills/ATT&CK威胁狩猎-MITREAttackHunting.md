@@ -1,17 +1,31 @@
 ---
-id: "28-003"
-title: "基于ATT&CK的威胁狩猎 (MITRE ATT&CK Threat Hunting)"
-category: "威胁狩猎"
-category_en: "Threat Hunting"
-difficulty: "★★★★★"
-tools: "ATT&CK Navigator, Red Canary, Atomic Red Team, Caldera, MITRE ATT&CK"
-last_updated: "2026-05"
-tags: [mitre-attack, threat-hunting, coverage-gap, adversary-emulation]
+name: 基于att-ck的威胁狩猎-mitre-att-ck-threat-hunting
+description: 'MITRE ATT&CK 是全球公认的对抗性战术和技术知识库，为威胁狩猎提供结构化框架。本技能基于 ATT&CK v15+，覆盖攻击路径分析、覆盖度评估、热力图生成、对抗模拟验证等核心技术。通过将 ATT&CK 作为狩猎的"脚手架"，安全团队可以系统化识别防御盲区。'
+domain: cybersecurity
 subdomain: threat-hunting
-nist_csf: [DE.AE-01, DE.AE-03, ID.GV-04]
-mitre_attack: [all]
+tags:
+    - 'mitre-attack'
+    - 'threat-hunting'
+    - 'coverage-gap'
+    - 'adversary-emulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-01'
+    - 'DE.AE-03'
+    - 'ID.GV-04'
+mitre_attack:
+  []
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 基于ATT&CK的威胁狩猎 (MITRE ATT&CK Threat Hunting)
+# original_category: 威胁狩猎
+# original_category_en: Threat Hunting
+# original_difficulty: ★★★★★
+# original_tools: ATT&CK Navigator, Red Canary, Atomic Red Team, Caldera, MITRE ATT&CK
+# original_last_updated: 2026-05
 # 基于ATT&CK的威胁狩猎 (MITRE ATT&CK Threat Hunting)
 
 ## 概述

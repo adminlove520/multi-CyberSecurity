@@ -1,16 +1,36 @@
 ---
-id: 19-003
-title: "🌐 工控网络协议安全 (ICS Network Protocol Security)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★
-tools: "Wireshark, Scapy, Zabbix, Modbus-cli, OPC UA Expert"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: 工控网络协议安全-ics-network-protocol-security
+description: 系统评估工业控制网络中的关键协议安全性，包括Modbus/TCP、DNP3、S7comm、EtherNet/IP、PROFINET、OPC UA和MQTT等。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 工控网络协议安全 (ICS Network Protocol Security)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★
+# original_tools: Wireshark, Scapy, Zabbix, Modbus-cli, OPC UA Expert
+# original_last_updated: 2025-07
 # 🌐 工控网络协议安全 (ICS Network Protocol Security)
 
 ## 概述

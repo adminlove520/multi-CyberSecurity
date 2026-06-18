@@ -1,16 +1,33 @@
 ---
-id: 06-001
-title: "🔁 PsExec与WMI远程执行 (PsExec & WMI Remote Execution)"
-category: 横向移动
-category_en: "Lateral Movement"
-difficulty: ★★★
-tools: "PsExec, WMI, WinRM, Impacket"
-last_updated: 2025-07
-tags: ["lateral-movement", "pivoting", "tunneling", "remote-execution"]
+name: psexec与wmi远程执行-psexec-wmi-remote-execution
+description: 使用PsExec和WMI等Windows内置管理工具在远程系统上执行命令，实现横向移动和远程控制。
+domain: cybersecurity
 subdomain: lateral-movement
-nist_csf: ["DE.CM-04", "PR.AC-05"]
-mitre_attack: ["T1021", "T1570", "T1080", "T1550"]
+tags:
+    - 'lateral-movement'
+    - pivoting
+    - tunneling
+    - 'remote-execution'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'PR.AC-05'
+mitre_attack:
+    - T1021
+    - T1570
+    - T1080
+    - T1550
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔁 PsExec与WMI远程执行 (PsExec & WMI Remote Execution)
+# original_category: 横向移动
+# original_category_en: Lateral Movement
+# original_difficulty: ★★★
+# original_tools: PsExec, WMI, WinRM, Impacket
+# original_last_updated: 2025-07
 # 🔁 PsExec与WMI远程执行 (PsExec & WMI Remote Execution)
 
 ## 概述

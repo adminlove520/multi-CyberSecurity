@@ -1,16 +1,32 @@
 ---
-id: 15-008
-title: "🔫 Linux 应急响应 AI 检查 (LinuxGun AI Response)"
-category: 应急响应
-category_en: Incident Response
-difficulty: ★★★★
-tools: "LinuxGun, chkrootkit, rkhunter"
-last_updated: 2026-05
-tags: ["linux", "incident-response", "malware-analysis", "ai-security"]
+name: linux-应急响应-ai-检查-linuxgun-ai-response
+description: 基于 AI 的 Linux 应急响应检查技能，通过渐进式披露原则，系统化排查系统信息、用户信息、进程、网络、文件等 16 个领域的风险。
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.AN-01"]
-mitre_attack: ["T1070", "T1078", "T1543"]
+tags:
+    - linux
+    - 'incident-response'
+    - 'malware-analysis'
+    - 'ai-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1070
+    - T1078
+    - T1543
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔫 Linux 应急响应 AI 检查 (LinuxGun AI Response)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★★
+# original_tools: LinuxGun, chkrootkit, rkhunter
+# original_last_updated: 2026-05
 # 🔫 Linux 应急响应 AI 检查 (LinuxGun AI Response)
 
 ## 概述

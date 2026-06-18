@@ -1,16 +1,33 @@
 ---
-id: 07-003
-title: "账户创建与凭证持久化 (Account Persistence)"
-category: 持久化
-category_en: Persistence
-difficulty: ★★★
-tools: "net user, dsquery, ssh-keygen, Azure AD, IAM"
-last_updated: 2026-05
-tags: ["persistence", "bootkit", "startup-autostart", "account-persistence"]
+name: 账户创建与凭证持久化-account-persistence
+description: 通过创建新账户、修改现有账户权限或植入持久化凭证（SSH 密钥、云服务访问密钥），攻击者可在网络中获得稳定的访问入口。该技术在 Windows 域环境、Linux 服务器和云平台中均有广泛应用。
+domain: cybersecurity
 subdomain: persistence
-nist_csf: ["PR.AC-01", "DE.CM-01"]
-mitre_attack: ["T1543", "T1547", "T1136", "T1053"]
+tags:
+    - persistence
+    - bootkit
+    - 'startup-autostart'
+    - 'account-persistence'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1543
+    - T1547
+    - T1136
+    - T1053
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 账户创建与凭证持久化 (Account Persistence)
+# original_category: 持久化
+# original_category_en: Persistence
+# original_difficulty: ★★★
+# original_tools: net user, dsquery, ssh-keygen, Azure AD, IAM
+# original_last_updated: 2026-05
 # 账户创建与凭证持久化 (Account Persistence)
 
 ## 概述

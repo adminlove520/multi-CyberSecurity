@@ -1,16 +1,33 @@
 ---
-id: 25-002
-title: "🔍 软件依赖与开源合规审计 (Dependency License Compliance)"
-category: 供应链安全
-category_en: "Supply Chain Security"
-difficulty: ★★★
-tools: "FOSSA, Black Duck, Snyk, OWASP Dependency-Check, Scancode"
-last_updated: 2025-07
-tags: ["supply-chain-security", "sbom", "dependency-check", "container-image", "third-party-risk"]
+name: 软件依赖与开源合规审计-dependency-license-compliance
+description: 开源组件已成为软件的基石，但许可证合规风险也随之增加。本节涵盖许可证识别、合规检查、策略实施和自动化审计，确保开源使用符合法律要求。
+domain: cybersecurity
 subdomain: supply-chain-security
-nist_csf: ["ID.SC-01", "ID.SC-02", "PR.DS-10"]
-mitre_attack: ["T1195", "T1525"]
+tags:
+    - 'supply-chain-security'
+    - sbom
+    - 'dependency-check'
+    - 'container-image'
+    - 'third-party-risk'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.SC-01'
+    - 'ID.SC-02'
+    - 'PR.DS-10'
+mitre_attack:
+    - T1195
+    - T1525
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔍 软件依赖与开源合规审计 (Dependency License Compliance)
+# original_category: 供应链安全
+# original_category_en: Supply Chain Security
+# original_difficulty: ★★★
+# original_tools: FOSSA, Black Duck, Snyk, OWASP Dependency-Check, Scancode
+# original_last_updated: 2025-07
 # 🔍 软件依赖与开源合规审计 (Dependency License Compliance)
 
 ## 概述

@@ -1,16 +1,35 @@
 ---
-id: 17-008
-title: "🔄 多云安全策略评估 (Multi-Cloud Security Strategy)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★★★
-tools: "Prisma Cloud, Wiz, Orca Security, Lacework, Aqua Security"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: 多云安全策略评估-multi-cloud-security-strategy
+description: 评估跨多云/混合云环境的整体安全策略，包括统一身份管理、合规一致性、安全工具集成、数据主权和云治理框架。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔄 多云安全策略评估 (Multi-Cloud Security Strategy)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★★★
+# original_tools: Prisma Cloud, Wiz, Orca Security, Lacework, Aqua Security
+# original_last_updated: 2025-07
 # 🔄 多云安全策略评估 (Multi-Cloud Security Strategy)
 
 ## 概述

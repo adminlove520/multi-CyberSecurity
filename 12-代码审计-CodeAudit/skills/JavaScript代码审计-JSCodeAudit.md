@@ -1,16 +1,31 @@
 ---
-id: 12-005
-title: "🌐 JavaScript/Node.js代码审计 (JavaScript & Node.js Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★
-tools: "ESLint, RetireJS, Semgrep, CodeQL"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: javascript-node-js代码审计-javascript-node-js-code-audit
+description: 审查JavaScript应用（前端和后端）中的安全漏洞，包括Node.js特有风险和客户端XSS、原型污染等问题。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 JavaScript/Node.js代码审计 (JavaScript & Node.js Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★
+# original_tools: ESLint, RetireJS, Semgrep, CodeQL
+# original_last_updated: 2025-07
 # 🌐 JavaScript/Node.js代码审计 (JavaScript & Node.js Code Audit)
 
 ## 概述

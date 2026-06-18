@@ -1,16 +1,32 @@
 ---
-id: 14-003
-title: "🏗️ 安全架构审计 (Security Architecture Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★★
-tools: "威胁建模工具, Archi, draw.io, STRIDE"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 安全架构审计-security-architecture-audit
+description: 对组织整体安全架构进行系统性审计评估，包括网络架构、零信任架构、身份与访问管理架构、数据安全架构等，识别架构层面的安全设计缺陷。
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🏗️ 安全架构审计 (Security Architecture Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★★
+# original_tools: 威胁建模工具, Archi, draw.io, STRIDE
+# original_last_updated: 2025-07
 # 🏗️ 安全架构审计 (Security Architecture Audit)
 
 ## 概述

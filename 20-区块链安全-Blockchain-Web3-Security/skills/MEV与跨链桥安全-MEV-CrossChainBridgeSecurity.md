@@ -1,16 +1,31 @@
 ---
-id: 20-006
-title: "⚡ MEV与跨链桥安全 (MEV & Cross-Chain Bridge Security)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★★
-tools: "MEV-Inspect, Flashbots, Bridge Audit Tools, LayerZero, Chainlink CCIP"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: mev与跨链桥安全-mev-cross-chain-bridge-security
+description: '深入评估MEV提取策略的安全影响和跨链桥的核心安全机制，涵盖Flashbots MEV-Boost、跨链消息验证、轻客户端验证和经济安全。'
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚡ MEV与跨链桥安全 (MEV & Cross-Chain Bridge Security)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★★
+# original_tools: MEV-Inspect, Flashbots, Bridge Audit Tools, LayerZero, Chainlink CCIP
+# original_last_updated: 2025-07
 # ⚡ MEV与跨链桥安全 (MEV & Cross-Chain Bridge Security)
 
 ## 概述

@@ -1,16 +1,35 @@
 ---
-id: 01-001
-title: "🌐 DNS枚举 (DNS Enumeration)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★
-tools: "dnsenum, dig, nslookup, fierce"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: dns枚举-dns-enumeration
+description: 通过DNS查询获取目标域名的IP、NS记录、MX记录、TXT记录等信息，发现目标网络拓扑结构。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 DNS枚举 (DNS Enumeration)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★
+# original_tools: dnsenum, dig, nslookup, fierce
+# original_last_updated: 2025-07
 # 🌐 DNS枚举 (DNS Enumeration)
 
 ## 概述

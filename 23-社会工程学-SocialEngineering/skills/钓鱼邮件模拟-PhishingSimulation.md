@@ -1,16 +1,33 @@
 ---
-id: 23-001
-title: "🎣 钓鱼邮件模拟 (Phishing Simulation)"
-category: 社会工程学
-category_en: "Social Engineering"
-difficulty: ★★★
-tools: "GoPhish, Evilginx2, SET, Modlishka, Muraena"
-last_updated: 2025-07
-tags: ["social-engineering", "phishing", "vishing", "physical-security", "awareness"]
+name: 钓鱼邮件模拟-phishing-simulation
+description: 钓鱼邮件模拟是评估组织员工安全意识和检测安全控制的有效方法。通过构造逼真的钓鱼场景，测量员工的识别和响应能力，持续提升组织的防钓鱼能力。
+domain: cybersecurity
 subdomain: social-engineering
-nist_csf: ["PR.AT-01", "PR.AT-02"]
-mitre_attack: ["T1566", "T1598", "T1204"]
+tags:
+    - 'social-engineering'
+    - phishing
+    - vishing
+    - 'physical-security'
+    - awareness
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+mitre_attack:
+    - T1566
+    - T1598
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🎣 钓鱼邮件模拟 (Phishing Simulation)
+# original_category: 社会工程学
+# original_category_en: Social Engineering
+# original_difficulty: ★★★
+# original_tools: GoPhish, Evilginx2, SET, Modlishka, Muraena
+# original_last_updated: 2025-07
 # 🎣 钓鱼邮件模拟 (Phishing Simulation)
 
 ## 概述

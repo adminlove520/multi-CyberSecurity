@@ -1,16 +1,32 @@
 ---
-id: 14-001
-title: "🤖 AI Agent安全审计 (AI Agent Security Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★★
-tools: "OWASP LLM VS, CSA CCM, Prowler, Garak"
-last_updated: 2025-07
-tags: ["compliance", "等级保护", "security-audit", "classification", "government-standard"]
+name: ai-agent安全审计-ai-agent-security-audit
+description: 'AI Agent安全审计是对AI智能体系统的全面安全评估，涵盖Agent权限模型、工具函数安全、数据隐私、供应链安全、合规要求等维度。参照 **OWASP LLM Verification Standard**、**NIST AI RMF**、**IEEE P7001** 等标准。'
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - compliance
+    - 等级保护
+    - 'security-audit'
+    - classification
+    - 'government-standard'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🤖 AI Agent安全审计 (AI Agent Security Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★★
+# original_tools: OWASP LLM VS, CSA CCM, Prowler, Garak
+# original_last_updated: 2025-07
 # 🤖 AI Agent安全审计 (AI Agent Security Audit)
 
 ## 概述

@@ -1,16 +1,33 @@
 ---
-id: 18-004
-title: "🌐 DAST动态应用安全测试 (Dynamic Application Security Testing)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★★
-tools: "OWASP ZAP, Burp Suite, Acunetix, Arachni, Nikto"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: dast动态应用安全测试-dynamic-application-security-testing
+description: 在运行时对Web应用进行自动化安全测试，识别OWASP Top 10漏洞，包括爬虫、认证扫描、主动扫描和API测试。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1505
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 DAST动态应用安全测试 (Dynamic Application Security Testing)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★★
+# original_tools: OWASP ZAP, Burp Suite, Acunetix, Arachni, Nikto
+# original_last_updated: 2025-07
 # 🌐 DAST动态应用安全测试 (Dynamic Application Security Testing)
 
 ## 概述

@@ -1,17 +1,35 @@
 ---
-id: "29-003"
-title: "APT组织分析与归因 (APT Group Analysis & Attribution)"
-category: "威胁情报"
-category_en: "Threat Intelligence"
-difficulty: "★★★★★"
-tools: "ATT&CK Navigator, MISP, Malpedia, VirusTotal, PassiveTotal"
-last_updated: "2026-05"
-tags: [apt, attribution, threat-actor, intelligence, malware-analysis]
+name: apt组织分析与归因-apt-group-analysis-attribution
+description: 'APT（高级持续威胁）组织分析是威胁情报的最高阶能力，涉及对手 TTP 分析、恶意软件关联、基础设施追踪和归因推理。本技能覆盖 APT 组织画像构建、攻击活动图谱分析、归因证据链和报告生成。参考 MITRE ATT&CK 的 140+ 个已知威胁行为体数据。'
+domain: cybersecurity
 subdomain: threat-intelligence
-nist_csf: [ID.RA-02, RS.AN-01, DE.AE-05]
-mitre_attack: [T1587, T1588, T1593, T1594]
+tags:
+    - apt
+    - attribution
+    - 'threat-actor'
+    - intelligence
+    - 'malware-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.RA-02'
+    - 'RS.AN-01'
+    - 'DE.AE-05'
+mitre_attack:
+    - T1587
+    - T1588
+    - T1593
+    - T1594
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: APT组织分析与归因 (APT Group Analysis & Attribution)
+# original_category: 威胁情报
+# original_category_en: Threat Intelligence
+# original_difficulty: ★★★★★
+# original_tools: ATT&CK Navigator, MISP, Malpedia, VirusTotal, PassiveTotal
+# original_last_updated: 2026-05
 # APT组织分析与归因 (APT Group Analysis & Attribution)
 
 ## 概述

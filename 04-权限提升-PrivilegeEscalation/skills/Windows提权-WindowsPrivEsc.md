@@ -1,16 +1,33 @@
 ---
-id: 04-002
-title: "🪟 Windows权限提升 (Windows Privilege Escalation)"
-category: 权限提升
-category_en: "Privilege Escalation"
-difficulty: ★★★
-tools: "WinPEAS, PowerUp, PrivescCheck, Seatbelt"
-last_updated: 2025-07
-tags: ["privilege-escalation", "linux-privilege", "windows-privilege", "credential-theft"]
+name: windows权限提升-windows-privilege-escalation
+description: Windows系统中的权限提升技术，利用内核漏洞、服务漏洞、令牌窃取、注册表配置错误等方式从普通用户提升到SYSTEM或管理员权限。
+domain: cybersecurity
 subdomain: privilege-escalation
-nist_csf: ["PR.AC-01", "DE.CM-04"]
-mitre_attack: ["T1068", "T1548", "T1055", "T1003"]
+tags:
+    - 'privilege-escalation'
+    - 'linux-privilege'
+    - 'windows-privilege'
+    - 'credential-theft'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-04'
+mitre_attack:
+    - T1068
+    - T1548
+    - T1055
+    - T1003
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🪟 Windows权限提升 (Windows Privilege Escalation)
+# original_category: 权限提升
+# original_category_en: Privilege Escalation
+# original_difficulty: ★★★
+# original_tools: WinPEAS, PowerUp, PrivescCheck, Seatbelt
+# original_last_updated: 2025-07
 # 🪟 Windows权限提升 (Windows Privilege Escalation)
 
 ## 概述

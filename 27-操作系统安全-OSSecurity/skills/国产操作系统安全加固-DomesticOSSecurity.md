@@ -1,16 +1,34 @@
 ---
-id: 27-006
-title: "国产操作系统安全加固 (Domestic OS Security Hardening)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★
-tools: "KylinOS, UOS, openEuler, 等保2.0, SM2/SM3/SM4, kylin-security-toolkit"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: 国产操作系统安全加固-domestic-os-security-hardening
+description: '国产操作系统在政府、军工、金融、能源等关键基础设施领域的部署快速增长，其安全加固能力直接关系到国家安全。本技能覆盖银河麒麟（KylinOS）、统信 UOS、华为 openEuler 等主流国产操作系统的安全加固实践，以等保2.0 三级要求为核心基线，结合 GB/T 39786-2021《信息安全技术 操作系统安全技术要求》和 CIS 基准的适用部分，系统覆盖身份鉴别、访问控制、安全审计、密码合规（'
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 国产操作系统安全加固 (Domestic OS Security Hardening)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★
+# original_tools: KylinOS, UOS, openEuler, 等保2.0, SM2/SM3/SM4, kylin-security-toolkit
+# original_last_updated: 2026-05
 # 国产操作系统安全加固 (Domestic OS Security Hardening)
 
 ## 概述

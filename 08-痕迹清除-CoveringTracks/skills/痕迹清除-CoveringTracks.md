@@ -1,16 +1,33 @@
 ---
-id: 08-001
-title: "🧹 痕迹清除 (Covering Tracks / Anti-Forensics)"
-category: 痕迹清除
-category_en: "Covering Tracks"
-difficulty: ★★★
-tools: "日志清除, 文件隐藏, 时间戳修改, 反取证技术"
-last_updated: 2025-07
-tags: ["covering-tracks", "anti-forensics", "process-injection", "obfuscation"]
+name: 痕迹清除-covering-tracks-anti-forensics
+description: 渗透测试完成后清除操作痕迹，包括日志清理、时间戳修改、文件删除恢复防护等，降低被检测和追踪的风险。
+domain: cybersecurity
 subdomain: covering-tracks
-nist_csf: ["DE.CM-01", "PR.PT-01"]
-mitre_attack: ["T1070", "T1562", "T1055", "T1027"]
+tags:
+    - 'covering-tracks'
+    - 'anti-forensics'
+    - 'process-injection'
+    - obfuscation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1070
+    - T1562
+    - T1055
+    - T1027
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🧹 痕迹清除 (Covering Tracks / Anti-Forensics)
+# original_category: 痕迹清除
+# original_category_en: Covering Tracks
+# original_difficulty: ★★★
+# original_tools: 日志清除, 文件隐藏, 时间戳修改, 反取证技术
+# original_last_updated: 2025-07
 # 🧹 痕迹清除 (Covering Tracks / Anti-Forensics)
 
 ## 概述

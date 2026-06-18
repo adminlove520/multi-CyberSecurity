@@ -1,16 +1,35 @@
 ---
-id: 21-002
-title: "📶 BLE/Zigbee/Z-Wave无线安全测试 (Wireless Protocol Security Testing)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★
-tools: "BLEAH, GATTool, Z3sec, HackRF, BetterCAP, Ubertooth"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: ble-zigbee-z-wave无线安全测试-wireless-protocol-security-testing
+description: '对物联网设备最常用的三种无线协议（BLE、Zigbee、Z-Wave）进行全面的安全测试和评估。'
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📶 BLE/Zigbee/Z-Wave无线安全测试 (Wireless Protocol Security Testing)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★
+# original_tools: BLEAH, GATTool, Z3sec, HackRF, BetterCAP, Ubertooth
+# original_last_updated: 2025-07
 # 📶 BLE/Zigbee/Z-Wave无线安全测试 (Wireless Protocol Security Testing)
 
 ## 概述

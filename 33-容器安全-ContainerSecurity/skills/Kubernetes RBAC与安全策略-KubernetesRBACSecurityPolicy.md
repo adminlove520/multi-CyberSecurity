@@ -1,17 +1,36 @@
 ---
-id: "33-002"
-title: "Kubernetes RBAC与安全策略 (Kubernetes RBAC & Security Policy)"
-category: "容器安全"
-category_en: "Container Security"
-difficulty: "★★★★"
-tools: "kubectl, OPA/Gatekeeper, Kyverno, kube-bench, kube-hunter"
-last_updated: "2026-05"
-tags: [kubernetes, rbac, security-policy, admission-controller, pod-security]
+name: kubernetes-rbac与安全策略-kubernetes-rbac-security-policy
+description: Kubernetes 安全的核心在于 RBAC 访问控制、Pod 安全策略和网络策略。错误配置的 RBAC 是 K8s 环境中最常见的安全漏洞。本技能覆盖 K8s RBAC 最小权限配置、Pod Security Standards、OPA/Gatekeeper 策略即代码和审计日志分析。
+domain: cybersecurity
 subdomain: container-security
-nist_csf: [PR.AC-01, PR.AC-04, PR.DS-03, DE.CM-08]
-mitre_attack: [T1525, T1578, T1610, T1613]
+tags:
+    - kubernetes
+    - rbac
+    - 'security-policy'
+    - 'admission-controller'
+    - 'pod-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.DS-03'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1525
+    - T1578
+    - T1610
+    - T1613
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: Kubernetes RBAC与安全策略 (Kubernetes RBAC & Security Policy)
+# original_category: 容器安全
+# original_category_en: Container Security
+# original_difficulty: ★★★★
+# original_tools: kubectl, OPA/Gatekeeper, Kyverno, kube-bench, kube-hunter
+# original_last_updated: 2026-05
 # Kubernetes RBAC与安全策略 (Kubernetes RBAC & Security Policy)
 
 ## 概述

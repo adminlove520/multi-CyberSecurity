@@ -1,16 +1,32 @@
 ---
-id: 16-002
-title: "📦 AI供应链安全 (AI Supply Chain Security)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★
-tools: "SBOM工具, SLSA框架, Snyk, Trivy"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: ai供应链安全-ai-supply-chain-security
+description: 'AI供应链安全涵盖模型托管、第三方API依赖、开源组件、训练数据、部署基础设施等环节的安全风险（OWASP LLM-05）。攻击者可能通过污染预训练模型、投毒训练数据、篡改推理管道等方式实施供应链攻击。本技能参照 **SLSA**、**SBOM**、**NIST SSDF**、**CNCF Software Supply Chain Best Practices** 等标准。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📦 AI供应链安全 (AI Supply Chain Security)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★
+# original_tools: SBOM工具, SLSA框架, Snyk, Trivy
+# original_last_updated: 2025-07
 # 📦 AI供应链安全 (AI Supply Chain Security)
 
 ## 概述

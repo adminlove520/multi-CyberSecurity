@@ -1,16 +1,32 @@
 ---
-id: 16-006
-title: "🎨 多模态AI安全 (Multimodal AI Security)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★
-tools: "对抗样本工具, 多模态检测器, CLIP, Stable Diffusion"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: 多模态ai安全-multimodal-ai-security
+description: 多模态AI系统同时处理文本、图像、音频、视频等多种模态数据，引入了独特的攻击面和安全挑战。包括视觉对抗样本、音频隐蔽指令注入、跨模态对抗攻击等（OWASP LLM Top 10 扩展）。本技能覆盖多模态模型的安全评估技术。
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🎨 多模态AI安全 (Multimodal AI Security)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★
+# original_tools: 对抗样本工具, 多模态检测器, CLIP, Stable Diffusion
+# original_last_updated: 2025-07
 # 🎨 多模态AI安全 (Multimodal AI Security)
 
 ## 概述

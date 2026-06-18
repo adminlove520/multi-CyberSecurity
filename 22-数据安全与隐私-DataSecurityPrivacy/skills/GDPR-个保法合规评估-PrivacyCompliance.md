@@ -1,16 +1,36 @@
 ---
-id: 22-004
-title: "🌍 GDPR/个保法合规评估 (Privacy Compliance Assessment)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★★★
-tools: "OneTrust, TrustArc, DPIA Toolkit, CNIL PIA Tool, Securiti.ai"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: gdpr-个保法合规评估-privacy-compliance-assessment
+description: '面向 **GDPR（通用数据保护条例）**、**中国《个人信息保护法》（PIPL）**、**CCPA/CPRA** 等全球主要隐私法规的合规评估方法。涵盖数据处理映射、数据主体权利响应、跨境数据传输、数据保护影响评估（DPIA）等核心合规领域。'
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌍 GDPR/个保法合规评估 (Privacy Compliance Assessment)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★★★
+# original_tools: OneTrust, TrustArc, DPIA Toolkit, CNIL PIA Tool, Securiti.ai
+# original_last_updated: 2025-07
 # 🌍 GDPR/个保法合规评估 (Privacy Compliance Assessment)
 
 ## 概述

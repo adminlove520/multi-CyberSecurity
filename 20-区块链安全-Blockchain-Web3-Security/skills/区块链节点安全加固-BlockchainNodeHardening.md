@@ -1,16 +1,31 @@
 ---
-id: 20-005
-title: "🛡️ 区块链节点安全加固 (Blockchain Node Hardening)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★
-tools: "Geth, Lighthouse, Prysm, Erigon, Nethermind, Firewall"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: 区块链节点安全加固-blockchain-node-hardening
+description: 对区块链节点进行全面安全加固，包括节点配置安全、P2P网络安全、API防护、密钥管理和监控告警。
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🛡️ 区块链节点安全加固 (Blockchain Node Hardening)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★
+# original_tools: Geth, Lighthouse, Prysm, Erigon, Nethermind, Firewall
+# original_last_updated: 2025-07
 # 🛡️ 区块链节点安全加固 (Blockchain Node Hardening)
 
 ## 概述

@@ -1,17 +1,35 @@
 ---
-id: "36-001"
-title: "零信任架构设计与实施 (Zero Trust Architecture Design & Implementation)"
-category: "零信任架构"
-category_en: "Zero Trust Architecture"
-difficulty: "★★★★"
-tools: "Google BeyondCorp, AWS Verified Access, Azure AD, Cloudflare Access"
-last_updated: "2026-05"
-tags: [zero-trust, architecture, beyondcorp, never-trust-always-verify, microsegmentation]
+name: 零信任架构设计与实施-zero-trust-architecture-design-implementation
+description: '零信任（Zero Trust）以"永不信任，始终验证"为核心理念，要求无论请求来自内网还是外网，都需要持续验证。本技能覆盖零信任架构模型、NIST ZTA 框架、策略决策和 Google BeyondCorp/ AWS Verified Access 实施。'
+domain: cybersecurity
 subdomain: zero-trust
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-05, PR.AC-06]
-mitre_attack: [T1078, T1550, T1557]
+tags:
+    - 'zero-trust'
+    - architecture
+    - beyondcorp
+    - 'never-trust-always-verify'
+    - microsegmentation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-05'
+    - 'PR.AC-06'
+mitre_attack:
+    - T1078
+    - T1550
+    - T1557
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 零信任架构设计与实施 (Zero Trust Architecture Design & Implementation)
+# original_category: 零信任架构
+# original_category_en: Zero Trust Architecture
+# original_difficulty: ★★★★
+# original_tools: Google BeyondCorp, AWS Verified Access, Azure AD, Cloudflare Access
+# original_last_updated: 2026-05
 # 零信任架构设计与实施 (Zero Trust Architecture Design & Implementation)
 
 ## 概述

@@ -1,16 +1,32 @@
 ---
-id: 24-006
-title: "🤖 Agent 黑客技能集 (Agent Hack Skills)"
-category: 红蓝对抗
-category_en: RedBlueTeam
-difficulty: ★★★★★
-tools: "HACK.SKILLS, yaklang, nuclei"
-last_updated: 2026-05
-tags: ["agent-security", "automated-pentest", "red-teaming", "skill-library"]
-subdomain: red-team
-nist_csf: ["ID.RA-01", "PR.PT-01"]
-mitre_attack: ["T1595", "T1190", "T1068"]
+name: agent-黑客技能集-agent-hack-skills
+description: 这是一个面向 AI Agent 的全能黑客技能知识库，旨在赋予智能体执行专业级渗透测试、漏洞赏金和红队评估的能力。
+domain: cybersecurity
+subdomain: red-blue-team
+tags:
+    - 'agent-security'
+    - 'automated-pentest'
+    - 'red-teaming'
+    - 'skill-library'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.RA-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1595
+    - T1190
+    - T1068
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🤖 Agent 黑客技能集 (Agent Hack Skills)
+# original_category: 红蓝对抗
+# original_category_en: RedBlueTeam
+# original_difficulty: ★★★★★
+# original_tools: HACK.SKILLS, yaklang, nuclei
+# original_last_updated: 2026-05
 # 🤖 Agent 黑客技能集 (Agent Hack Skills)
 
 ## 概述

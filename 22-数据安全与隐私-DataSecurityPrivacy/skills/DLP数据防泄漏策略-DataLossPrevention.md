@@ -1,16 +1,36 @@
 ---
-id: 22-002
-title: "🛡️ DLP数据防泄漏策略 (Data Loss Prevention)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★★
-tools: "Microsoft DLP, Symantec DLP, Digital Guardian, Forcepoint DLP, OpenDLP"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: dlp数据防泄漏策略-data-loss-prevention
+description: '数据防泄漏（DLP）通过内容识别、策略控制和行为监控，防止敏感数据通过网络、终端和存储渠道被未授权外泄。覆盖数据**静态**（存储）、**传输中**（网络）和**使用中**（终端）三种状态。'
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🛡️ DLP数据防泄漏策略 (Data Loss Prevention)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★★
+# original_tools: Microsoft DLP, Symantec DLP, Digital Guardian, Forcepoint DLP, OpenDLP
+# original_last_updated: 2025-07
 # 🛡️ DLP数据防泄漏策略 (Data Loss Prevention)
 
 ## 概述

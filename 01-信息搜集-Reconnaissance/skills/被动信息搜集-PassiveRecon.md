@@ -1,16 +1,35 @@
 ---
-id: 01-007
-title: "🕵️ 被动信息搜集 (Passive Reconnaissance / OSINT)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★
-tools: "Google Dork, Shodan, Maltego, theHarvester"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 被动信息搜集-passive-reconnaissance-osint
+description: 不直接与目标系统交互，通过公开渠道收集目标信息。这种方式不会被目标察觉，是渗透测试的第一步。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🕵️ 被动信息搜集 (Passive Reconnaissance / OSINT)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★
+# original_tools: Google Dork, Shodan, Maltego, theHarvester
+# original_last_updated: 2025-07
 # 🕵️ 被动信息搜集 (Passive Reconnaissance / OSINT)
 
 ## 概述

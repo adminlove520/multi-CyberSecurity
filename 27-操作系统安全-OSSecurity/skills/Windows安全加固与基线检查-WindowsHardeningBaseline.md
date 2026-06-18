@@ -1,16 +1,34 @@
 ---
-id: 27-001
-title: "Windows安全加固与基线检查 (Windows Hardening & Baseline)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★
-tools: "CIS Benchmarks, 等保2.0, GPO, LGPO, Microsoft Security Compliance Toolkit, Windows Defender"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: windows安全加固与基线检查-windows-hardening-baseline
+description: Windows 系统安全加固是保障企业环境安全的基础。本技能以 CIS Microsoft Windows Server Benchmarks、等保2.0 三级安全要求、Microsoft 安全基线为参考，系统覆盖 Windows 系统安全配置、组策略加固、用户权限管理、服务加固、安全功能配置等核心领域，帮助安全运维人员建立标准化的 Windows 安全加固体系。
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Windows安全加固与基线检查 (Windows Hardening & Baseline)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★
+# original_tools: CIS Benchmarks, 等保2.0, GPO, LGPO, Microsoft Security Compliance Toolkit, Windows Defender
+# original_last_updated: 2026-05
 # Windows安全加固与基线检查 (Windows Hardening & Baseline)
 
 ## 概述

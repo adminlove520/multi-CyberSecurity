@@ -1,17 +1,34 @@
 ---
-id: "39-002"
-title: "风险管理与安全度量 (Risk Management & Security Metrics)"
-category: "安全治理与合规"
-category_en: "Governance & Compliance"
-difficulty: "★★★★"
-tools: "FAIR, RiskLens, Archer, Jira, Grafana"
-last_updated: "2026-05"
-tags: [risk-management, security-metrics, fair, risk-assessment, board-reporting]
+name: 风险管理与安全度量-risk-management-security-metrics
+description: '网络安全风险管理是企业安全决策的基础。通过量化风险、测量安全运营效能、向管理层报告风险态势，安全团队可以从"成本中心"转变为"业务赋能者"。本技能覆盖风险评估方法论（FAIR 定量分析）、安全 KPI/KRI、管理层报告和风险处置决策。'
+domain: cybersecurity
 subdomain: governance-compliance
-nist_csf: [ID.RA-01, ID.RA-02, ID.RA-03, ID.RM-01, ID.SC-01]
-mitre_attack: []
+tags:
+    - 'risk-management'
+    - 'security-metrics'
+    - fair
+    - 'risk-assessment'
+    - 'board-reporting'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.RA-01'
+    - 'ID.RA-02'
+    - 'ID.RA-03'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 风险管理与安全度量 (Risk Management & Security Metrics)
+# original_category: 安全治理与合规
+# original_category_en: Governance & Compliance
+# original_difficulty: ★★★★
+# original_tools: FAIR, RiskLens, Archer, Jira, Grafana
+# original_last_updated: 2026-05
 # 风险管理与安全度量 (Risk Management & Security Metrics)
 
 ## 概述

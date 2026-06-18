@@ -1,16 +1,33 @@
 ---
-id: 06-002
-title: "🔗 内网代理与隧道 (Internal Proxy & Tunneling)"
-category: 横向移动
-category_en: "Lateral Movement"
-difficulty: ★★★★
-tools: "Chisel, FRP, Stowaway, Ngrok, Proxychains"
-last_updated: 2025-07
-tags: ["lateral-movement", "pivoting", "tunneling", "remote-execution"]
+name: 内网代理与隧道-internal-proxy-tunneling
+description: 在内网环境中搭建代理或隧道，穿透网络隔离，使攻击机能够访问原本无法直接到达的内网资源。
+domain: cybersecurity
 subdomain: lateral-movement
-nist_csf: ["DE.CM-04", "PR.AC-05"]
-mitre_attack: ["T1021", "T1570", "T1080", "T1550"]
+tags:
+    - 'lateral-movement'
+    - pivoting
+    - tunneling
+    - 'remote-execution'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'PR.AC-05'
+mitre_attack:
+    - T1021
+    - T1570
+    - T1080
+    - T1550
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔗 内网代理与隧道 (Internal Proxy & Tunneling)
+# original_category: 横向移动
+# original_category_en: Lateral Movement
+# original_difficulty: ★★★★
+# original_tools: Chisel, FRP, Stowaway, Ngrok, Proxychains
+# original_last_updated: 2025-07
 # 🔗 内网代理与隧道 (Internal Proxy & Tunneling)
 
 ## 概述

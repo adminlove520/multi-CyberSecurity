@@ -1,16 +1,32 @@
 ---
-id: 14-005
-title: "🏛️ 等级保护合规审计 (Classified Protection Compliance Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★★
-tools: "等保自查工具, 合规扫描平台"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 等级保护合规审计-classified-protection-compliance-audit
+description: '依据《网络安全法》及《信息安全技术 网络安全等级保护基本要求》（GB/T 22239-2019），对信息系统进行等级保护合规评估，检查安全控制措施是否符合对应等级要求。'
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🏛️ 等级保护合规审计 (Classified Protection Compliance Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★★
+# original_tools: 等保自查工具, 合规扫描平台
+# original_last_updated: 2025-07
 # 🏛️ 等级保护合规审计 (Classified Protection Compliance Audit)
 
 ## 概述

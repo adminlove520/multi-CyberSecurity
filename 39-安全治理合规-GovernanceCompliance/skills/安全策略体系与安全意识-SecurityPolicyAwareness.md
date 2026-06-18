@@ -1,17 +1,33 @@
 ---
-id: "39-003"
-title: "安全策略体系与安全意识 (Security Policy & Awareness)"
-category: "安全治理与合规"
-category_en: "Governance & Compliance"
-difficulty: "★★★"
-tools: "KnowBe4, PhishER, SharePoint, Confluence, Snyk"
-last_updated: "2026-05"
-tags: [security-policy, awareness-training, phishing, security-culture, policy-management]
+name: 安全策略体系与安全意识-security-policy-awareness
+description: 安全策略体系是安全治理的基石，安全意识培训是将策略转化为行动的关键。没有策略的安全是无序的，没有意识的策略是无效的。本技能覆盖安全策略框架设计、策略生命周期管理、安全意识培训计划、钓鱼模拟和安全文化建设。
+domain: cybersecurity
 subdomain: governance-compliance
-nist_csf: [ID.GV-01, PR.AT-01, PR.AT-02, ID.GV-02]
-mitre_attack: []
+tags:
+    - 'security-policy'
+    - 'awareness-training'
+    - phishing
+    - 'security-culture'
+    - 'policy-management'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+    - 'ID.GV-02'
+mitre_attack:
+  []
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 安全策略体系与安全意识 (Security Policy & Awareness)
+# original_category: 安全治理与合规
+# original_category_en: Governance & Compliance
+# original_difficulty: ★★★
+# original_tools: KnowBe4, PhishER, SharePoint, Confluence, Snyk
+# original_last_updated: 2026-05
 # 安全策略体系与安全意识 (Security Policy & Awareness)
 
 ## 概述

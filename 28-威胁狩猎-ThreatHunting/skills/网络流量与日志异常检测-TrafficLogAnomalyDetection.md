@@ -1,17 +1,36 @@
 ---
-id: "28-004"
-title: "网络流量与日志异常检测 (Network Traffic & Log Anomaly Detection)"
-category: "威胁狩猎"
-category_en: "Threat Hunting"
-difficulty: "★★★★"
-tools: "Zeek, Suricata, tcpdump, Elastic, Splunk, Jupyter"
-last_updated: "2026-05"
-tags: [anomaly-detection, network-traffic, dns, beaconing, log-analysis]
+name: 网络流量与日志异常检测-network-traffic-log-anomaly-detection
+description: 网络流量异常检测是威胁狩猎的核心能力之一，常用于发现 DNS 隧道、C2 通信、数据外传等隐蔽行为。本技能覆盖流量层面（Zeek/包分析）和日志层面（Windows Event/EDR/代理日志）的异常检测技术，结合统计分析和机器学习方法识别偏离基线的行为。
+domain: cybersecurity
 subdomain: threat-hunting
-nist_csf: [DE.AE-02, DE.AE-04, DE.CM-01]
-mitre_attack: [T1041, T1071, T1095, T1571, T1572]
+tags:
+    - 'anomaly-detection'
+    - 'network-traffic'
+    - dns
+    - beaconing
+    - 'log-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.AE-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1041
+    - T1071
+    - T1095
+    - T1571
+    - T1572
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 网络流量与日志异常检测 (Network Traffic & Log Anomaly Detection)
+# original_category: 威胁狩猎
+# original_category_en: Threat Hunting
+# original_difficulty: ★★★★
+# original_tools: Zeek, Suricata, tcpdump, Elastic, Splunk, Jupyter
+# original_last_updated: 2026-05
 # 网络流量与日志异常检测 (Network Traffic & Log Anomaly Detection)
 
 ## 概述

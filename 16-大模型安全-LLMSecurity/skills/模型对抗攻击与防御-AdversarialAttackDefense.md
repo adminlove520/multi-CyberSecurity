@@ -1,16 +1,32 @@
 ---
-id: 16-008
-title: "🛡️ 模型对抗攻击与防御 (Adversarial Attack & Defense)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★★
-tools: "ART, CleverHans, Foolbox, Adversarial Robustness"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: 模型对抗攻击与防御-adversarial-attack-defense
+description: '对抗攻击（Adversarial Attack）通过对输入施加人眼难以察觉的微小扰动，使模型产生错误输出。在LLM领域，对抗攻击包括对抗性Token序列、梯度攻击、嵌入扰动等技术。本技能参照 **NIST IR 8269**（对抗性机器学习分类）、**MITRE ATLAS**、**Google AI Red Team** 等标准。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🛡️ 模型对抗攻击与防御 (Adversarial Attack & Defense)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★★
+# original_tools: ART, CleverHans, Foolbox, Adversarial Robustness
+# original_last_updated: 2025-07
 # 🛡️ 模型对抗攻击与防御 (Adversarial Attack & Defense)
 
 ## 概述

@@ -1,16 +1,33 @@
 ---
-id: 07-005
-title: "Bootkit与固件持久化 (Bootkit & Firmware Persistence)"
-category: 持久化
-category_en: Persistence
-difficulty: ★★★★★
-tools: "UEFI, SPI Flash, Chipsec, Flashrom, RWEverything"
-last_updated: 2026-05
-tags: ["persistence", "bootkit", "startup-autostart", "account-persistence"]
+name: bootkit与固件持久化-bootkit-firmware-persistence
+description: Bootkit 和固件级持久化是最高级的持久化技术之一。攻击者将恶意代码植入系统引导过程（MBR/VBR）、UEFI 固件或设备固件中，使其在操作系统加载前或独立于操作系统执行。此类持久化难以检测、难以清除，格式化硬盘甚至重装系统都无法移除。
+domain: cybersecurity
 subdomain: persistence
-nist_csf: ["PR.AC-01", "DE.CM-01"]
-mitre_attack: ["T1543", "T1547", "T1136", "T1053"]
+tags:
+    - persistence
+    - bootkit
+    - 'startup-autostart'
+    - 'account-persistence'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1543
+    - T1547
+    - T1136
+    - T1053
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Bootkit与固件持久化 (Bootkit & Firmware Persistence)
+# original_category: 持久化
+# original_category_en: Persistence
+# original_difficulty: ★★★★★
+# original_tools: UEFI, SPI Flash, Chipsec, Flashrom, RWEverything
+# original_last_updated: 2026-05
 # Bootkit与固件持久化 (Bootkit & Firmware Persistence)
 
 ## 概述

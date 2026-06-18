@@ -1,16 +1,35 @@
 ---
-id: 01-002
-title: "🎯 主动信息搜集 (Active Reconnaissance)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★★
-tools: "Nmap, Masscan, Zmap"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 主动信息搜集-active-reconnaissance
+description: '直接与目标系统交互，探测开放的端口、运行的服务和操作系统信息。**注意：主动探测会留下源IP记录。**'
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🎯 主动信息搜集 (Active Reconnaissance)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★★
+# original_tools: Nmap, Masscan, Zmap
+# original_last_updated: 2025-07
 # 🎯 主动信息搜集 (Active Reconnaissance)
 
 ## 概述

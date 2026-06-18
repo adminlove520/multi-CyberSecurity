@@ -1,17 +1,37 @@
 ---
-id: "37-004"
-title: "移动设备安全与MDM (Mobile Device Security & MDM)"
-category: "端点安全"
-category_en: "Endpoint Security"
-difficulty: "★★★★"
-tools: "Intune, Jamf, MaaS360, MobileIron, Workspace ONE"
-last_updated: "2026-05"
-tags: [mobile-security, mdm, ios, android, byod, device-compliance]
+name: 移动设备安全与mdm-mobile-device-security-mdm
+description: 移动设备已成为企业办公的必需品，但也带来了新的安全风险。MDM（移动设备管理）帮助企业管理和保护移动设备。本技能覆盖 MDM 策略配置、设备合规、应用管理和移动威胁防御。
+domain: cybersecurity
 subdomain: endpoint-security
-nist_csf: [PR.AC-01, PR.DS-03, PR.PT-01, DE.CM-01]
-mitre_attack: [T1204, T1475, T1514, T1529]
+tags:
+    - 'mobile-security'
+    - mdm
+    - ios
+    - android
+    - byod
+    - 'device-compliance'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1204
+    - T1475
+    - T1514
+    - T1529
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 移动设备安全与MDM (Mobile Device Security & MDM)
+# original_category: 端点安全
+# original_category_en: Endpoint Security
+# original_difficulty: ★★★★
+# original_tools: Intune, Jamf, MaaS360, MobileIron, Workspace ONE
+# original_last_updated: 2026-05
 # 移动设备安全与MDM (Mobile Device Security & MDM)
 
 ## 概述

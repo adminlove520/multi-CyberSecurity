@@ -1,16 +1,33 @@
 ---
-id: 07-002
-title: "启动项与登录自动执行 (Boot/Logon Autostart)"
-category: 持久化
-category_en: Persistence
-difficulty: ★★★
-tools: "Regedit, Autoruns, schtasks, systemd, launchd"
-last_updated: 2026-05
-tags: ["persistence", "bootkit", "startup-autostart", "account-persistence"]
+name: 启动项与登录自动执行-boot-logon-autostart
+description: 操作系统提供了多种机制允许程序在系统启动或用户登录时自动执行。攻击者利用这些合法功能实现持久化控制，包括注册表 Run 键、启动文件夹、系统服务、计划任务以及跨平台的启动脚本等。
+domain: cybersecurity
 subdomain: persistence
-nist_csf: ["PR.AC-01", "DE.CM-01"]
-mitre_attack: ["T1543", "T1547", "T1136", "T1053"]
+tags:
+    - persistence
+    - bootkit
+    - 'startup-autostart'
+    - 'account-persistence'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1543
+    - T1547
+    - T1136
+    - T1053
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 启动项与登录自动执行 (Boot/Logon Autostart)
+# original_category: 持久化
+# original_category_en: Persistence
+# original_difficulty: ★★★
+# original_tools: Regedit, Autoruns, schtasks, systemd, launchd
+# original_last_updated: 2026-05
 # 启动项与登录自动执行 (Boot/Logon Autostart)
 
 ## 概述

@@ -1,16 +1,35 @@
 ---
-id: 17-004
-title: "🔑 云IAM权限与访问控制审计 (Cloud IAM Audit)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★
-tools: "AWS IAM Access Analyzer, Azure AD, gcloud IAM, Principal Mapper, Cloudsplaining"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: 云iam权限与访问控制审计-cloud-iam-audit
+description: 跨云平台的身份与访问管理审计方法论，识别过度授权的IAM角色/用户、权限提升路径、闲置凭证和不合规的信任策略。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔑 云IAM权限与访问控制审计 (Cloud IAM Audit)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★
+# original_tools: AWS IAM Access Analyzer, Azure AD, gcloud IAM, Principal Mapper, Cloudsplaining
+# original_last_updated: 2025-07
 # 🔑 云IAM权限与访问控制审计 (Cloud IAM Audit)
 
 ## 概述

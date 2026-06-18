@@ -1,16 +1,33 @@
 ---
-id: 24-004
-title: "⚡ BAS攻击模拟平台 (Breach & Attack Simulation)"
-category: 红蓝对抗
-category_en: "Red/Blue Team"
-difficulty: ★★★★
-tools: "Atomic Red Team, Stratus Red Team, CALDERA, AttackIQ, Picus Security"
-last_updated: 2025-07
-tags: ["red-team", "blue-team", "purple-team", "bas", "adversary-simulation"]
+name: bas攻击模拟平台-breach-attack-simulation
+description: 'BAS（入侵与攻击模拟）平台通过持续自动化地模拟真实攻击行为，验证安全控制（防火墙、EDR、SIEM、WAF等）的有效性。相比传统渗透测试，BAS提供**持续验证**、**闭环度量**和**量化风险降低**的能力。'
+domain: cybersecurity
 subdomain: red-blue-team
-nist_csf: ["DE.AE-02", "RS.AN-01", "ID.RM-01"]
-mitre_attack: ["T1595", "T1562"]
+tags:
+    - 'red-team'
+    - 'blue-team'
+    - 'purple-team'
+    - bas
+    - 'adversary-simulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+    - 'ID.RM-01'
+mitre_attack:
+    - T1595
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚡ BAS攻击模拟平台 (Breach & Attack Simulation)
+# original_category: 红蓝对抗
+# original_category_en: Red/Blue Team
+# original_difficulty: ★★★★
+# original_tools: Atomic Red Team, Stratus Red Team, CALDERA, AttackIQ, Picus Security
+# original_last_updated: 2025-07
 # ⚡ BAS攻击模拟平台 (Breach & Attack Simulation)
 
 ## 概述

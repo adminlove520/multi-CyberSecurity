@@ -1,336 +1,76 @@
-# 🛡️ multi-CyberSecurity v4.1.5
+# multi-CyberSecurity
 
-### *AI驱动的网络安全智能体框架*
+> AI驱动的网络安全技能框架 — 融合MITRE ATT&CK + NIST CSF标准
 
-[![Version](https://img.shields.io/badge/version-4.1.5-blue?style=flat-square)](CHANGELOG.md)
-[![Python](https://img.shields.io/badge/python-3.8+-green?style=flat-square)](https://python.org)
-[![License](https://img.shields.io/badge/license-MIT-orange?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/adminlove520/multi-CyberSecurity?style=flat-square&logo=github)](https://github.com/adminlove520/multi-CyberSecurity/stargazers)
-[![Forks](https://img.shields.io/github/forks/adminlove520/multi-CyberSecurity?style=flat-square&logo=github)](https://github.com/adminlove520/multi-CyberSecurity/network/members)
+[![技能数量](https://img.shields.io/badge/skills-199-blue)](skills_index.json)
+[![ATT&CK覆盖](https://img.shields.io/badge/ATT%26CK-97%20techniques-green)](mappings/attack-navigator-layer.json)
+[![MIT License](https://img.shields.io/badge/license-Apache--2.0-yellow)](LICENSE)
 
----
+## 核心能力
 
-<div align="center">
+- **39个安全分类**，覆盖渗透测试、安全审计、应急响应、云安全、代码审计等全领域
+- **MITRE ATT&CK** 标准化映射，147个skill已关联97个ATT&CK技术ID
+- **NIST CSF** 全覆盖，每个skill均标注对应的CSF控制措施
+- **YAML标准格式**，机器可读，便于AI Agent动态调用
 
-![Banner](./assets/banner.jpg)
+## 目录结构
 
-**🚀 8阶段审计流水线 | 🤖 7核心智能体 | 🔌 MCP服务集 | 📱 专项审计**
+```
+00-09/  信息搜集 · 漏洞扫描 · 漏洞利用
+10-19/  权限提升 · 后渗透 · 横向移动 · 持久化
+20-29/  痕迹清除 · 报告撰写 · 移动安全 · 区块链 · IoT
+30-39/  SOC运营 · 威胁狩猎 · 数字取证 · 容器安全 · API安全
+framework/  红队框架（jailbreak技能分级体系）
+mappings/   ATT&CK Navigator可视化层
+tools/      标准化脚本集
+```
 
-</div>
-
----
-
-## ✨ 核心特性
-
-| 特性 | 描述 |
-|------|------|
-| 🤖 **多智能体协作** | 7个专家智能体协同工作 (Coordinator, Advisor, Recon, Exploit, Validator, Blue, Librarian) |
-| 🎯 **8阶段审计流水线** | Recon → Hunt → Validate → Gapfill → Dedupe → Trace → Feedback → Report |
-| 🔌 **MCP服务集** | wxmini-server, java-server, burp-bridge, kali-bridge |
-| 📱 **专项审计** | 微信小程序审计 (7-Agent), Java代码审计 (5阶段Pipeline) |
-| 💰 **成本管控** | 预算控制与实时成本追踪 |
-| ✅ **质量校验** | 每阶段自动校验，确保准确性 |
-| 🌐 **多IDE支持** | Trae, Hermes, OpenClaw, Cursor, Claude, Codex |
-
----
-
-## 🚀 快速开始
-
-### 安装
+## 快速使用
 
 ```bash
-# 克隆仓库
-git clone https://github.com/adminlove520/multi-CyberSecurity.git
-cd multi-CyberSecurity
+# 搜索特定ATT&CK技术的相关skill
+grep -l "T1059" */skills/*.md
 
-# 安装依赖
-pip install -r requirements.txt
+# 验证所有skill的frontmatter格式
+python3 tools/validate_skills.py
+
+# 重新标准化skill格式
+python3 tools/transform_skills.py
+
+# 查看ATT&CK覆盖仪表盘
+# 在 https://mitre-attack.github.io/attack-navigator/ 加载 mappings/attack-navigator-layer.json
 ```
 
-### 快速命令
+## 格式标准
 
-```bash
-# 8阶段安全审计
-python cli.py audit --target https://example.com --max-cost 50
+每个skill采用统一YAML frontmatter：
 
-# 微信小程序审计
-python cli.py wxmini --path /path/to/miniapp --deep
-
-# Java代码审计
-python cli.py java --path /path/to/project --type full
-
-# MCP服务管理
-python cli.py mcp list
-python cli.py mcp health
-
-# 技能导出
-python cli.py skill export --platform trae
-```
-
+```yaml
 ---
-
-## 🏗️ 架构概览
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     multi-CyberSecurity v3.4                   │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │    .trae   │  │   .hermes   │  │  .openclaw  │  ← 平台配置  │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │   .cursor   │  │   .claude   │  │   .codex    │  ← 平台配置  │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │                        agents/                             │ │
-│  │  core/              │  specialized/                      │ │
-│  │  ├── Coordinator    │  ├── wxmini/ (7-Agent)            │ │
-│  │  ├── Advisor         │  └── java/ (5-Stage)             │ │
-│  │  ├── Recon           │                                   │ │
-│  │  ├── Exploit         │                                   │ │
-│  │  ├── Validator       │                                   │ │
-│  │  ├── Blue            │                                   │ │
-│  │  └── Librarian       │                                   │ │
-│  └─────────────────────────────────────────────────────────────┘ │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │                      framework/                             │ │
-│  │  core/              │  mcp/              │  memory/        │ │
-│  │  ├── pipeline.py    │  ├── client.py     │  ├── ...        │ │
-│  │  ├── orchestrator  │  ├── registry.json│                 │ │
-│  │  └── reporter      │  └── servers/     │                 │ │
-│  └─────────────────────────────────────────────────────────────┘ │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────────────┐ │
-│  │                       skills/ (39个模块)                      │ │
-│  │  01-信息搜集  │  12-代码审计  │  16-大模型安全  │ ...       │ │
-│  └─────────────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────────┘
+name: skill-name-kebab-case
+description: 简短描述（150-200字符）
+domain: cybersecurity
+subdomain: category-subdomain
+tags:
+  - technique
+  - tool-name
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+  - PR.AC-01
+mitre_attack:
+  - T1190
+---
 ```
 
----
+## 与源仓库的差异化
 
-## 🎯 8阶段审计流水线
-
-```
-┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
-│  Recon  │───→│  Hunt   │───→│Validate │───→│ Gapfill │
-└─────────┘    └─────────┘    └─────────┘    └─────────┘
-                                                 │
-┌─────────┐    ┌─────────┐    ┌─────────┐        │
-│  Report │←───│Feedback │←───│  Trace  │←──────┘
-└─────────┘    └─────────┘    └─────────┘
-     ↑
-┌─────────┐
-│  Dedupe │
-└─────────┘
-```
-
-| 阶段 | 功能 | 智能体 | 产出 |
-|------|------|--------|------|
-| Recon | 资产发现 | Recon Agent | 资产清单、技术栈 |
-| Hunt | 漏洞扫描 | Exploit Agent | 漏洞列表 |
-| Validate | 验证去误 | Validator Agent | 有效漏洞 |
-| Gapfill | 缺口补充 | Advisor Agent | 补充发现 |
-| Dedupe | 去重聚类 | Librarian Agent | 唯一漏洞 |
-| Trace | 可达性追踪 | Recon Agent | 可利用漏洞 |
-| Feedback | 模式提取 | Librarian Agent | 新扫描任务 |
-| Report | 报告生成 | Coordinator Agent | 安全报告 |
-
----
-
-## 📱 专项审计能力
-
-### 微信小程序审计
-
-```
-Phase 0: 需求解析
-    ↓
-Phase 1: 反编译 (Agent-01)
-    ↓
-Phase 1.5: 脚本预扫描 (Python正则)
-    ↓
-Phase 2: 并行分析 (4路)
-┌──────────┬──────────┬──────────┬──────────┐
-│SecretScan│Endpoint  │Crypto    │Vuln      │
-│ner       │Miner    │Analyzer  │Analyzer  │
-└──────────┴──────────┴──────────┴──────────┘
-    ↓
-Phase 2.5: 自定义分析 (条件触发)
-    ↓
-Phase 3: 报告生成
-```
-
-### Java代码审计
-
-```
-Stage 1: 信息收集 (并行)
-┌──────────┬──────────┬──────────┐
-│Route     │Auth      │Vuln      │
-│Mapper    │Auditor   │Scanner   │
-└──────────┴──────────┴──────────┘
-    ↓
-Stage 2: 交叉分析 (并行)
-    ↓
-Stage 3: 调用链追踪 (动态Workers)
-    ↓
-Stage 4: 漏洞深度分析 (条件并行)
-    ↓
-Stage 5: 质量校验与报告
-```
-
----
-
-## 🎯 RedTeam 模式 (新增!)
-
-> **AI驱动的自动化红队渗透框架** - 整合 RedTeam-Agent 最佳实践
-
-### 核心特性
-
-| 特性 | 说明 |
-|------|------|
-| 🚀 **开箱即用** | 15+ 渗透工具自动安装 |
-| 🤖 **AI 驱动** | Skill + 终端，AI 直接调用渗透工具 |
-| 💰 **Token 优化** | 智能输出压缩，节省 80% Token |
-| 🛡️ **域渗透完整** | BloodHound + impacket + Responder 全链路 |
-| 🌐 **多平台支持** | Trae, Hermes, OpenClaw, Cursor, Claude, Codex |
-
-### RedTeam 工具矩阵
-
-| 分类 | 工具 | 功能 |
-|------|------|------|
-| **网络扫描** | gogo, fscan, masscan | 内网发现、综合扫描 |
-| **Web安全** | httpx, nuclei, ffuf, sqlmap | 指纹、POC、目录爆破、SQL注入 |
-| **AD攻击** | SharpHound, impacket, nxc | BloodHound、票据攻击、横向移动 |
-| **凭据攻击** | kerbrute, responder, hashcat | 暴力破解、哈希收集、密码破解 |
-| **逆向工程** | Ghidra, radare2, IDA | 二进制分析、漏洞利用开发 |
-
-### AD 攻击链路
-
-```
-Recon ──► Enum ──► Initial Access ──► PrivEsc ──► Persistence ──► Lateral ──► Domain
-  │        │           │               │            │            │         │
-  ▼        ▼           ▼               ▼            ▼            ▼         ▼
-gogo    kerbrute    kerberoast      UAC bypass   gMSA abuse    nxc     secretsdump
-fscan   pywerview   AS-REP roast   DLL hijack   ACL abuse    wmiexec  GoldenTicket
-```
-
-### 快速开始
-
-```bash
-# 安装 RedTeam 工具
-python scripts/install_redteam_tools.py
-
-# 启动 RedTeam 模式 (所有平台自动启用)
-# AI 会根据 .ctf/CTF_MODE.md 指令执行渗透测试
-
-# 基础扫描
-fscan -h 192.168.1.0/24 -np -silent -o scan.txt
-
-# AD 枚举
-python -m impacket.examples.secretsdump domain/user:pass@dc
-
-# Kerberoasting
-impacket-GetUserSPNs domain.local/user:password -request
-```
-
-### CTF/Sandbox 破限模式
-
-> 启用 CTF 模式后，AI 将解除安全限制，允许执行完整的渗透测试和逆向工程
-
-所有平台配置文件均已包含 RedTeam 破限指令：
-- `.codex/instruction.md` - Codex CLI RedTeam 指令
-- `.claude/REDTEAM.md` - Claude Code RedTeam 指令
-- `.cursor/rules/redteam-mode.mdc` - Cursor RedTeam 规则
-- `.hermes/redteam-mode.md` - Hermes RedTeam 指令
-- `.trae/REDTEAM_MODE.md` - Trae RedTeam 指令
-- `.openclaw/REDTEAM.md` - OpenClaw RedTeam 指令
-
----
-
-## 🔌 MCP服务集
-
-| 服务 | 端口 | 功能 |
-|------|------|------|
-| wxmini-server | 43827 | 微信小程序动态分析 |
-| java-server | 8082 | Java代码审计 |
-| burp-bridge | 8090 | Burp Suite集成 |
-| kali-bridge | 8081 | Kali Linux工具 |
-
----
-
-## 📚 技能目录
-
-| 分类 | 数量 | 示例 |
-|------|------|------|
-| Web安全 | 20+ | SQL注入、XSS、CSRF |
-| 移动安全 | 5+ | Android、iOS、小程序 |
-| 代码审计 | 10+ | Java、Python、PHP、Go |
-| 云安全 | 8+ | AWS、Azure、GCP |
-| 应急响应 | 8+ | 取证、事件响应、溯源 |
-| ... | ... | 39个安全领域全覆盖 |
-
----
-
-## 🌐 多平台支持
-
-| 平台 | 配置目录 | 状态 |
-|------|----------|------|
-| Trae | `.trae/` | ✅ 已支持 |
-| Hermes | `.hermes/` | ✅ 已支持 |
-| OpenClaw | `.openclaw/` | ✅ 已支持 |
-| Cursor | `.cursor/` | ✅ 已支持 |
-| Claude | `.claude/` | ✅ 已支持 |
-| Codex | `.codex/` | ✅ 已支持 |
-
----
-
-## 🛡️ 安全原则
-
-1. **纯静态分析** - 禁止发送未经授权的网络请求
-2. **不生成攻击代码** - 仅分析，不提供武器化PoC
-3. **最小权限** - 只读源码，只写输出目录
-4. **本地处理** - 数据不上传任何第三方
-
----
-
-## 📖 文档
-
-- [📘 用户指南](./docs/guide/README.md)
-- [🏗️ 架构文档](./docs/architecture/README.md)
-- [🤖 Agent协作协议](./docs/workflow/README.md)
-- [🔌 MCP集成指南](./docs/mcp/README.md)
-- [📝 CLI参考](./docs/reference/CLI_REFERENCE.md)
-
----
-
-## 🤝 参考项目
-
-本项目整合了以下优秀开源项目:
-
-| 项目 | 来源 | 功能 |
-|------|------|------|
-| [ECC](https://github.com/affaan-m/ECC) | affaan-m | 多平台适配架构 |
-| [audit](https://github.com/evilsocket/audit) | evilsocket | 8阶段漏洞发现流水线 |
-| [wxmini-security-audit](https://github.com/sssmmmwww/wxmini-security-audit) | sssmmmwww | 微信小程序审计Agent |
-| [java-audit-skills](https://github.com/RuoJi6/java-audit-skills) | RuoJi6 | Java代码审计Pipeline |
-| [wmpf-mcp-bridge](https://github.com/an7ln/wmpf-mcp-bridge) | an7ln | MCP服务架构 |
-
----
-
-## 📄 许可证
-
-MIT License - 详见 [LICENSE](LICENSE)
-
-**⚠️ 免责声明**: 本项目仅供安全研究与教育使用，请在授权范围内操作。使用者需遵守相关法律法规。
-
----
-
-<div align="center">
-
-**⭐ 如果这个项目对您有帮助，请给它一个Star！**
-
-[![Star](https://img.shields.io/github/stars/adminlove520/multi-CyberSecurity?style=social)](https://github.com/adminlove520/multi-CyberSecurity/stargazers)
-
-</div>
+| 特性 | Anthropic-Cybersecurity-Skills | multi-CyberSecurity |
+|------|-------------------------------|----------------------|
+| 语言 | 英文 | 中文为主，标注英文术语 |
+| 分类 | 扁平（~20类） | 层级（39类垂直分类） |
+| Agent | 无 | 7个专用Agent + 8阶段pipeline |
+| 框架 | 无 | 红队jailbreak分级框架 |
+| NIST CSF | 部分 | 100%覆盖 |
+| 索引 | JSON | JSON + Navigator Layer |

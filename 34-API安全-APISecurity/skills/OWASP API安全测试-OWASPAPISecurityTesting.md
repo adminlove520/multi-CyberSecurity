@@ -1,17 +1,36 @@
 ---
-id: "34-001"
-title: "OWASP API安全测试 (OWASP API Security Testing)"
-category: "API安全"
-category_en: "API Security"
-difficulty: "★★★★"
-tools: "Burp Suite, Postman, OWASP ZAP, k6, curl"
-last_updated: "2026-05"
-tags: [api-security, owasp, penetration-testing, rest-api, graphql]
+name: owasp-api安全测试-owasp-api-security-testing
+description: API 是现代应用架构的基石，也是最常见的攻击目标之一。OWASP API Security Top 10 列出了 API 最常见的 10 类安全风险。本技能覆盖 API 安全测试方法论、认证绕过、注入攻击、批量分配（Mass Assignment）和速率限制测试等。
+domain: cybersecurity
 subdomain: api-security
-nist_csf: [PR.AC-04, PR.AC-07, DE.CM-08, ID.RA-01]
-mitre_attack: [T1071, T1190, T1550, T1593]
+tags:
+    - 'api-security'
+    - owasp
+    - 'penetration-testing'
+    - 'rest-api'
+    - graphql
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-04'
+    - 'PR.AC-07'
+    - 'DE.CM-08'
+    - 'ID.RA-01'
+mitre_attack:
+    - T1071
+    - T1190
+    - T1550
+    - T1593
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: OWASP API安全测试 (OWASP API Security Testing)
+# original_category: API安全
+# original_category_en: API Security
+# original_difficulty: ★★★★
+# original_tools: Burp Suite, Postman, OWASP ZAP, k6, curl
+# original_last_updated: 2026-05
 # OWASP API安全测试 (OWASP API Security Testing)
 
 ## 概述

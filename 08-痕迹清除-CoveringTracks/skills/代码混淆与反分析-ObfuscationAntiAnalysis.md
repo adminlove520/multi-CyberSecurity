@@ -1,16 +1,33 @@
 ---
-id: 08-003
-title: "代码混淆与反分析 (Code Obfuscation & Anti-Analysis)"
-category: 痕迹清除
-category_en: "Covering Tracks"
-difficulty: ★★★★
-tools: "ConfuserEx, Obfuscator-LLVM, UPX, VMP, dnSpy, x64dbg"
-last_updated: 2026-05
-tags: ["covering-tracks", "anti-forensics", "process-injection", "obfuscation"]
+name: 代码混淆与反分析-code-obfuscation-anti-analysis
+description: 代码混淆和反分析技术用于保护恶意代码不被安全工具检测和分析。包括代码混淆（控制流平坦化、字符串加密、虚假控制流）、反调试（IsDebuggerPresent、NtGlobalFlag）、反虚拟化（检测VMware/VirtualBox环境）以及代码保护（加壳、加密）。
+domain: cybersecurity
 subdomain: covering-tracks
-nist_csf: ["DE.CM-01", "PR.PT-01"]
-mitre_attack: ["T1070", "T1562", "T1055", "T1027"]
+tags:
+    - 'covering-tracks'
+    - 'anti-forensics'
+    - 'process-injection'
+    - obfuscation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1070
+    - T1562
+    - T1055
+    - T1027
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 代码混淆与反分析 (Code Obfuscation & Anti-Analysis)
+# original_category: 痕迹清除
+# original_category_en: Covering Tracks
+# original_difficulty: ★★★★
+# original_tools: ConfuserEx, Obfuscator-LLVM, UPX, VMP, dnSpy, x64dbg
+# original_last_updated: 2026-05
 # 代码混淆与反分析 (Code Obfuscation & Anti-Analysis)
 
 ## 概述

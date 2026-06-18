@@ -1,16 +1,36 @@
 ---
-id: 15-003
-title: "📋 事件分类与优先级评估 (Incident Triage & Prioritization)"
-category: 应急响应
-category_en: "Incident Response"
-difficulty: ★★★
-tools: "事件管理平台, SIRP工具, TheHive"
-last_updated: 2025-07
-tags: ["incident-response", "forensics", "memory-forensics", "threat-hunting", "ransomware"]
+name: 事件分类与优先级评估-incident-triage-prioritization
+description: '对安全事件进行快速分类和优先级评估，确保有限的安全资源聚焦于影响最大的事件。参照 **NIST SP 800-61** 的四阶段分类模型和 **FIRST CVSS** 评分体系，建立标准化的事件分级机制。'
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.CO-02", "RS.AN-01", "RS.MI-01"]
-mitre_attack: ["T1486", "T1490", "T1485", "T1562"]
+tags:
+    - 'incident-response'
+    - forensics
+    - 'memory-forensics'
+    - 'threat-hunting'
+    - ransomware
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📋 事件分类与优先级评估 (Incident Triage & Prioritization)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★
+# original_tools: 事件管理平台, SIRP工具, TheHive
+# original_last_updated: 2025-07
 # 📋 事件分类与优先级评估 (Incident Triage & Prioritization)
 
 ## 概述

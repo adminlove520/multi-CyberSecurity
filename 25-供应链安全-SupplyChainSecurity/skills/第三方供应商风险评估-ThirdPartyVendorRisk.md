@@ -1,16 +1,33 @@
 ---
-id: 25-005
-title: "🏢 第三方供应商风险评估 (Third-Party Vendor Risk Assessment)"
-category: 供应链安全
-category_en: "Supply Chain Security"
-difficulty: ★★★★
-tools: "BitSight, SecurityScorecard, OneTrust Vendor Risk, Prevalent, Panorays"
-last_updated: 2025-07
-tags: ["supply-chain-security", "sbom", "dependency-check", "container-image", "third-party-risk"]
+name: 第三方供应商风险评估-third-party-vendor-risk-assessment
+description: 第三方供应商是供应链安全中最薄弱的环节之一。通过系统化的供应商安全评估、持续监控和合同约束，有效管理由外部合作伙伴带来的安全风险。
+domain: cybersecurity
 subdomain: supply-chain-security
-nist_csf: ["ID.SC-01", "ID.SC-02", "PR.DS-10"]
-mitre_attack: ["T1195", "T1525"]
+tags:
+    - 'supply-chain-security'
+    - sbom
+    - 'dependency-check'
+    - 'container-image'
+    - 'third-party-risk'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.SC-01'
+    - 'ID.SC-02'
+    - 'PR.DS-10'
+mitre_attack:
+    - T1195
+    - T1525
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🏢 第三方供应商风险评估 (Third-Party Vendor Risk Assessment)
+# original_category: 供应链安全
+# original_category_en: Supply Chain Security
+# original_difficulty: ★★★★
+# original_tools: BitSight, SecurityScorecard, OneTrust Vendor Risk, Prevalent, Panorays
+# original_last_updated: 2025-07
 # 🏢 第三方供应商风险评估 (Third-Party Vendor Risk Assessment)
 
 ## 概述

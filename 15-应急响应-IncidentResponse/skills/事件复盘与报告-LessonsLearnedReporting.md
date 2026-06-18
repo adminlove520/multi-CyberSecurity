@@ -1,16 +1,36 @@
 ---
-id: 15-004
-title: "📝 事件复盘与报告 (Lessons Learned & Reporting)"
-category: 应急响应
-category_en: "Incident Response"
-difficulty: ★★★
-tools: "复盘模板, Root Cause分析, 5 Whys"
-last_updated: 2025-07
-tags: ["incident-response", "forensics", "memory-forensics", "threat-hunting", "ransomware"]
+name: 事件复盘与报告-lessons-learned-reporting
+description: '事件复盘（Lessons Learned）是应急响应生命周期的最后阶段，也是最重要的改进环节。通过系统化地复盘事件处理的全过程，发现流程、技术和管理层面的短板，推动安全体系持续改进。参照 **NIST SP 800-61** 和 **SANS Incident Handler''s Handbook** 的复盘方法论。'
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.CO-02", "RS.AN-01", "RS.MI-01"]
-mitre_attack: ["T1486", "T1490", "T1485", "T1562"]
+tags:
+    - 'incident-response'
+    - forensics
+    - 'memory-forensics'
+    - 'threat-hunting'
+    - ransomware
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 事件复盘与报告 (Lessons Learned & Reporting)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★
+# original_tools: 复盘模板, Root Cause分析, 5 Whys
+# original_last_updated: 2025-07
 # 📝 事件复盘与报告 (Lessons Learned & Reporting)
 
 ## 概述

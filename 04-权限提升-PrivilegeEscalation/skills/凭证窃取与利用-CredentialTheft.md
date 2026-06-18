@@ -1,16 +1,33 @@
 ---
-id: 04-004
-title: "🔑 凭证窃取与利用 (Credential Theft & Exploitation)"
-category: 权限提升
-category_en: "Privilege Escalation"
-difficulty: ★★★★
-tools: "Mimikatz, Lazagne, LaZagne, ProcDump"
-last_updated: 2025-07
-tags: ["privilege-escalation", "linux-privilege", "windows-privilege", "credential-theft"]
+name: 凭证窃取与利用-credential-theft-exploitation
+description: 窃取系统存储的密码、哈希、令牌等凭证信息，用于权限提升、横向移动和持久化控制。
+domain: cybersecurity
 subdomain: privilege-escalation
-nist_csf: ["PR.AC-01", "DE.CM-04"]
-mitre_attack: ["T1068", "T1548", "T1055", "T1003"]
+tags:
+    - 'privilege-escalation'
+    - 'linux-privilege'
+    - 'windows-privilege'
+    - 'credential-theft'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-04'
+mitre_attack:
+    - T1068
+    - T1548
+    - T1055
+    - T1003
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔑 凭证窃取与利用 (Credential Theft & Exploitation)
+# original_category: 权限提升
+# original_category_en: Privilege Escalation
+# original_difficulty: ★★★★
+# original_tools: Mimikatz, Lazagne, LaZagne, ProcDump
+# original_last_updated: 2025-07
 # 🔑 凭证窃取与利用 (Credential Theft & Exploitation)
 
 ## 概述

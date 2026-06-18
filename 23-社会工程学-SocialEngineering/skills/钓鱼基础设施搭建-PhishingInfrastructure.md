@@ -1,16 +1,33 @@
 ---
-id: 23-004
-title: "⚙️ 钓鱼基础设施搭建 (Phishing Infrastructure)"
-category: 社会工程学
-category_en: "Social Engineering"
-difficulty: ★★★★
-tools: "GoPhish, Modlishka, Muraena, Evilginx2, Nginx"
-last_updated: 2025-07
-tags: ["social-engineering", "phishing", "vishing", "physical-security", "awareness"]
+name: 钓鱼基础设施搭建-phishing-infrastructure
+description: 钓鱼基础设施包括域名注册、邮件服务器配置、SSL证书、反向代理和追踪系统。专业的基础设施可以显著提高钓鱼测试的成功率和隐蔽性。
+domain: cybersecurity
 subdomain: social-engineering
-nist_csf: ["PR.AT-01", "PR.AT-02"]
-mitre_attack: ["T1566", "T1598", "T1204"]
+tags:
+    - 'social-engineering'
+    - phishing
+    - vishing
+    - 'physical-security'
+    - awareness
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+mitre_attack:
+    - T1566
+    - T1598
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ 钓鱼基础设施搭建 (Phishing Infrastructure)
+# original_category: 社会工程学
+# original_category_en: Social Engineering
+# original_difficulty: ★★★★
+# original_tools: GoPhish, Modlishka, Muraena, Evilginx2, Nginx
+# original_last_updated: 2025-07
 # ⚙️ 钓鱼基础设施搭建 (Phishing Infrastructure)
 
 ## 概述

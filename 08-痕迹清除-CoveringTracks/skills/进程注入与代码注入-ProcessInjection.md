@@ -1,16 +1,33 @@
 ---
-id: 08-002
-title: "进程注入与代码注入 (Process Injection & Code Injection)"
-category: 痕迹清除
-category_en: "Covering Tracks"
-difficulty: ★★★★
-tools: "Cobalt Strike, Meterpreter, PowerSploit, Process Hollowing, APC"
-last_updated: 2026-05
-tags: ["covering-tracks", "anti-forensics", "process-injection", "obfuscation"]
+name: 进程注入与代码注入-process-injection-code-injection
+description: 进程注入是将恶意代码植入合法进程地址空间执行的技术，是防御规避的重要手段。通过将恶意代码隐藏在可信进程（如 explorer.exe、svchost.exe、notepad.exe）中，攻击者可以绕过应用白名单、逃避进程检测和网络监控。
+domain: cybersecurity
 subdomain: covering-tracks
-nist_csf: ["DE.CM-01", "PR.PT-01"]
-mitre_attack: ["T1070", "T1562", "T1055", "T1027"]
+tags:
+    - 'covering-tracks'
+    - 'anti-forensics'
+    - 'process-injection'
+    - obfuscation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1070
+    - T1562
+    - T1055
+    - T1027
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 进程注入与代码注入 (Process Injection & Code Injection)
+# original_category: 痕迹清除
+# original_category_en: Covering Tracks
+# original_difficulty: ★★★★
+# original_tools: Cobalt Strike, Meterpreter, PowerSploit, Process Hollowing, APC
+# original_last_updated: 2026-05
 # 进程注入与代码注入 (Process Injection & Code Injection)
 
 ## 概述

@@ -1,16 +1,32 @@
 ---
-id: 16-007
-title: "🎯 大模型红队测试 (LLM Red Teaming)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★★
-tools: "Garak, Counterfit, ART, PyRIT, LLM Red Team"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: 大模型红队测试-llm-red-teaming
+description: '大模型红队测试是一种系统化的对抗性评估方法，通过模拟真实攻击者的技术、战术和流程，全面评估LLM应用的安全边界、健壮性和合规性。参照 **MITRE ATLAS™** 攻击矩阵、**OWASP LLM Red Team Guide**、**Microsoft AI Red Team** 等最佳实践。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🎯 大模型红队测试 (LLM Red Teaming)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★★
+# original_tools: Garak, Counterfit, ART, PyRIT, LLM Red Team
+# original_last_updated: 2025-07
 # 🎯 大模型红队测试 (LLM Red Teaming)
 
 ## 概述

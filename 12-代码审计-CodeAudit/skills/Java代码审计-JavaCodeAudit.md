@@ -1,16 +1,31 @@
 ---
-id: 12-006
-title: "☕ Java代码审计 (Java Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★★
-tools: "FindSecBugs, SpotBugs, Fortify, Semgrep"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: java代码审计-java-code-audit
+description: 审查Java Web应用和框架中的安全漏洞，包括Spring、Struts2等框架特有漏洞和通用安全问题。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ☕ Java代码审计 (Java Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: FindSecBugs, SpotBugs, Fortify, Semgrep
+# original_last_updated: 2025-07
 # ☕ Java代码审计 (Java Code Audit)
 
 ## 概述

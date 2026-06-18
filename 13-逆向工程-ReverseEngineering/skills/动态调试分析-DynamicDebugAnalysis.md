@@ -1,16 +1,31 @@
 ---
-id: 13-001
-title: "⚙️ 动态调试分析 (Dynamic Debug Analysis)"
-category: 逆向工程
-category_en: "Reverse Engineering"
-difficulty: ★★★★
-tools: "x64dbg, OllyDbg, GDB, WinDbg, Immunity"
-last_updated: 2025-07
-tags: ["reverse-engineering", "malware-analysis", "debugging", "static-analysis"]
+name: 动态调试分析-dynamic-debug-analysis
+description: 通过运行和调试目标程序，实时观察执行流程、内存状态和行为特征，分析程序逻辑和漏洞。
+domain: cybersecurity
 subdomain: reverse-engineering
-nist_csf: ["DE.CM-04", "DE.AE-02"]
-mitre_attack: ["T1204", "T1036"]
+tags:
+    - 'reverse-engineering'
+    - 'malware-analysis'
+    - debugging
+    - 'static-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'DE.AE-02'
+mitre_attack:
+    - T1204
+    - T1036
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ 动态调试分析 (Dynamic Debug Analysis)
+# original_category: 逆向工程
+# original_category_en: Reverse Engineering
+# original_difficulty: ★★★★
+# original_tools: x64dbg, OllyDbg, GDB, WinDbg, Immunity
+# original_last_updated: 2025-07
 # ⚙️ 动态调试分析 (Dynamic Debug Analysis)
 
 ## 概述

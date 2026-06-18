@@ -1,17 +1,35 @@
 ---
-id: "31-003"
-title: "安全自动化与编排 (Security Automation & Orchestration - SOAR)"
-category: "SOC运营"
-category_en: "SOC Operations"
-difficulty: "★★★★"
-tools: "Shuffle, Splunk SOAR, Tines, Palo Alto XSOAR, n8n"
-last_updated: "2026-05"
-tags: [soar, automation, orchestration, playbook, security-automation]
+name: 安全自动化与编排-security-automation-orchestration---soar
+description: 'SOAR（Security Orchestration, Automation and Response）是将安全运营自动化的核心平台。通过工作流编排、API 联动和自动化响应，SOAR 能够大幅缩短平均响应时间（MTTR），提升 SOC 运营效率。本技能覆盖 SOAR 工作流设计、常见集成场景、自动化剧本开发和运营指标。'
+domain: cybersecurity
 subdomain: soc-operations
-nist_csf: [RS.CO-01, RS.CO-02, RS.MI-01, RS.MI-02]
-mitre_attack: [T1580, T1587, T1588]
+tags:
+    - soar
+    - automation
+    - orchestration
+    - playbook
+    - 'security-automation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.CO-01'
+    - 'RS.CO-02'
+    - 'RS.MI-01'
+    - 'RS.MI-02'
+mitre_attack:
+    - T1580
+    - T1587
+    - T1588
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 安全自动化与编排 (Security Automation & Orchestration - SOAR)
+# original_category: SOC运营
+# original_category_en: SOC Operations
+# original_difficulty: ★★★★
+# original_tools: Shuffle, Splunk SOAR, Tines, Palo Alto XSOAR, n8n
+# original_last_updated: 2026-05
 # 安全自动化与编排 (Security Automation & Orchestration - SOAR)
 
 ## 概述

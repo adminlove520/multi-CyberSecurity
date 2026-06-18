@@ -1,16 +1,34 @@
 ---
-id: 27-003
-title: "Linux安全加固与基线检查 (Linux Hardening & Baseline)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★
-tools: "CIS Benchmarks, 等保2.0, Lynis, OpenSCAP, auditd, SELinux, AppArmor"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: linux安全加固与基线检查-linux-hardening-baseline
+description: 'Linux 系统是企业基础设施的核心组成部分，安全加固是防范攻击的第一道防线。本技能以 CIS Linux Benchmarks、等保2.0 三级要求、NIST SP 800-53 为参考，系统化覆盖 Linux 内核参数调优、身份鉴别与访问控制、SELinux/AppArmor 强制访问控制、系统审计、网络层加固等关键领域，适用于 CentOS/RHEL、Ubuntu、Debian 等主流发行版'
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Linux安全加固与基线检查 (Linux Hardening & Baseline)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★
+# original_tools: CIS Benchmarks, 等保2.0, Lynis, OpenSCAP, auditd, SELinux, AppArmor
+# original_last_updated: 2026-05
 # Linux安全加固与基线检查 (Linux Hardening & Baseline)
 
 ## 概述

@@ -1,16 +1,33 @@
 ---
-id: 07-001
-title: "🔐 持久化 - 长期控制 (Persistence - Long-term Access)"
-category: 持久化
-category_en: Persistence
-difficulty: ★★★
-tools: "MSF Venom, Cobalt Strike, 计划任务, 自启动项"
-last_updated: 2025-07
-tags: ["persistence", "bootkit", "startup-autostart", "account-persistence"]
+name: 持久化---长期控制-persistence---long-term-access
+description: 在目标系统上建立持久化后门，确保在系统重启、凭证更改后仍能维持访问控制权。
+domain: cybersecurity
 subdomain: persistence
-nist_csf: ["PR.AC-01", "DE.CM-01"]
-mitre_attack: ["T1543", "T1547", "T1136", "T1053"]
+tags:
+    - persistence
+    - bootkit
+    - 'startup-autostart'
+    - 'account-persistence'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1543
+    - T1547
+    - T1136
+    - T1053
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔐 持久化 - 长期控制 (Persistence - Long-term Access)
+# original_category: 持久化
+# original_category_en: Persistence
+# original_difficulty: ★★★
+# original_tools: MSF Venom, Cobalt Strike, 计划任务, 自启动项
+# original_last_updated: 2025-07
 # 🔐 持久化 - 长期控制 (Persistence - Long-term Access)
 
 ## 概述

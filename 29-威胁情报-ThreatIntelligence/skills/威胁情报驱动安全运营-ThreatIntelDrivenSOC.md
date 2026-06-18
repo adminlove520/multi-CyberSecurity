@@ -1,17 +1,36 @@
 ---
-id: "29-004"
-title: "威胁情报驱动安全运营 (Threat Intel Driven Security Operations)"
-category: "威胁情报"
-category_en: "Threat Intelligence"
-difficulty: "★★★★"
-tools: "Splunk, Elastic, MISP, TheHive, OpenCTI, Shuffle"
-last_updated: "2026-05"
-tags: [threat-intelligence, security-operations, automation, ioc, intel-driven]
+name: 威胁情报驱动安全运营-threat-intel-driven-security-operations
+description: '威胁情报的核心价值在于驱动安全运营决策。本技能覆盖 IOC 自动化导入、威胁情报与 SIEM 联动、基于情报的告警优先级排序、自动化阻断响应等场景。通过将外部情报与内部遥测数据关联，实现从"被动告警"到"情报驱动"的运营升级。'
+domain: cybersecurity
 subdomain: threat-intelligence
-nist_csf: [DE.CM-04, DE.AE-03, RS.AN-01, RS.CO-02]
-mitre_attack: [T1041, T1071, T1568, T1573]
+tags:
+    - 'threat-intelligence'
+    - 'security-operations'
+    - automation
+    - ioc
+    - 'intel-driven'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'DE.AE-03'
+    - 'RS.AN-01'
+    - 'RS.CO-02'
+mitre_attack:
+    - T1041
+    - T1071
+    - T1568
+    - T1573
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 威胁情报驱动安全运营 (Threat Intel Driven Security Operations)
+# original_category: 威胁情报
+# original_category_en: Threat Intelligence
+# original_difficulty: ★★★★
+# original_tools: Splunk, Elastic, MISP, TheHive, OpenCTI, Shuffle
+# original_last_updated: 2026-05
 # 威胁情报驱动安全运营 (Threat Intel Driven Security Operations)
 
 ## 概述

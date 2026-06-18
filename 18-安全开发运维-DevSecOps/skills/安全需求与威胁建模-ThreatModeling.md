@@ -1,16 +1,33 @@
 ---
-id: 18-006
-title: "🧠 安全需求与威胁建模 (Security Requirements & Threat Modeling)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★★
-tools: "STRIDE, PASTA, Threat Dragon, OWASP Cornucopia, Microsoft TMT"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: 安全需求与威胁建模-security-requirements-threat-modeling
+description: 在系统设计阶段系统化识别安全威胁和风险，建立安全需求基线。涵盖STRIDE、PASTA、LINDDUN等主流威胁建模方法论。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🧠 安全需求与威胁建模 (Security Requirements & Threat Modeling)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★★
+# original_tools: STRIDE, PASTA, Threat Dragon, OWASP Cornucopia, Microsoft TMT
+# original_last_updated: 2025-07
 # 🧠 安全需求与威胁建模 (Security Requirements & Threat Modeling)
 
 ## 概述

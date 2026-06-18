@@ -1,16 +1,35 @@
 ---
-id: 17-002
-title: "🌤️ Azure安全评估 (Azure Security Assessment)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★★
-tools: "Azucar, ScoutSuite, Azure Security Center, Microsoft Defender for Cloud"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: azure安全评估-azure-security-assessment
+description: 对Microsoft Azure云环境进行安全评估，涵盖Azure RBAC权限审计、KeyVault密钥管理、NSG网络安全组配置、Azure AD安全、存储账户加密和合规基线检查。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌤️ Azure安全评估 (Azure Security Assessment)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★★
+# original_tools: Azucar, ScoutSuite, Azure Security Center, Microsoft Defender for Cloud
+# original_last_updated: 2025-07
 # 🌤️ Azure安全评估 (Azure Security Assessment)
 
 ## 概述

@@ -1,16 +1,32 @@
 ---
-id: 14-002
-title: "☁️ 云安全审计 (Cloud Security Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★★
-tools: "ScoutSuite, Prowler, CloudSploit, Pacu"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 云安全审计-cloud-security-audit
+description: 对云基础设施（AWS、Azure、阿里云等）进行安全配置审计，检查云资源的访问控制、数据加密、日志审计、网络安全组等配置是否符合安全最佳实践。
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ☁️ 云安全审计 (Cloud Security Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★★
+# original_tools: ScoutSuite, Prowler, CloudSploit, Pacu
+# original_last_updated: 2025-07
 # ☁️ 云安全审计 (Cloud Security Audit)
 
 ## 概述

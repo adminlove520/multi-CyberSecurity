@@ -1,16 +1,31 @@
 ---
-id: 12-009
-title: "🦀 Rust代码审计 (Rust Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★
-tools: "Clippy, cargo-audit, cargo-geiger, Miri"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: rust代码审计-rust-code-audit
+description: 'Rust通过所有权系统和借用检查器在编译时消除了大量内存安全漏洞，但其安全保证依赖于所有代码都是安全的（Safe Rust）。`unsafe` 代码块、FFI调用和不安全的宏可以绕过编译器检查，成为安全审计的重点区域。'
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🦀 Rust代码审计 (Rust Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★
+# original_tools: Clippy, cargo-audit, cargo-geiger, Miri
+# original_last_updated: 2025-07
 # 🦀 Rust代码审计 (Rust Code Audit)
 
 ## 概述

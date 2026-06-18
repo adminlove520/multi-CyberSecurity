@@ -1,16 +1,31 @@
 ---
-id: 20-002
-title: "💰 DeFi协议安全评估 (DeFi Protocol Security Assessment)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★★
-tools: "Hardhat, Foundry, DeFi-Scanner, Tenderly, Dune Analytics"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: defi协议安全评估-defi-protocol-security-assessment
+description: 针对去中心化金融(DeFi)协议的安全评估方法论，涵盖AMM DEX借贷协议、收益聚合器、跨链桥和合成资产等复杂金融协议的深度审计。
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 💰 DeFi协议安全评估 (DeFi Protocol Security Assessment)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★★
+# original_tools: Hardhat, Foundry, DeFi-Scanner, Tenderly, Dune Analytics
+# original_last_updated: 2025-07
 # 💰 DeFi协议安全评估 (DeFi Protocol Security Assessment)
 
 ## 概述

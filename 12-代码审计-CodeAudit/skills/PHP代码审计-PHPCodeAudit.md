@@ -1,16 +1,31 @@
 ---
-id: 12-007
-title: "🔍 PHP代码审计 (PHP Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★
-tools: "RIPS, phpcs, Psalm, Phan, 手动审查"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: php代码审计-php-code-audit
+description: 通过静态分析技术审查PHP代码中的安全漏洞，发现常见的Web安全问题如注入、文件操作和反序列化漏洞。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔍 PHP代码审计 (PHP Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★
+# original_tools: RIPS, phpcs, Psalm, Phan, 手动审查
+# original_last_updated: 2025-07
 # 🔍 PHP代码审计 (PHP Code Audit)
 
 ## 概述

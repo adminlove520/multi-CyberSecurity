@@ -1,16 +1,32 @@
 ---
-id: 16-010
-title: "🤝 联邦学习安全 (Federated Learning Security)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★
-tools: "TensorFlow Federated, PySyft, FATE, 安全聚合"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: 联邦学习安全-federated-learning-security
+description: '联邦学习（Federated Learning）允许多方协作训练模型而不共享原始数据，但面临梯度泄露、模型投毒、成员推理等特有安全威胁。本技能覆盖联邦学习中的隐私保护、投毒防御、安全聚合等关键技术，参照 **MITRE ATLAS** 联邦学习攻击矩阵、**IEEE FL安全标准**。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🤝 联邦学习安全 (Federated Learning Security)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★
+# original_tools: TensorFlow Federated, PySyft, FATE, 安全聚合
+# original_last_updated: 2025-07
 # 🤝 联邦学习安全 (Federated Learning Security)
 
 ## 概述

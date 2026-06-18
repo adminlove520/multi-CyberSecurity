@@ -1,16 +1,35 @@
 ---
-id: 01-006
-title: "🌍 网络空间搜索引擎 (Cyberspace Search Engine)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★★
-tools: "Fofa, ZoomEye, Shodan, Censys"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 网络空间搜索引擎-cyberspace-search-engine
+description: 利用网络空间搜索引擎直接搜索全球联网设备、网站和服务，快速定位目标的信息系统资产。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌍 网络空间搜索引擎 (Cyberspace Search Engine)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★★
+# original_tools: Fofa, ZoomEye, Shodan, Censys
+# original_last_updated: 2025-07
 # 🌍 网络空间搜索引擎 (Cyberspace Search Engine)
 
 ## 概述

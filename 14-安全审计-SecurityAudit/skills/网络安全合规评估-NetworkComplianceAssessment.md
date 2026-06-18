@@ -1,16 +1,32 @@
 ---
-id: 14-006
-title: "🌐 网络安全合规评估 (Network Security Compliance Assessment)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★
-tools: "Nmap NSE, Wireshark, Nipper, OpenVAS"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 网络安全合规评估-network-security-compliance-assessment
+description: 对网络环境进行安全评估与合规检查，包括防火墙策略审计、网络分段检查、入侵检测评估、VPN安全审计、DNS安全、网络设备基线配置等。
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 网络安全合规评估 (Network Security Compliance Assessment)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★
+# original_tools: Nmap NSE, Wireshark, Nipper, OpenVAS
+# original_last_updated: 2025-07
 # 🌐 网络安全合规评估 (Network Security Compliance Assessment)
 
 ## 概述

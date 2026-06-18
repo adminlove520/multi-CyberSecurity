@@ -1,16 +1,34 @@
 ---
-id: 10-002
-title: "🍎 iOS安全测试 (iOS Security Testing)"
-category: 移动安全
-category_en: "Mobile Security"
-difficulty: ★★★★★
-tools: "Frida, Objection, class-dump, Ghidra, checkra1n"
-last_updated: 2025-07
-tags: ["mobile-security", "android", "ios", "mobile-audit"]
+name: ios安全测试-ios-security-testing
+description: 对iOS应用程序进行安全评估，包括IPA分析、运行时调试、越狱检测绕过和API安全测试。
+domain: cybersecurity
 subdomain: mobile-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1475", "T1514", "T1529", "T1204"]
+tags:
+    - 'mobile-security'
+    - android
+    - ios
+    - 'mobile-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1475
+    - T1514
+    - T1529
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🍎 iOS安全测试 (iOS Security Testing)
+# original_category: 移动安全
+# original_category_en: Mobile Security
+# original_difficulty: ★★★★★
+# original_tools: Frida, Objection, class-dump, Ghidra, checkra1n
+# original_last_updated: 2025-07
 # 🍎 iOS安全测试 (iOS Security Testing)
 
 ## 概述

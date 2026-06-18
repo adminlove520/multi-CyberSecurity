@@ -1,17 +1,36 @@
 ---
-id: "30-003"
-title: "Windows数字取证分析 (Windows Digital Forensics)"
-category: "数字取证"
-category_en: "Digital Forensics"
-difficulty: "★★★★"
-tools: "KAPE, Hayabusa, Eric Zimmerman Tools, Plaso, Event Log Explorer"
-last_updated: "2026-05"
-tags: [forensics, windows, artifacts, event-logs, timeline-analysis]
+name: windows数字取证分析-windows-digital-forensics
+description: Windows 操作系统在运行过程中会产生大量的取证痕迹，包括文件系统元数据、注册表、事件日志和各类应用痕迹。本技能覆盖 Windows 核心取证痕迹的提取与分析，包括 MFT、USN Journal、Event Logs、Prefetch、Shimcache、Amcache、SRUM 等。
+domain: cybersecurity
 subdomain: digital-forensics
-nist_csf: [DE.AE-02, DE.CM-04, RS.AN-01]
-mitre_attack: [T1003, T1070, T1071, T1546, T1564]
+tags:
+    - forensics
+    - windows
+    - artifacts
+    - 'event-logs'
+    - 'timeline-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.CM-04'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1003
+    - T1070
+    - T1071
+    - T1546
+    - T1564
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: Windows数字取证分析 (Windows Digital Forensics)
+# original_category: 数字取证
+# original_category_en: Digital Forensics
+# original_difficulty: ★★★★
+# original_tools: KAPE, Hayabusa, Eric Zimmerman Tools, Plaso, Event Log Explorer
+# original_last_updated: 2026-05
 # Windows数字取证分析 (Windows Digital Forensics)
 
 ## 概述

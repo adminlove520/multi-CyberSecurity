@@ -1,16 +1,36 @@
 ---
-id: 19-004
-title: "📋 工控安全合规审计 - IEC 62443 (ICS Compliance Audit - IEC 62443)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★
-tools: "IEC 62443 Checklist, ICS Compliant, C2M2, NIST CSF"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: 工控安全合规审计---iec-62443-ics-compliance-audit---iec-62443
+description: 按照IEC 62443系列标准进行工控安全合规审计，涵盖安全等级(SL)评估、风险管理、安全策略审计与安全能力成熟度评估。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📋 工控安全合规审计 - IEC 62443 (ICS Compliance Audit - IEC 62443)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★
+# original_tools: IEC 62443 Checklist, ICS Compliant, C2M2, NIST CSF
+# original_last_updated: 2025-07
 # 📋 工控安全合规审计 - IEC 62443 (ICS Compliance Audit - IEC 62443)
 
 ## 概述

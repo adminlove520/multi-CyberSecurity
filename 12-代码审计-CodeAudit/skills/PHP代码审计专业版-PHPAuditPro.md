@@ -1,16 +1,31 @@
 ---
-id: 12-011
-title: "🐘 PHP 代码审计专业版 (PHP Code Audit Pro)"
-category: 代码审计
-category_en: Code Audit
-difficulty: ★★★★
-tools: "PHP-Code-Audit-Skill, RIPS, Seay"
-last_updated: 2026-05
-tags: ["php", "code-audit", "white-box", "vulnerability-discovery"]
+name: php-代码审计专业版-php-code-audit-pro
+description: 面向 PHP Web 的专业白盒代码安全审计技能，覆盖从路由枚举到漏洞验证的全流程审计，适用于 Cursor/Trae 等 AI Agent 环境。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "DE.CM-08"]
-mitre_attack: ["T1059.006", "T1190"]
+tags:
+    - php
+    - 'code-audit'
+    - 'white-box'
+    - 'vulnerability-discovery'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1059.006
+    - T1190
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🐘 PHP 代码审计专业版 (PHP Code Audit Pro)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: PHP-Code-Audit-Skill, RIPS, Seay
+# original_last_updated: 2026-05
 # 🐘 PHP 代码审计专业版 (PHP Code Audit Pro)
 
 ## 概述

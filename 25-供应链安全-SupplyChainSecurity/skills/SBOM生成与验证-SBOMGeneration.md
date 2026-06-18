@@ -1,16 +1,33 @@
 ---
-id: 25-001
-title: "📦 SBOM生成与验证 (SBOM Generation & Verification)"
-category: 供应链安全
-category_en: "Supply Chain Security"
-difficulty: ★★★
-tools: "Syft, CycloneDX, SPDX, Trivy, Dependency-Track, FOSSA"
-last_updated: 2025-07
-tags: ["supply-chain-security", "sbom", "dependency-check", "container-image", "third-party-risk"]
+name: sbom生成与验证-sbom-generation-verification
+description: 'SBOM（软件物料清单）是供应链安全的基石。通过生成和维护SBOM，组织可以清晰了解软件中包含的组件、依赖和许可证信息，快速响应漏洞事件。标准格式包括 **SPDX**、**CycloneDX** 和 **SWID**。'
+domain: cybersecurity
 subdomain: supply-chain-security
-nist_csf: ["ID.SC-01", "ID.SC-02", "PR.DS-10"]
-mitre_attack: ["T1195", "T1525"]
+tags:
+    - 'supply-chain-security'
+    - sbom
+    - 'dependency-check'
+    - 'container-image'
+    - 'third-party-risk'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.SC-01'
+    - 'ID.SC-02'
+    - 'PR.DS-10'
+mitre_attack:
+    - T1195
+    - T1525
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📦 SBOM生成与验证 (SBOM Generation & Verification)
+# original_category: 供应链安全
+# original_category_en: Supply Chain Security
+# original_difficulty: ★★★
+# original_tools: Syft, CycloneDX, SPDX, Trivy, Dependency-Track, FOSSA
+# original_last_updated: 2025-07
 # 📦 SBOM生成与验证 (SBOM Generation & Verification)
 
 ## 概述

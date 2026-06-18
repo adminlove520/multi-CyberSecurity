@@ -1,16 +1,32 @@
 ---
-id: 16-003
-title: "⚙️ AI应用安全配置审计 (AI Application Security Configuration Audit)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★
-tools: "OWASP ASVS, CIS AI Benchmarks, Semgrep"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: ai应用安全配置审计-ai-application-security-configuration-audit
+description: 'AI应用安全配置审计涵盖LLM服务部署、API端点、模型推理服务、向量数据库等基础设施的安全基线检查。参照 **OWASP ASVS (Application Security Verification Standard)**、**CIS AI Benchmarks**、**CSA Cloud Controls Matrix (CCM) for AI** 等标准。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ AI应用安全配置审计 (AI Application Security Configuration Audit)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★
+# original_tools: OWASP ASVS, CIS AI Benchmarks, Semgrep
+# original_last_updated: 2025-07
 # ⚙️ AI应用安全配置审计 (AI Application Security Configuration Audit)
 
 ## 概述

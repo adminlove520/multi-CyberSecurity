@@ -1,16 +1,31 @@
 ---
-id: 12-002
-title: "🔧 C++代码审计 (C++ Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★★
-tools: "Cppcheck, Clang-Tidy, PVS-Studio, CodeQL"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: c-代码审计-c-code-audit
+description: C++在C语言基础上增加了面向对象、泛型编程和RAII等特性。C++审计除了继承C语言的缓冲区溢出等问题外，还需关注虚函数劫持、智能指针误用、STL安全、异常安全和模板元编程等特有的安全风险。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔧 C++代码审计 (C++ Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: Cppcheck, Clang-Tidy, PVS-Studio, CodeQL
+# original_last_updated: 2025-07
 # 🔧 C++代码审计 (C++ Code Audit)
 
 ## 概述

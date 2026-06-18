@@ -1,17 +1,35 @@
 ---
-id: "30-002"
-title: "内存取证分析 (Memory Forensics with Volatility)"
-category: "数字取证"
-category_en: "Digital Forensics"
-difficulty: "★★★★"
-tools: "Volatility 3, Volatility 2, LiME, WinPmem, FTK Imager, Rekall, YARA"
-last_updated: "2026-05"
-tags: [forensics, memory-analysis, volatility, ram, malware-analysis]
+name: 内存取证分析-memory-forensics-with-volatility
+description: 内存取证是数字取证和事件响应（DFIR）的核心技术。攻击者留下的恶意代码和证据通常在内存中，而不会写入磁盘。本技能覆盖内存获取、Volatility 插件使用、进程分析、网络连接恢复、Rootkit 检测和恶意代码提取。
+domain: cybersecurity
 subdomain: digital-forensics
-nist_csf: [DE.AE-02, DE.AE-05, RS.AN-01]
-mitre_attack: [T1003, T1055, T1071, T1564]
+tags:
+    - forensics
+    - 'memory-analysis'
+    - volatility
+    - ram
+    - 'malware-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.AE-05'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1003
+    - T1055
+    - T1071
+    - T1564
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 内存取证分析 (Memory Forensics with Volatility)
+# original_category: 数字取证
+# original_category_en: Digital Forensics
+# original_difficulty: ★★★★
+# original_tools: Volatility 3, Volatility 2, LiME, WinPmem, FTK Imager, Rekall, YARA
+# original_last_updated: 2026-05
 # 内存取证分析 (Memory Forensics with Volatility)
 
 ## 概述

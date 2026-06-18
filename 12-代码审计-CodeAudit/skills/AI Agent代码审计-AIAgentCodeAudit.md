@@ -1,16 +1,31 @@
 ---
-id: 12-001
-title: "🤖 AI Agent代码审计 (AI Agent Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★★
-tools: "Semgrep, Bandit, CodeQL, Garak"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: ai-agent代码审计-ai-agent-code-audit
+description: AI Agent代码审计关注AI智能体系统在工具函数实现、Agent编排、Prompt模板、RAG管道等环节的代码安全。结合传统代码审计技术与AI特有安全风险，覆盖LangChain、AutoGPT、CrewAI等主流框架。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🤖 AI Agent代码审计 (AI Agent Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: Semgrep, Bandit, CodeQL, Garak
+# original_last_updated: 2025-07
 # 🤖 AI Agent代码审计 (AI Agent Code Audit)
 
 ## 概述

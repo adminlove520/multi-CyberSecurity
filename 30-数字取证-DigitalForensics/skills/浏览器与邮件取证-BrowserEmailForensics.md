@@ -1,17 +1,35 @@
 ---
-id: "30-005"
-title: "浏览器与邮件取证 (Browser & Email Forensics)"
-category: "数字取证"
-category_en: "Digital Forensics"
-difficulty: "★★★"
-tools: "BrowserHistoryView, DB Browser for SQLite, MailStore, readpst, oletools"
-last_updated: "2026-05"
-tags: [forensics, browser, email, web-history, pst-analysis]
+name: 浏览器与邮件取证-browser-email-forensics
+description: 浏览器和电子邮件是日常网络活动的核心工具，也是数字取证中最丰富的证据源。浏览器历史记录包含用户的网页访问轨迹、搜索记录、下载文件信息；电子邮件则记录了通信往来和社交工程攻击的线索。本技能覆盖主流浏览器（Chrome/Firefox/Edge）和邮件客户端（Outlook/Thunderbird）的取证分析。
+domain: cybersecurity
 subdomain: digital-forensics
-nist_csf: [DE.AE-02, DE.CM-07, RS.AN-01]
-mitre_attack: [T1071, T1114, T1557, T1566]
+tags:
+    - forensics
+    - browser
+    - email
+    - 'web-history'
+    - 'pst-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.CM-07'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1071
+    - T1114
+    - T1557
+    - T1566
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 浏览器与邮件取证 (Browser & Email Forensics)
+# original_category: 数字取证
+# original_category_en: Digital Forensics
+# original_difficulty: ★★★
+# original_tools: BrowserHistoryView, DB Browser for SQLite, MailStore, readpst, oletools
+# original_last_updated: 2026-05
 # 浏览器与邮件取证 (Browser & Email Forensics)
 
 ## 概述

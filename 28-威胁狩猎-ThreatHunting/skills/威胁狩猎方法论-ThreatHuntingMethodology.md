@@ -1,17 +1,36 @@
 ---
-id: "28-001"
-title: "威胁狩猎方法论与假设驱动 (Threat Hunting Methodology & Hypothesis)"
-category: "威胁狩猎"
-category_en: "Threat Hunting"
-difficulty: "★★★★"
-tools: "Splunk, Elastic, Jupyter, Sigma, ATT&CK Navigator"
-last_updated: "2026-05"
-tags: [threat-hunting, hypothesis, methodology, ioc, analytics]
+name: 威胁狩猎方法论与假设驱动-threat-hunting-methodology-hypothesis
+description: '威胁狩猎（Threat Hunting）是在传统检测规则触发之前，主动搜索网络中潜在威胁的过程。其核心是基于假设驱动（Hypothesis-Driven）的方法论，利用威胁情报、ATT&CK 框架、异常分析等技术，在攻击者造成实质性损害前发现其踪迹。本技能覆盖狩猎全流程：假设生成 → 数据采集 → 分析验证 → 闭环改进。'
+domain: cybersecurity
 subdomain: threat-hunting
-nist_csf: [DE.AE-01, DE.AE-02, DE.DP-01]
-mitre_attack: [T1046, T1057, T1082, T1087, T1482]
+tags:
+    - 'threat-hunting'
+    - hypothesis
+    - methodology
+    - ioc
+    - analytics
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-01'
+    - 'DE.AE-02'
+    - 'DE.DP-01'
+mitre_attack:
+    - T1046
+    - T1057
+    - T1082
+    - T1087
+    - T1482
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 威胁狩猎方法论与假设驱动 (Threat Hunting Methodology & Hypothesis)
+# original_category: 威胁狩猎
+# original_category_en: Threat Hunting
+# original_difficulty: ★★★★
+# original_tools: Splunk, Elastic, Jupyter, Sigma, ATT&CK Navigator
+# original_last_updated: 2026-05
 # 威胁狩猎方法论与假设驱动 (Threat Hunting Methodology & Hypothesis)
 
 ## 概述

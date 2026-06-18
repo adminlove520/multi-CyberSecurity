@@ -1,17 +1,36 @@
 ---
-id: "33-003"
-title: "容器运行时安全 (Container Runtime Security with Falco)"
-category: "容器安全"
-category_en: "Container Security"
-difficulty: "★★★★"
-tools: "Falco, tracee, Sysdig, Cilium Tetragon, Seccomp"
-last_updated: "2026-05"
-tags: [container-security, runtime-security, falco, syscall-monitoring, threat-detection]
+name: 容器运行时安全-container-runtime-security-with-falco
+description: 容器运行时安全关注容器运行时的行为监控和威胁检测。与镜像扫描不同，运行时安全检测的是容器在运行过程中产生的异常行为。本技能覆盖 Falco 规则引擎、系统调用监控、tracee/eBPF 分析和运行时异常检测。
+domain: cybersecurity
 subdomain: container-security
-nist_csf: [DE.CM-01, DE.CM-08, PR.PT-01, PR.PT-03]
-mitre_attack: [T1525, T1578, T1610, T1611]
+tags:
+    - 'container-security'
+    - 'runtime-security'
+    - falco
+    - 'syscall-monitoring'
+    - 'threat-detection'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'DE.CM-08'
+    - 'PR.PT-01'
+    - 'PR.PT-03'
+mitre_attack:
+    - T1525
+    - T1578
+    - T1610
+    - T1611
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 容器运行时安全 (Container Runtime Security with Falco)
+# original_category: 容器安全
+# original_category_en: Container Security
+# original_difficulty: ★★★★
+# original_tools: Falco, tracee, Sysdig, Cilium Tetragon, Seccomp
+# original_last_updated: 2026-05
 # 容器运行时安全 (Container Runtime Security with Falco)
 
 ## 概述

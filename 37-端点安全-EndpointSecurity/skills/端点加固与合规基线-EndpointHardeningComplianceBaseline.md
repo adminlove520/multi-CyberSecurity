@@ -1,17 +1,34 @@
 ---
-id: "37-003"
-title: "端点加固与合规基线 (Endpoint Hardening & Compliance Baseline)"
-category: "端点安全"
-category_en: "Endpoint Security"
-difficulty: "★★★★"
-tools: "CIS Benchmarks, Microsoft Baselines, OpenSCAP, InSpec, Ansible"
-last_updated: "2026-05"
-tags: [endpoint-hardening, compliance, cis-benchmarks, security-baseline, automation]
+name: 端点加固与合规基线-endpoint-hardening-compliance-baseline
+description: 端点加固是减少攻击面的基础安全措施。通过配置安全基线、关闭不必要的服务、强化系统配置，可以抵御大量常见攻击。本技能覆盖 CIS 基准检查、安全基线部署和合规自动化。
+domain: cybersecurity
 subdomain: endpoint-security
-nist_csf: [PR.AC-01, PR.DS-07, PR.IP-01, PR.PT-01]
-mitre_attack: [T1562, T1564]
+tags:
+    - 'endpoint-hardening'
+    - compliance
+    - 'cis-benchmarks'
+    - 'security-baseline'
+    - automation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.IP-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1562
+    - T1564
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 端点加固与合规基线 (Endpoint Hardening & Compliance Baseline)
+# original_category: 端点安全
+# original_category_en: Endpoint Security
+# original_difficulty: ★★★★
+# original_tools: CIS Benchmarks, Microsoft Baselines, OpenSCAP, InSpec, Ansible
+# original_last_updated: 2026-05
 # 端点加固与合规基线 (Endpoint Hardening & Compliance Baseline)
 
 ## 概述

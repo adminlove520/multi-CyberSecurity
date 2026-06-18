@@ -1,17 +1,34 @@
 ---
-id: "30-001"
-title: "磁盘镜像与证据获取 (Disk Imaging & Evidence Acquisition)"
-category: "数字取证"
-category_en: "Digital Forensics"
-difficulty: "★★★"
-tools: "dd, dcfldd, guymager, FTK Imager, Sleuth Kit, Autopsy, Plaso, Photorec"
-last_updated: "2026-05"
-tags: [forensics, disk-imaging, evidence-acquisition, chain-of-custody, hash-verification]
+name: 磁盘镜像与证据获取-disk-imaging-evidence-acquisition
+description: 证据获取是数字取证的第一步，也是最关键的一步。任何取证分析的质量都取决于原始证据的完整性。本技能覆盖磁盘镜像工具的使用、写保护技术、证据保管链管理、哈希校验、文件系统分析、Windows/Linux痕迹取证与文件恢复。
+domain: cybersecurity
 subdomain: digital-forensics
-nist_csf: [DE.CM-07, DE.AE-05, ID.RA-01]
-mitre_attack: [T1003, T1552, T1560]
+tags:
+    - forensics
+    - 'disk-imaging'
+    - 'evidence-acquisition'
+    - 'chain-of-custody'
+    - 'hash-verification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-07'
+    - 'DE.AE-05'
+    - 'ID.RA-01'
+mitre_attack:
+    - T1003
+    - T1552
+    - T1560
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 磁盘镜像与证据获取 (Disk Imaging & Evidence Acquisition)
+# original_category: 数字取证
+# original_category_en: Digital Forensics
+# original_difficulty: ★★★
+# original_tools: dd, dcfldd, guymager, FTK Imager, Sleuth Kit, Autopsy, Plaso, Photorec
+# original_last_updated: 2026-05
 # 磁盘镜像与证据获取 (Disk Imaging & Evidence Acquisition)
 
 ## 概述

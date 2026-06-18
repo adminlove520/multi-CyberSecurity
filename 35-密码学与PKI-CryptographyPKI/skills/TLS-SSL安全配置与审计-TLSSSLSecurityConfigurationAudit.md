@@ -1,17 +1,36 @@
 ---
-id: "35-001"
-title: "TLS/SSL安全配置与审计 (TLS/SSL Security Configuration & Audit)"
-category: "密码学与PKI"
-category_en: "Cryptography & PKI"
-difficulty: "★★★"
-tools: "OpenSSL, testssl.sh, nmap, certbot, SSL Labs"
-last_updated: "2026-05"
-tags: [tls, ssl, certificate, cipher, security-configuration, audit]
+name: tls-ssl安全配置与审计-tls-ssl-security-configuration-audit
+description: TLS/SSL 是保护网络通信安全的基石协议。错误的 TLS 配置可能导致中间人攻击、协议降级和信息泄露。本技能覆盖 TLS 协议原理、安全配置方法、证书部署和自动化安全审计。
+domain: cybersecurity
 subdomain: cryptography-pki
-nist_csf: [PR.DS-01, PR.DS-02, PR.DS-05, DE.CM-07]
-mitre_attack: [T1573, T1587, T1608]
+tags:
+    - tls
+    - ssl
+    - certificate
+    - cipher
+    - 'security-configuration'
+    - audit
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'DE.CM-07'
+mitre_attack:
+    - T1573
+    - T1587
+    - T1608
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: TLS/SSL安全配置与审计 (TLS/SSL Security Configuration & Audit)
+# original_category: 密码学与PKI
+# original_category_en: Cryptography & PKI
+# original_difficulty: ★★★
+# original_tools: OpenSSL, testssl.sh, nmap, certbot, SSL Labs
+# original_last_updated: 2026-05
 # TLS/SSL安全配置与审计 (TLS/SSL Security Configuration & Audit)
 
 ## 概述

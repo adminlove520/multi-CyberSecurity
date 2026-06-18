@@ -1,16 +1,36 @@
 ---
-id: 15-001
-title: "🤖 AI安全应急响应 (AI Security Incident Response)"
-category: 应急响应
-category_en: "Incident Response"
-difficulty: ★★★★
-tools: "AI IR Framework, MITRE ATLAS, TheHive"
-last_updated: 2025-07
-tags: ["incident-response", "forensics", "memory-forensics", "threat-hunting", "ransomware"]
+name: ai安全应急响应-ai-security-incident-response
+description: 'AI系统安全事件具有独特的特征：提示注入攻击、模型数据泄露、Agent越权操作、对抗攻击等。本技能覆盖AI安全事件的检测、分析、遏制、清除和复盘全流程，参照 **NIST SP 800-61 Rev 2**、**MITRE ATLAS** 事件响应指南。'
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.CO-02", "RS.AN-01", "RS.MI-01"]
-mitre_attack: ["T1486", "T1490", "T1485", "T1562"]
+tags:
+    - 'incident-response'
+    - forensics
+    - 'memory-forensics'
+    - 'threat-hunting'
+    - ransomware
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🤖 AI安全应急响应 (AI Security Incident Response)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★★
+# original_tools: AI IR Framework, MITRE ATLAS, TheHive
+# original_last_updated: 2025-07
 # 🤖 AI安全应急响应 (AI Security Incident Response)
 
 ## 概述

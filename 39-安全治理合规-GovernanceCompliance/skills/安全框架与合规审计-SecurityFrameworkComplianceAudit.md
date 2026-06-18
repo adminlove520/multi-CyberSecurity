@@ -1,17 +1,35 @@
 ---
-id: "39-001"
-title: "安全框架与合规审计 (Security Framework & Compliance Audit)"
-category: "安全治理与合规"
-category_en: "Governance & Compliance"
-difficulty: "★★★"
-tools: "NIST CSF, ISO 27001, SOC 2, CIS Controls, AuditBoard"
-last_updated: "2026-05"
-tags: [compliance, audit, framework, iso27001, nist-csf, soc2, governance]
+name: 安全框架与合规审计-security-framework-compliance-audit
+description: 安全框架为企业提供了系统化的安全管理方法论，合规审计确保安全措施符合法规和行业标准。本技能覆盖主流安全框架（NIST CSF、ISO 27001、SOC 2、CIS、PCI DSS、HIPAA）的核心要求、控制映射方法、审计准备和合规自动化。
+domain: cybersecurity
 subdomain: governance-compliance
-nist_csf: [ID.GV-01, ID.RM-01, ID.SC-01, ID.GV-03]
-mitre_attack: []
+tags:
+    - compliance
+    - audit
+    - framework
+    - iso27001
+    - 'nist-csf'
+    - soc2
+    - governance
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+    - 'ID.GV-03'
+mitre_attack:
+  []
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 安全框架与合规审计 (Security Framework & Compliance Audit)
+# original_category: 安全治理与合规
+# original_category_en: Governance & Compliance
+# original_difficulty: ★★★
+# original_tools: NIST CSF, ISO 27001, SOC 2, CIS Controls, AuditBoard
+# original_last_updated: 2026-05
 # 安全框架与合规审计 (Security Framework & Compliance Audit)
 
 ## 概述

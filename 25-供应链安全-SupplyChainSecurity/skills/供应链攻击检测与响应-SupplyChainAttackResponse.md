@@ -1,16 +1,33 @@
 ---
-id: 25-006
-title: "🎯 供应链攻击检测与响应 (Supply Chain Attack Detection & Response)"
-category: 供应链安全
-category_en: "Supply Chain Security"
-difficulty: ★★★★
-tools: "GuardDog, GraphQL API Security, Falco, Network Policy, OPA"
-last_updated: 2025-07
-tags: ["supply-chain-security", "sbom", "dependency-check", "container-image", "third-party-risk"]
+name: 供应链攻击检测与响应-supply-chain-attack-detection-response
+description: 供应链攻击（如 SolarWinds、Codecov、Log4Shell）利用软件供应链的信任关系，通过污染上游组件来攻陷下游用户。检测和响应供应链攻击需要多层可见性和快速响应能力。
+domain: cybersecurity
 subdomain: supply-chain-security
-nist_csf: ["ID.SC-01", "ID.SC-02", "PR.DS-10"]
-mitre_attack: ["T1195", "T1525"]
+tags:
+    - 'supply-chain-security'
+    - sbom
+    - 'dependency-check'
+    - 'container-image'
+    - 'third-party-risk'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.SC-01'
+    - 'ID.SC-02'
+    - 'PR.DS-10'
+mitre_attack:
+    - T1195
+    - T1525
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🎯 供应链攻击检测与响应 (Supply Chain Attack Detection & Response)
+# original_category: 供应链安全
+# original_category_en: Supply Chain Security
+# original_difficulty: ★★★★
+# original_tools: GuardDog, GraphQL API Security, Falco, Network Policy, OPA
+# original_last_updated: 2025-07
 # 🎯 供应链攻击检测与响应 (Supply Chain Attack Detection & Response)
 
 ## 概述

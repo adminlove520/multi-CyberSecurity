@@ -1,16 +1,33 @@
 ---
-id: 18-001
-title: "🔗 CI/CD管道安全审计 (CI/CD Pipeline Security)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★★
-tools: "GitLab CI Security, Jenkins Security Scanner, GitGuardian, TruffleHog"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: ci-cd管道安全审计-ci-cd-pipeline-security
+description: 对CI/CD管道进行端到端安全审计，包括代码仓库安全、构建环境隔离、凭证管理、制品签名和部署安全管控。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔗 CI/CD管道安全审计 (CI/CD Pipeline Security)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★★
+# original_tools: GitLab CI Security, Jenkins Security Scanner, GitGuardian, TruffleHog
+# original_last_updated: 2025-07
 # 🔗 CI/CD管道安全审计 (CI/CD Pipeline Security)
 
 ## 概述

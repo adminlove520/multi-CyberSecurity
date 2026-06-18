@@ -1,17 +1,36 @@
 ---
-id: "30-004"
-title: "Linux数字取证分析 (Linux Digital Forensics)"
-category: "数字取证"
-category_en: "Digital Forensics"
-difficulty: "★★★★"
-tools: "autopsy, sleuthkit, linux-ir, auditd, osquery, chkrootkit"
-last_updated: "2026-05"
-tags: [forensics, linux, system-analysis, artifact, incident-response]
+name: linux数字取证分析-linux-digital-forensics
+description: Linux 系统在服务器和云环境中占据主导地位，也是攻击者常针对的目标。本技能覆盖 Linux 系统取证中的关键痕迹源，包括日志系统、文件系统时间轴、用户活动、持久化机制和 Rootkit 检测。
+domain: cybersecurity
 subdomain: digital-forensics
-nist_csf: [DE.AE-02, DE.CM-04, RS.AN-01]
-mitre_attack: [T1059, T1505, T1543, T1546, T1554]
+tags:
+    - forensics
+    - linux
+    - 'system-analysis'
+    - artifact
+    - 'incident-response'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.CM-04'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1059
+    - T1505
+    - T1543
+    - T1546
+    - T1554
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: Linux数字取证分析 (Linux Digital Forensics)
+# original_category: 数字取证
+# original_category_en: Digital Forensics
+# original_difficulty: ★★★★
+# original_tools: autopsy, sleuthkit, linux-ir, auditd, osquery, chkrootkit
+# original_last_updated: 2026-05
 # Linux数字取证分析 (Linux Digital Forensics)
 
 ## 概述

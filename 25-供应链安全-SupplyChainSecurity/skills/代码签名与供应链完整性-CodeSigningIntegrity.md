@@ -1,16 +1,33 @@
 ---
-id: 25-003
-title: "📝 代码签名与供应链完整性 (Code Signing & Supply Chain Integrity)"
-category: 供应链安全
-category_en: "Supply Chain Security"
-difficulty: ★★★★
-tools: "cosign, sigstore, GnuPG, notary, in-toto, TUF"
-last_updated: 2025-07
-tags: ["supply-chain-security", "sbom", "dependency-check", "container-image", "third-party-risk"]
+name: 代码签名与供应链完整性-code-signing-supply-chain-integrity
+description: '代码签名确保软件的**来源真实性**和**完整性**。通过数字签名、透明日志和可验证构建，构建从开发到部署的信任链。核心技术包括 **Sigstore**、**SLSA** 框架和 **in-toto** 元数据。'
+domain: cybersecurity
 subdomain: supply-chain-security
-nist_csf: ["ID.SC-01", "ID.SC-02", "PR.DS-10"]
-mitre_attack: ["T1195", "T1525"]
+tags:
+    - 'supply-chain-security'
+    - sbom
+    - 'dependency-check'
+    - 'container-image'
+    - 'third-party-risk'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.SC-01'
+    - 'ID.SC-02'
+    - 'PR.DS-10'
+mitre_attack:
+    - T1195
+    - T1525
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 代码签名与供应链完整性 (Code Signing & Supply Chain Integrity)
+# original_category: 供应链安全
+# original_category_en: Supply Chain Security
+# original_difficulty: ★★★★
+# original_tools: cosign, sigstore, GnuPG, notary, in-toto, TUF
+# original_last_updated: 2025-07
 # 📝 代码签名与供应链完整性 (Code Signing & Supply Chain Integrity)
 
 ## 概述

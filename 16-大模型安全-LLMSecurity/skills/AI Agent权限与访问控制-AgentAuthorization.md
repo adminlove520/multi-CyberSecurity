@@ -1,16 +1,32 @@
 ---
-id: 16-001
-title: "🔐 AI Agent权限与访问控制 (Agent Authorization & Access Control)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★
-tools: "OAuth 2.0, OIDC, RBAC, OWASP LLM-08"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: ai-agent权限与访问控制-agent-authorization-access-control
+description: 'AI智能体（AI Agent）具有执行工具调用、访问外部资源、处理敏感数据的能力（OWASP LLM-08: Excessive Agency）。不当的权限控制可能导致Agent越权操作，造成严重安全事件。本技能覆盖Agent权限模型设计、工具函数授权、最小权限原则、人机确认机制等核心议题。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔐 AI Agent权限与访问控制 (Agent Authorization & Access Control)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★
+# original_tools: OAuth 2.0, OIDC, RBAC, OWASP LLM-08
+# original_last_updated: 2025-07
 # 🔐 AI Agent权限与访问控制 (Agent Authorization & Access Control)
 
 ## 概述

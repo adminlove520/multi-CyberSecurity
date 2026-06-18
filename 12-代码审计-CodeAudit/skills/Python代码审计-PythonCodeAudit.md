@@ -1,16 +1,31 @@
 ---
-id: 12-008
-title: "🐍 Python代码审计 (Python Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★
-tools: "Bandit, Semgrep, Pyre, CodeQL"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: python代码审计-python-code-audit
+description: 审查Python Web应用和服务中的安全漏洞，包括Django/Flask框架特有漏洞和Python运行时安全问题。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🐍 Python代码审计 (Python Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★
+# original_tools: Bandit, Semgrep, Pyre, CodeQL
+# original_last_updated: 2025-07
 # 🐍 Python代码审计 (Python Code Audit)
 
 ## 概述

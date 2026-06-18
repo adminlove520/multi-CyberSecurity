@@ -1,17 +1,36 @@
 ---
-id: "32-002"
-title: "PAM特权账号管理 (Privileged Access Management)"
-category: "身份与访问管理"
-category_en: "Identity & Access Management"
-difficulty: "★★★★"
-tools: "CyberArk, HashiCorp Vault, BeyondTrust, ManageEngine, Teleport"
-last_updated: "2026-05"
-tags: [pam, privileged-access, secrets-management, vault, just-in-time]
+name: pam特权账号管理-privileged-access-management
+description: '特权账号是攻击者的首要目标。PAM（Privileged Access Management）通过管理、监控和保护特权凭证，减少攻击面。本技能覆盖特权凭证管理、会话监控、Just-In-Time 权限提升、密码轮换和审计等核心能力。'
+domain: cybersecurity
 subdomain: identity-access-management
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-06, PR.DS-05]
-mitre_attack: [T1078, T1555, T1556, T1569]
+tags:
+    - pam
+    - 'privileged-access'
+    - 'secrets-management'
+    - vault
+    - 'just-in-time'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-06'
+    - 'PR.DS-05'
+mitre_attack:
+    - T1078
+    - T1555
+    - T1556
+    - T1569
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: PAM特权账号管理 (Privileged Access Management)
+# original_category: 身份与访问管理
+# original_category_en: Identity & Access Management
+# original_difficulty: ★★★★
+# original_tools: CyberArk, HashiCorp Vault, BeyondTrust, ManageEngine, Teleport
+# original_last_updated: 2026-05
 # PAM特权账号管理 (Privileged Access Management)
 
 ## 概述

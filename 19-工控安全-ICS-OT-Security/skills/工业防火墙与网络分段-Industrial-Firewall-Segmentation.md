@@ -1,16 +1,36 @@
 ---
-id: 19-006
-title: "🔒 工业防火墙与网络分段 (Industrial Firewall & Segmentation)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★
-tools: "Tofino Security, Claroty, Nozomi, pfSense, iptables"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: 工业防火墙与网络分段-industrial-firewall-segmentation
+description: 基于Purdue企业参考架构的OT网络分段方法论，涵盖工业防火墙部署策略、安全区(Security Zone)与管道(Conduit)的IEC 62443合规设计。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔒 工业防火墙与网络分段 (Industrial Firewall & Segmentation)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★
+# original_tools: Tofino Security, Claroty, Nozomi, pfSense, iptables
+# original_last_updated: 2025-07
 # 🔒 工业防火墙与网络分段 (Industrial Firewall & Segmentation)
 
 ## 概述

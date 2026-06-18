@@ -1,16 +1,36 @@
 ---
-id: 22-005
-title: "🗄️ 数据库安全与加密 (Database Security & Encryption)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★
-tools: "Vault, CipherTrust, SQL Audit Tools, pgAudit, MySQL Audit Plugin"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: 数据库安全与加密-database-security-encryption
+description: 数据库安全涵盖访问控制、审计日志、加密（TDE/列加密）、备份安全和配置加固。保障数据在存储层和应用层的机密性、完整性和可用性。支持关系型、NoSQL和云数据库。
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🗄️ 数据库安全与加密 (Database Security & Encryption)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★
+# original_tools: Vault, CipherTrust, SQL Audit Tools, pgAudit, MySQL Audit Plugin
+# original_last_updated: 2025-07
 # 🗄️ 数据库安全与加密 (Database Security & Encryption)
 
 ## 概述

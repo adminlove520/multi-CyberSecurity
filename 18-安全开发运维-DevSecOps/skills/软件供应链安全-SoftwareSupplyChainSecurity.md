@@ -1,16 +1,33 @@
 ---
-id: 18-005
-title: "🔗 软件供应链安全 (Software Supply Chain Security)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★★
-tools: "Snyk, Dependabot, Trivy, SBOM, Sigstore, OWASP DC"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: 软件供应链安全-software-supply-chain-security
+description: 确保软件开发生命周期中所有组件的安全性和可追溯性，涵盖依赖漏洞管理、SBOM生成、制品签名、供应链威胁检测和SLSA合规。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔗 软件供应链安全 (Software Supply Chain Security)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★★
+# original_tools: Snyk, Dependabot, Trivy, SBOM, Sigstore, OWASP DC
+# original_last_updated: 2025-07
 # 🔗 软件供应链安全 (Software Supply Chain Security)
 
 ## 概述

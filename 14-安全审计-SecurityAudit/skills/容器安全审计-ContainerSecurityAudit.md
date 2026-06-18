@@ -1,16 +1,32 @@
 ---
-id: 14-004
-title: "🐳 容器安全审计 (Container Security Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★
-tools: "Trivy, Dockle, kube-bench, Falco, Dagda"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 容器安全审计-container-security-audit
+description: 对容器化环境（Docker、Kubernetes、容器镜像仓库）进行安全审计，覆盖容器镜像漏洞扫描、运行时安全、K8s集群安全配置、网络策略、RBAC权限等。
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🐳 容器安全审计 (Container Security Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★
+# original_tools: Trivy, Dockle, kube-bench, Falco, Dagda
+# original_last_updated: 2025-07
 # 🐳 容器安全审计 (Container Security Audit)
 
 ## 概述

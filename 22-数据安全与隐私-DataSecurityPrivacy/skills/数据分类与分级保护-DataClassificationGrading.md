@@ -1,16 +1,36 @@
 ---
-id: 22-001
-title: "📋 数据分类与分级保护 (Data Classification & Grading)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★
-tools: "Data Classification Toolkit, Varonis, Microsoft Purview, BigID, Spirion"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: 数据分类与分级保护-data-classification-grading
+description: '数据分类分级是数据安全治理的基石。根据数据的敏感程度、业务影响和法规要求，对数据进行分级标识，并实施差异化的访问控制和保护策略。本标准参考 **ISO 27001**、**等级保护2.0**、**GDPR** 和 **NIST SP 800-60** 等规范。'
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📋 数据分类与分级保护 (Data Classification & Grading)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★
+# original_tools: Data Classification Toolkit, Varonis, Microsoft Purview, BigID, Spirion
+# original_last_updated: 2025-07
 # 📋 数据分类与分级保护 (Data Classification & Grading)
 
 ## 概述

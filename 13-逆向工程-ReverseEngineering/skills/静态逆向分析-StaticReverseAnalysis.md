@@ -1,16 +1,31 @@
 ---
-id: 13-003
-title: "🔬 静态逆向分析 (Static Reverse Engineering)"
-category: 逆向工程
-category_en: "Reverse Engineering"
-difficulty: ★★★★
-tools: "IDA Pro, Ghidra, Radare2, Binary Ninja"
-last_updated: 2025-07
-tags: ["reverse-engineering", "malware-analysis", "debugging", "static-analysis"]
+name: 静态逆向分析-static-reverse-engineering
+description: 使用静态分析方法对二进制程序进行分析，不运行程序，通过反汇编、反编译等手段理解程序逻辑、发现漏洞和提取敏感信息。
+domain: cybersecurity
 subdomain: reverse-engineering
-nist_csf: ["DE.CM-04", "DE.AE-02"]
-mitre_attack: ["T1204", "T1036"]
+tags:
+    - 'reverse-engineering'
+    - 'malware-analysis'
+    - debugging
+    - 'static-analysis'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'DE.AE-02'
+mitre_attack:
+    - T1204
+    - T1036
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔬 静态逆向分析 (Static Reverse Engineering)
+# original_category: 逆向工程
+# original_category_en: Reverse Engineering
+# original_difficulty: ★★★★
+# original_tools: IDA Pro, Ghidra, Radare2, Binary Ninja
+# original_last_updated: 2025-07
 # 🔬 静态逆向分析 (Static Reverse Engineering)
 
 ## 概述

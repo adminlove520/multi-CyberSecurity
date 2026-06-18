@@ -1,17 +1,37 @@
 ---
-id: "32-003"
-title: "云IAM与联邦认证 (Cloud IAM & Federation)"
-category: "身份与访问管理"
-category_en: "Identity & Access Management"
-difficulty: "★★★★"
-tools: "AWS IAM, GCP IAM, Azure RBAC, Okta, Terraform"
-last_updated: "2026-05"
-tags: [cloud-iam, federation, aws-iam, gcp-iam, azure-rbac, oidc]
+name: 云iam与联邦认证-cloud-iam-federation
+description: 云环境中的 IAM 是多云安全的基础。不同云厂商的 IAM 模型各有特点，需要统一管理和联邦集成。本技能覆盖 AWS IAM、GCP IAM、Azure RBAC 的策略编写、跨云联邦认证和基础设施即代码（IaC）管理。
+domain: cybersecurity
 subdomain: identity-access-management
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-06, PR.AC-07]
-mitre_attack: [T1078, T1528, T1550, T1613]
+tags:
+    - 'cloud-iam'
+    - federation
+    - 'aws-iam'
+    - 'gcp-iam'
+    - 'azure-rbac'
+    - oidc
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-06'
+    - 'PR.AC-07'
+mitre_attack:
+    - T1078
+    - T1528
+    - T1550
+    - T1613
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 云IAM与联邦认证 (Cloud IAM & Federation)
+# original_category: 身份与访问管理
+# original_category_en: Identity & Access Management
+# original_difficulty: ★★★★
+# original_tools: AWS IAM, GCP IAM, Azure RBAC, Okta, Terraform
+# original_last_updated: 2026-05
 # 云IAM与联邦认证 (Cloud IAM & Federation)
 
 ## 概述

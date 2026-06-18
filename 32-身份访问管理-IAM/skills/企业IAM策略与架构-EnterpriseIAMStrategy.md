@@ -1,17 +1,36 @@
 ---
-id: "32-001"
-title: "企业IAM策略与架构 (Enterprise IAM Strategy & Architecture)"
-category: "身份与访问管理"
-category_en: "Identity & Access Management"
-difficulty: "★★★"
-tools: "Okta, Azure AD, Keycloak, LDAP, FreeIPA"
-last_updated: "2026-05"
-tags: [iam, identity-management, access-control, sso, directory-services]
+name: 企业iam策略与架构-enterprise-iam-strategy-architecture
+description: 身份与访问管理（IAM）是企业安全架构的基石。有效的 IAM 策略确保正确的用户在正确的时间以正确的理由访问正确的资源。本技能覆盖 IAM 架构设计、身份生命周期管理、访问控制模型、SSO 和 MFA 实施。
+domain: cybersecurity
 subdomain: identity-access-management
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-06, ID.AM-05]
-mitre_attack: [T1078, T1528, T1550, T1556]
+tags:
+    - iam
+    - 'identity-management'
+    - 'access-control'
+    - sso
+    - 'directory-services'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-06'
+    - 'ID.AM-05'
+mitre_attack:
+    - T1078
+    - T1528
+    - T1550
+    - T1556
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 企业IAM策略与架构 (Enterprise IAM Strategy & Architecture)
+# original_category: 身份与访问管理
+# original_category_en: Identity & Access Management
+# original_difficulty: ★★★
+# original_tools: Okta, Azure AD, Keycloak, LDAP, FreeIPA
+# original_last_updated: 2026-05
 # 企业IAM策略与架构 (Enterprise IAM Strategy & Architecture)
 
 ## 概述

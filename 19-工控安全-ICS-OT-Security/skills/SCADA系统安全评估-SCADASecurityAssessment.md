@@ -1,16 +1,36 @@
 ---
-id: 19-001
-title: "⚙️ SCADA系统安全评估 (SCADA System Security Assessment)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★
-tools: "PLCScan, Modbus/TCP Scanner, Shodan, Nmap NSE, Wireshark"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: scada系统安全评估-scada-system-security-assessment
+description: 对SCADA(监控与数据采集)系统进行安全评估，涵盖Modbus、DNP3、S7等工业协议的安全性测试、PLC设备发现、固件版本核查和网络隔离审查。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ SCADA系统安全评估 (SCADA System Security Assessment)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★
+# original_tools: PLCScan, Modbus/TCP Scanner, Shodan, Nmap NSE, Wireshark
+# original_last_updated: 2025-07
 # ⚙️ SCADA系统安全评估 (SCADA System Security Assessment)
 
 ## 概述

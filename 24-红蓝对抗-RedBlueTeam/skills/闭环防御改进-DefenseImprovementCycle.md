@@ -1,16 +1,33 @@
 ---
-id: 24-005
-title: "🔄 闭环防御改进 (Defense Improvement Cycle)"
-category: 红蓝对抗
-category_en: "Red/Blue Team"
-difficulty: ★★★★
-tools: "Purple Team Metrics, Detection Gap Analysis, Jira, Confluence, MITRE Navigator"
-last_updated: 2025-07
-tags: ["red-team", "blue-team", "purple-team", "bas", "adversary-simulation"]
+name: 闭环防御改进-defense-improvement-cycle
+description: '闭环防御改进通过PDCA（计划-执行-检查-改进）循环，将红蓝对抗发现转化为具体的防御增强措施。核心包括：**发现度量**、**差距分析**、**改进跟踪**和**效果验证**。'
+domain: cybersecurity
 subdomain: red-blue-team
-nist_csf: ["DE.AE-02", "RS.AN-01", "ID.RM-01"]
-mitre_attack: ["T1595", "T1562"]
+tags:
+    - 'red-team'
+    - 'blue-team'
+    - 'purple-team'
+    - bas
+    - 'adversary-simulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+    - 'ID.RM-01'
+mitre_attack:
+    - T1595
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔄 闭环防御改进 (Defense Improvement Cycle)
+# original_category: 红蓝对抗
+# original_category_en: Red/Blue Team
+# original_difficulty: ★★★★
+# original_tools: Purple Team Metrics, Detection Gap Analysis, Jira, Confluence, MITRE Navigator
+# original_last_updated: 2025-07
 # 🔄 闭环防御改进 (Defense Improvement Cycle)
 
 ## 概述

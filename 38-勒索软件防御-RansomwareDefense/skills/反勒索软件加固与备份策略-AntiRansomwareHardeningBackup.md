@@ -1,17 +1,34 @@
 ---
-id: "38-003"
-title: "反勒索软件加固与备份策略 (Anti-Ransomware Hardening & Backup Strategy)"
-category: "勒索软件防御"
-category_en: "Ransomware Defense"
-difficulty: "★★★★"
-tools: "Veeam, Azure Backup, AWS Backup, Rubrik, Cohesity"
-last_updated: "2026-05"
-tags: [ransomware, hardening, backup, disaster-recovery, immutable-backup]
+name: 反勒索软件加固与备份策略-anti-ransomware-hardening-backup-strategy
+description: '勒索软件防御的核心在于"防得住、备得稳、恢复得快"。主动加固减少攻击面，智能备份确保可恢复。本技能覆盖反勒索软件系统加固、3-2-1备份策略、不可变备份架构、以及备份恢复演练自动化。'
+domain: cybersecurity
 subdomain: ransomware-defense
-nist_csf: [PR.DS-04, PR.DS-10, PR.IP-04, DE.CM-01]
-mitre_attack: [T1486, T1490]
+tags:
+    - ransomware
+    - hardening
+    - backup
+    - 'disaster-recovery'
+    - 'immutable-backup'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-04'
+    - 'PR.DS-10'
+    - 'PR.IP-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1486
+    - T1490
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 反勒索软件加固与备份策略 (Anti-Ransomware Hardening & Backup Strategy)
+# original_category: 勒索软件防御
+# original_category_en: Ransomware Defense
+# original_difficulty: ★★★★
+# original_tools: Veeam, Azure Backup, AWS Backup, Rubrik, Cohesity
+# original_last_updated: 2026-05
 # 反勒索软件加固与备份策略 (Anti-Ransomware Hardening & Backup Strategy)
 
 ## 概述

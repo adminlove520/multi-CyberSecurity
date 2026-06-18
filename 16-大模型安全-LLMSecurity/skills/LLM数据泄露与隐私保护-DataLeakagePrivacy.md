@@ -1,16 +1,32 @@
 ---
-id: 16-005
-title: "🔒 LLM数据泄露与隐私保护 (Data Leakage & Privacy Protection)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★
-tools: "数据脱敏工具, 隐私检测, Presidio, 差分隐私库"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: llm数据泄露与隐私保护-data-leakage-privacy-protection
+description: '大语言模型在训练、推理和部署各阶段都可能发生数据泄露（OWASP LLM-06）。本技能覆盖模型训练数据记忆泄露、推理时敏感信息泄露、第三方API数据外泄、差分隐私保护等核心议题，参照 **GDPR**、**中国个人信息保护法**、**NIST Privacy Framework** 等法规标准。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔒 LLM数据泄露与隐私保护 (Data Leakage & Privacy Protection)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★
+# original_tools: 数据脱敏工具, 隐私检测, Presidio, 差分隐私库
+# original_last_updated: 2025-07
 # 🔒 LLM数据泄露与隐私保护 (Data Leakage & Privacy Protection)
 
 ## 概述

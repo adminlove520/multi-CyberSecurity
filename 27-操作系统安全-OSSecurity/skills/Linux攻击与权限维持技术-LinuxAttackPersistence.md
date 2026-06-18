@@ -1,16 +1,34 @@
 ---
-id: 27-004
-title: "Linux攻击与权限维持技术 (Linux Attack & Persistence)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★★
-tools: "LinPEAS, GTFO Bins, systemctl, kernel-exploit, Rootkit, Chisel, Ligolo"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: linux攻击与权限维持技术-linux-attack-persistence
+description: 'Linux 系统的攻击技术涵盖本地权限维持、凭据窃取、持久化后门、rootkit 安装、容器逃逸等多个维度。本技能深入覆盖超出基础提权枚举（模块04已覆盖）的进阶 Linux 攻击手法，包括 capabilities 滥用、LD_PRELOAD 劫持、动态链接库注入、systemd-managed 持久化、LKM rootkit、eBPF 逃逸检测等，为渗透测试和红队评估提供系统化的技术参考。'
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Linux攻击与权限维持技术 (Linux Attack & Persistence)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★★
+# original_tools: LinPEAS, GTFO Bins, systemctl, kernel-exploit, Rootkit, Chisel, Ligolo
+# original_last_updated: 2026-05
 # Linux攻击与权限维持技术 (Linux Attack & Persistence)
 
 ## 概述

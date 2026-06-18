@@ -1,17 +1,36 @@
 ---
-id: "29-001"
-title: "威胁情报馈入与TAXII/STIX管理 (Threat Intelligence Feeds & TAXII/STIX)"
-category: "威胁情报"
-category_en: "Threat Intelligence"
-difficulty: "★★★"
-tools: "TAXII, STIX, MISP, OpenCTI, MITRE CTI"
-last_updated: "2026-05"
-tags: [threat-intelligence, stix, taxii, cti, ioc, feed-management]
+name: 威胁情报馈入与taxii-stix管理-threat-intelligence-feeds-taxii-stix
+description: 威胁情报的自动化采集和消费是现代安全运营的基础。STIX（Structured Threat Information Expression）和 TAXII（Trusted Automated Exchange of Intelligence Resources）是业界标准的威胁情报交换格式和协议。本技能覆盖威胁情报馈入源管理、STIX 对象解析、TAXII 客户端配置、IOC 提取和情报质量评估。
+domain: cybersecurity
 subdomain: threat-intelligence
-nist_csf: [DE.AE-01, ID.RA-02, RS.AN-01]
-mitre_attack: [T1583, T1584, T1595, T1597]
+tags:
+    - 'threat-intelligence'
+    - stix
+    - taxii
+    - cti
+    - ioc
+    - 'feed-management'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-01'
+    - 'ID.RA-02'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1583
+    - T1584
+    - T1595
+    - T1597
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 威胁情报馈入与TAXII/STIX管理 (Threat Intelligence Feeds & TAXII/STIX)
+# original_category: 威胁情报
+# original_category_en: Threat Intelligence
+# original_difficulty: ★★★
+# original_tools: TAXII, STIX, MISP, OpenCTI, MITRE CTI
+# original_last_updated: 2026-05
 # 威胁情报馈入与TAXII/STIX管理 (Threat Intelligence Feeds & TAXII/STIX)
 
 ## 概述

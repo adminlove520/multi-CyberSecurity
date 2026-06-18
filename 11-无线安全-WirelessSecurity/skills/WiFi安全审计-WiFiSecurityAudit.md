@@ -1,16 +1,31 @@
 ---
-id: 11-001
-title: "📶 Wi-Fi安全审计 (Wi-Fi Security Audit)"
-category: 无线安全
-category_en: "Wireless Security"
-difficulty: ★★★
-tools: "Aircrack-ng, Wireshark, Airodump-ng, Hashcat"
-last_updated: 2025-07
-tags: ["wireless-security", "wifi", "wpa", "network-audit"]
+name: wi-fi安全审计-wi-fi-security-audit
+description: 评估无线网络的安全性，包括加密协议检测、弱密码破解、钓鱼接入点检测和客户端攻击。
+domain: cybersecurity
 subdomain: wireless-security
-nist_csf: ["PR.AC-01", "PR.DS-02"]
-mitre_attack: ["T1559", "T1465"]
+tags:
+    - 'wireless-security'
+    - wifi
+    - wpa
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-02'
+mitre_attack:
+    - T1559
+    - T1465
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📶 Wi-Fi安全审计 (Wi-Fi Security Audit)
+# original_category: 无线安全
+# original_category_en: Wireless Security
+# original_difficulty: ★★★
+# original_tools: Aircrack-ng, Wireshark, Airodump-ng, Hashcat
+# original_last_updated: 2025-07
 # 📶 Wi-Fi安全审计 (Wi-Fi Security Audit)
 
 ## 概述

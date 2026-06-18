@@ -1,16 +1,31 @@
 ---
-id: 20-004
-title: "🖥️ Web3前端与钱包安全 (Web3 Frontend & Wallet Security)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★
-tools: "MetaMask Security, Ethers.js, Web3.js, WalletConnect, EIP-1193"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: web3前端与钱包安全-web3-frontend-wallet-security
+description: 评估Web3 DApp前端的客户端安全、钱包集成安全、签名逻辑验证和交易模拟，防止前端劫持、钓鱼和签名攻击。
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🖥️ Web3前端与钱包安全 (Web3 Frontend & Wallet Security)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★
+# original_tools: MetaMask Security, Ethers.js, Web3.js, WalletConnect, EIP-1193
+# original_last_updated: 2025-07
 # 🖥️ Web3前端与钱包安全 (Web3 Frontend & Wallet Security)
 
 ## 概述

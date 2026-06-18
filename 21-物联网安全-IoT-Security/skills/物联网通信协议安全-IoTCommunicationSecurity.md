@@ -1,16 +1,35 @@
 ---
-id: 21-003
-title: "🌐 物联网通信协议安全 (IoT Communication Security)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★
-tools: "MQTT Pwn, MQTTSA, Wireshark, nmap, MQTTCheck"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: 物联网通信协议安全-iot-communication-security
+description: 评估物联网通信协议的安全性，包括MQTT、CoAP、HTTP/2、AMQP、LoRaWAN等IoT协议的安全配置和漏洞识别。
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 物联网通信协议安全 (IoT Communication Security)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★
+# original_tools: MQTT Pwn, MQTTSA, Wireshark, nmap, MQTTCheck
+# original_last_updated: 2025-07
 # 🌐 物联网通信协议安全 (IoT Communication Security)
 
 ## 概述

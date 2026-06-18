@@ -1,17 +1,36 @@
 ---
-id: "31-001"
-title: "SIEM告警规则与关联分析 (SIEM Alert Rules & Correlation)"
-category: "SOC运营"
-category_en: "SOC Operations"
-difficulty: "★★★★"
-tools: "Splunk, Elastic Security, Azure Sentinel, QRadar, Sigma"
-last_updated: "2026-05"
-tags: [siem, detection, correlation-rules, alerting, security-monitoring]
+name: siem告警规则与关联分析-siem-alert-rules-correlation
+description: SIEM（Security Information and Event Management）是现代安全运营的核心平台。高效的告警规则和关联分析能够将海量日志转化为可操作的安全告警。本技能覆盖主流 SIEM 平台的检测规则编写、跨数据源关联分析、误报优化规则和安全场景建模。
+domain: cybersecurity
 subdomain: soc-operations
-nist_csf: [DE.CM-01, DE.CM-04, DE.AE-03]
-mitre_attack: [T1046, T1071, T1082, T1560, T1580]
+tags:
+    - siem
+    - detection
+    - 'correlation-rules'
+    - alerting
+    - 'security-monitoring'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'DE.CM-04'
+    - 'DE.AE-03'
+mitre_attack:
+    - T1046
+    - T1071
+    - T1082
+    - T1560
+    - T1580
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: SIEM告警规则与关联分析 (SIEM Alert Rules & Correlation)
+# original_category: SOC运营
+# original_category_en: SOC Operations
+# original_difficulty: ★★★★
+# original_tools: Splunk, Elastic Security, Azure Sentinel, QRadar, Sigma
+# original_last_updated: 2026-05
 # SIEM告警规则与关联分析 (SIEM Alert Rules & Correlation)
 
 ## 概述

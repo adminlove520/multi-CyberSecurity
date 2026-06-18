@@ -1,17 +1,36 @@
 ---
-id: "35-002"
-title: "PKI架构与证书安全管理 (PKI Architecture & Certificate Management)"
-category: "密码学与PKI"
-category_en: "Cryptography & PKI"
-difficulty: "★★★★"
-tools: "OpenSSL, EasyRSA, CFSSL, Vault PKI, EJBCA"
-last_updated: "2026-05"
-tags: [pki, certificate-authority, certificate-management, x509, chain-of-trust]
+name: pki架构与证书安全管理-pki-architecture-certificate-management
+description: 公钥基础设施（PKI）是数字信任的基石，也是企业安全基础设施的关键组件。本技能覆盖 CA 搭建、证书签发与管理、证书生命周期管理和私有 PKI 的最佳实践。
+domain: cybersecurity
 subdomain: cryptography-pki
-nist_csf: [PR.AC-01, PR.DS-01, PR.DS-05, ID.AM-03]
-mitre_attack: [T1552, T1587, T1588, T1608]
+tags:
+    - pki
+    - 'certificate-authority'
+    - 'certificate-management'
+    - x509
+    - 'chain-of-trust'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'PR.DS-05'
+    - 'ID.AM-03'
+mitre_attack:
+    - T1552
+    - T1587
+    - T1588
+    - T1608
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: PKI架构与证书安全管理 (PKI Architecture & Certificate Management)
+# original_category: 密码学与PKI
+# original_category_en: Cryptography & PKI
+# original_difficulty: ★★★★
+# original_tools: OpenSSL, EasyRSA, CFSSL, Vault PKI, EJBCA
+# original_last_updated: 2026-05
 # PKI架构与证书安全管理 (PKI Architecture & Certificate Management)
 
 ## 概述

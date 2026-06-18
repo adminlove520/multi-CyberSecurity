@@ -1,16 +1,33 @@
 ---
-id: 06-003
-title: "🔄 横向移动 (Lateral Movement)"
-category: 横向移动
-category_en: "Lateral Movement"
-difficulty: ★★★
-tools: "BloodHound, CrackMapExec, Impacket"
-last_updated: 2025-07
-tags: ["lateral-movement", "pivoting", "tunneling", "remote-execution"]
+name: 横向移动-lateral-movement
+description: 在已攻破的网络中，从一台主机移动到另一台主机，扩大控制范围，最终到达目标系统（如域控制器）。
+domain: cybersecurity
 subdomain: lateral-movement
-nist_csf: ["DE.CM-04", "PR.AC-05"]
-mitre_attack: ["T1021", "T1570", "T1080", "T1550"]
+tags:
+    - 'lateral-movement'
+    - pivoting
+    - tunneling
+    - 'remote-execution'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-04'
+    - 'PR.AC-05'
+mitre_attack:
+    - T1021
+    - T1570
+    - T1080
+    - T1550
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔄 横向移动 (Lateral Movement)
+# original_category: 横向移动
+# original_category_en: Lateral Movement
+# original_difficulty: ★★★
+# original_tools: BloodHound, CrackMapExec, Impacket
+# original_last_updated: 2025-07
 # 🔄 横向移动 (Lateral Movement)
 
 ## 概述

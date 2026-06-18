@@ -1,16 +1,33 @@
 ---
-id: 23-002
-title: "📞 电话诈骗与Vishing测试 (Vishing Testing)"
-category: 社会工程学
-category_en: "Social Engineering"
-difficulty: ★★★★
-tools: "SET (Social Engineering Toolkit), Twilio, Asterisk, CallerID Spoofer"
-last_updated: 2025-07
-tags: ["social-engineering", "phishing", "vishing", "physical-security", "awareness"]
+name: 电话诈骗与vishing测试-vishing-testing
+description: Vishing（语音钓鱼）是通过电话进行的社交工程攻击。测试人员模拟可信实体（IT支持、银行、供应商）通过电话获取敏感信息。本节涵盖脚本编写、通话自动化、录音分析和防御策略。
+domain: cybersecurity
 subdomain: social-engineering
-nist_csf: ["PR.AT-01", "PR.AT-02"]
-mitre_attack: ["T1566", "T1598", "T1204"]
+tags:
+    - 'social-engineering'
+    - phishing
+    - vishing
+    - 'physical-security'
+    - awareness
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+mitre_attack:
+    - T1566
+    - T1598
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📞 电话诈骗与Vishing测试 (Vishing Testing)
+# original_category: 社会工程学
+# original_category_en: Social Engineering
+# original_difficulty: ★★★★
+# original_tools: SET (Social Engineering Toolkit), Twilio, Asterisk, CallerID Spoofer
+# original_last_updated: 2025-07
 # 📞 电话诈骗与Vishing测试 (Vishing Testing)
 
 ## 概述

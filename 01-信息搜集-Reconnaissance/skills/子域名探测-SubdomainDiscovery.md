@@ -1,16 +1,35 @@
 ---
-id: 01-003
-title: "🔗 子域名探测 (Subdomain Discovery)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★★
-tools: "Subfinder, Amass, Sublist3r"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 子域名探测-subdomain-discovery
+description: 发现目标域名的所有子域名，扩大攻击面。子域名可能包含测试环境、管理后台、API端点等敏感资源。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔗 子域名探测 (Subdomain Discovery)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★★
+# original_tools: Subfinder, Amass, Sublist3r
+# original_last_updated: 2025-07
 # 🔗 子域名探测 (Subdomain Discovery)
 
 ## 概述

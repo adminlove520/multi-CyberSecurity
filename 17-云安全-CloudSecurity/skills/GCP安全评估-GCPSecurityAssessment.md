@@ -1,16 +1,35 @@
 ---
-id: 17-003
-title: "🟢 GCP安全评估 (GCP Security Assessment)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★★
-tools: "Forseti Security, GCP Inspector, ScoutSuite, gcloud CLI"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: gcp安全评估-gcp-security-assessment
+description: 对Google Cloud Platform环境进行全面安全评估，涵盖IAM权限审计、Cloud Storage存储桶加固、GKE集群安全、VPC防火墙规则和合规基线检查。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🟢 GCP安全评估 (GCP Security Assessment)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★★
+# original_tools: Forseti Security, GCP Inspector, ScoutSuite, gcloud CLI
+# original_last_updated: 2025-07
 # 🟢 GCP安全评估 (GCP Security Assessment)
 
 ## 概述

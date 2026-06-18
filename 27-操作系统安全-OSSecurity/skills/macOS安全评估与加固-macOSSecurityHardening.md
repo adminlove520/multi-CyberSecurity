@@ -1,16 +1,34 @@
 ---
-id: 27-005
-title: "macOS安全评估与加固 (macOS Security Assessment & Hardening)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★★
-tools: "SIP, TCC, MDM, osquery, Santa, BlockBlock, KnockKnock, objective-see tools"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: macos安全评估与加固-macos-security-assessment-hardening
+description: macOS 在企业环境中日益普及，其基于 XNU 内核的安全机制（SIP、TCC、AMFI、XProtect）与其他操作系统有显著差异。本技能覆盖 macOS 安全架构解析、本地安全评估、隐私保护与 TCC 策略管理、端点检测与响应配置、企业 MDM 安全策略实施，同时涵盖 macOS 攻击面分析（恶意软件持续化、TCC 绕过、Gatekeeper 逃逸等），帮助安全人员全面评估和加固 macOS
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: macOS安全评估与加固 (macOS Security Assessment & Hardening)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★★
+# original_tools: SIP, TCC, MDM, osquery, Santa, BlockBlock, KnockKnock, objective-see tools
+# original_last_updated: 2026-05
 # macOS安全评估与加固 (macOS Security Assessment & Hardening)
 
 ## 概述

@@ -1,16 +1,32 @@
 ---
-id: 16-009
-title: "📝 模型输出安全与幻觉检测 (Output Safety & Hallucination Detection)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★
-tools: "Guardrails, Nemo Guardrails, 幻觉检测模型"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: 模型输出安全与幻觉检测-output-safety-hallucination-detection
+description: 'LLM输出安全涵盖有害内容生成、事实幻觉、版权侵权（OWASP LLM-02: Insecure Output Handling）等问题。本技能覆盖输出过滤、幻觉检测、事实一致性验证、内容安全审核等关键技术。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 模型输出安全与幻觉检测 (Output Safety & Hallucination Detection)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★
+# original_tools: Guardrails, Nemo Guardrails, 幻觉检测模型
+# original_last_updated: 2025-07
 # 📝 模型输出安全与幻觉检测 (Output Safety & Hallucination Detection)
 
 ## 概述

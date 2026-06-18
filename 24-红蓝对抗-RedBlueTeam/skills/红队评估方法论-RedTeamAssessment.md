@@ -1,16 +1,33 @@
 ---
-id: 24-001
-title: "🔴 红队评估方法论 (Red Team Assessment)"
-category: 红蓝对抗
-category_en: "Red/Blue Team"
-difficulty: ★★★★★
-tools: "Cobalt Strike, CALDERA, Sliver, Nighthawk, Mythic"
-last_updated: 2025-07
-tags: ["red-team", "blue-team", "purple-team", "bas", "adversary-simulation"]
+name: 红队评估方法论-red-team-assessment
+description: 红队评估通过模拟真实攻击者的TTP（战术、技术和流程），全面测试组织的检测响应能力。红队评估超越传统渗透测试，以攻击场景为目标，评估整体安全防御体系的有效性。
+domain: cybersecurity
 subdomain: red-blue-team
-nist_csf: ["DE.AE-02", "RS.AN-01", "ID.RM-01"]
-mitre_attack: ["T1595", "T1562"]
+tags:
+    - 'red-team'
+    - 'blue-team'
+    - 'purple-team'
+    - bas
+    - 'adversary-simulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+    - 'ID.RM-01'
+mitre_attack:
+    - T1595
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔴 红队评估方法论 (Red Team Assessment)
+# original_category: 红蓝对抗
+# original_category_en: Red/Blue Team
+# original_difficulty: ★★★★★
+# original_tools: Cobalt Strike, CALDERA, Sliver, Nighthawk, Mythic
+# original_last_updated: 2025-07
 # 🔴 红队评估方法论 (Red Team Assessment)
 
 ## 概述

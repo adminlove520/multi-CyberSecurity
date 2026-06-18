@@ -1,16 +1,35 @@
 ---
-id: 21-004
-title: "⚙️ 嵌入式设备硬件安全测试 (Embedded Hardware Security)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★★
-tools: "JTAGulator, OpenOCD, Saleae Logic, Bus Pirate, ChipWhisperer"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: 嵌入式设备硬件安全测试-embedded-hardware-security
+description: 对物联网嵌入式硬件进行物理安全评估，涵盖JTAG/SWD调试接口测试、UART串口攻击、SPI/I2C总线窃听和侧信道攻击分析。
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ 嵌入式设备硬件安全测试 (Embedded Hardware Security)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★★
+# original_tools: JTAGulator, OpenOCD, Saleae Logic, Bus Pirate, ChipWhisperer
+# original_last_updated: 2025-07
 # ⚙️ 嵌入式设备硬件安全测试 (Embedded Hardware Security)
 
 ## 概述

@@ -1,17 +1,37 @@
 ---
-id: "35-003"
-title: "加密算法与密钥管理 (Encryption Algorithms & Key Management)"
-category: "密码学与PKI"
-category_en: "Cryptography & PKI"
-difficulty: "★★★★"
-tools: "OpenSSL, GPG, HashiCorp Vault, HSM, age"
-last_updated: "2026-05"
-tags: [cryptography, encryption, key-management, symmetric, asymmetric, hsm]
+name: 加密算法与密钥管理-encryption-algorithms-key-management
+description: 密码学是信息安全的基础，密钥管理则是密码学的核心难题。本技能覆盖对称与非对称加密算法、哈希函数、数字签名、密钥生命周期管理和硬件安全模块（HSM）的基础应用。
+domain: cybersecurity
 subdomain: cryptography-pki
-nist_csf: [PR.DS-01, PR.DS-02, PR.DS-05, PR.DS-06]
-mitre_attack: [T1552, T1573, T1587, T1608]
+tags:
+    - cryptography
+    - encryption
+    - 'key-management'
+    - symmetric
+    - asymmetric
+    - hsm
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'PR.DS-06'
+mitre_attack:
+    - T1552
+    - T1573
+    - T1587
+    - T1608
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 加密算法与密钥管理 (Encryption Algorithms & Key Management)
+# original_category: 密码学与PKI
+# original_category_en: Cryptography & PKI
+# original_difficulty: ★★★★
+# original_tools: OpenSSL, GPG, HashiCorp Vault, HSM, age
+# original_last_updated: 2026-05
 # 加密算法与密钥管理 (Encryption Algorithms & Key Management)
 
 ## 概述

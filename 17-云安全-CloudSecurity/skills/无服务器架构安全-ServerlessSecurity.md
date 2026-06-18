@@ -1,16 +1,35 @@
 ---
-id: 17-007
-title: "⚡ 无服务器架构安全 (Serverless Security)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★★
-tools: "AWS Lambda Check, Serverless Framework, PureSec, Snyk"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: 无服务器架构安全-serverless-security
+description: 评估AWS Lambda、Azure Functions、GCP Cloud Functions等无服务器计算环境的安全性，涵盖函数权限配置、事件源安全、依赖漏洞和环境变量保护。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚡ 无服务器架构安全 (Serverless Security)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★★
+# original_tools: AWS Lambda Check, Serverless Framework, PureSec, Snyk
+# original_last_updated: 2025-07
 # ⚡ 无服务器架构安全 (Serverless Security)
 
 ## 概述

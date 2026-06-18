@@ -1,16 +1,31 @@
 ---
-id: 09-005
-title: "📊 漏洞评级与CVSS评分 (Vulnerability Rating & CVSS Scoring)"
-category: 报告撰写
-category_en: Reporting
-difficulty: ★★★
-tools: "CVSS 3.1/4.0, DREAD, OWASP Risk Rating"
-last_updated: 2025-07
-tags: ["reporting", "documentation", "cvss", "pentest-report", "markdown"]
+name: 漏洞评级与cvss评分-vulnerability-rating-cvss-scoring
+description: 使用CVSS（Common Vulnerability Scoring System）标准和行业最佳实践对漏洞进行评级和严重性评估。
+domain: cybersecurity
 subdomain: reporting
-nist_csf: ["ID.GV-01", "ID.SC-03"]
-mitre_attack: []
+tags:
+    - reporting
+    - documentation
+    - cvss
+    - 'pentest-report'
+    - markdown
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.SC-03'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📊 漏洞评级与CVSS评分 (Vulnerability Rating & CVSS Scoring)
+# original_category: 报告撰写
+# original_category_en: Reporting
+# original_difficulty: ★★★
+# original_tools: CVSS 3.1/4.0, DREAD, OWASP Risk Rating
+# original_last_updated: 2025-07
 # 📊 漏洞评级与CVSS评分 (Vulnerability Rating & CVSS Scoring)
 
 ## 概述

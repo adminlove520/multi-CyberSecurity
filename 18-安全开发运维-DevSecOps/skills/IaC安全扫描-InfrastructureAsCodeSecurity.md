@@ -1,16 +1,33 @@
 ---
-id: 18-002
-title: "📦 IaC安全扫描 (Infrastructure as Code Security)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★
-tools: "Checkov, Terrascan, tfsec, KICS, cfn-nag, kube-lint"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: iac安全扫描-infrastructure-as-code-security
+description: 对Terraform、CloudFormation、ARM、Kubernetes manifests等基础设施即代码进行安全配置扫描，发现错误配置、安全基线偏离和合规违规。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📦 IaC安全扫描 (Infrastructure as Code Security)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★
+# original_tools: Checkov, Terrascan, tfsec, KICS, cfn-nag, kube-lint
+# original_last_updated: 2025-07
 # 📦 IaC安全扫描 (Infrastructure as Code Security)
 
 ## 概述

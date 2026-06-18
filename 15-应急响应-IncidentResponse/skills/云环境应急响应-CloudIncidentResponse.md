@@ -1,16 +1,36 @@
 ---
-id: 15-006
-title: "☁️ 云环境应急响应 (Cloud Incident Response)"
-category: 应急响应
-category_en: "Incident Response"
-difficulty: ★★★★
-tools: "AWS GuardDuty, Azure Sentinel, GCP Security"
-last_updated: 2025-07
-tags: ["incident-response", "forensics", "memory-forensics", "threat-hunting", "ransomware"]
+name: 云环境应急响应-cloud-incident-response
+description: '云环境的安全事件响应与传统IT存在显著差异：共享责任模型、API驱动的控制平面、短暂的云资源、以及需要云原生取证技术。参照 **AWS IR Guide**、**Azure Sentinel IR Playbooks** 和 **GCP IR Framework** 最佳实践。'
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.CO-02", "RS.AN-01", "RS.MI-01"]
-mitre_attack: ["T1486", "T1490", "T1485", "T1562"]
+tags:
+    - 'incident-response'
+    - forensics
+    - 'memory-forensics'
+    - 'threat-hunting'
+    - ransomware
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ☁️ 云环境应急响应 (Cloud Incident Response)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★★
+# original_tools: AWS GuardDuty, Azure Sentinel, GCP Security
+# original_last_updated: 2025-07
 # ☁️ 云环境应急响应 (Cloud Incident Response)
 
 ## 概述

@@ -1,17 +1,37 @@
 ---
-id: "28-002"
-title: "基于Sigma规则的检测工程 (Sigma Rule Detection Engineering)"
-category: "威胁狩猎"
-category_en: "Threat Hunting"
-difficulty: "★★★★"
-tools: "Sigma, PySigma, sigma-cli, Elastic, Splunk, QRadar"
-last_updated: "2026-05"
-tags: [sigma, detection, rules, siem, yara, threat-hunting]
+name: 基于sigma规则的检测工程-sigma-rule-detection-engineering
+description: Sigma 是开源的通用检测规则格式，类似 YARA 但面向日志事件。它允许安全团队编写一次检测规则，便可转换为 Splunk、Elasticsearch QL、KQL、ArcSight、QRadar 等 20+ 种 SIEM 平台的查询语言。本技能覆盖 Sigma 规则编写、转换、测试和部署的全流程。
+domain: cybersecurity
 subdomain: threat-hunting
-nist_csf: [DE.AE-02, DE.CM-01, DE.CM-04]
-mitre_attack: [T1059, T1055, T1078, T1134, T1569]
+tags:
+    - sigma
+    - detection
+    - rules
+    - siem
+    - yara
+    - 'threat-hunting'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.CM-01'
+    - 'DE.CM-04'
+mitre_attack:
+    - T1059
+    - T1055
+    - T1078
+    - T1134
+    - T1569
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 基于Sigma规则的检测工程 (Sigma Rule Detection Engineering)
+# original_category: 威胁狩猎
+# original_category_en: Threat Hunting
+# original_difficulty: ★★★★
+# original_tools: Sigma, PySigma, sigma-cli, Elastic, Splunk, QRadar
+# original_last_updated: 2026-05
 # 基于Sigma规则的检测工程 (Sigma Rule Detection Engineering)
 
 ## 概述

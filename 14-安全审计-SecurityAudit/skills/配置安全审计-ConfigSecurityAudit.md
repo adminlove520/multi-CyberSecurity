@@ -1,16 +1,32 @@
 ---
-id: 14-007
-title: "🔧 配置安全审计 (Configuration Security Audit)"
-category: 安全审计
-category_en: "Security Audit"
-difficulty: ★★★
-tools: "Lynis, OpenSCAP, CIS-CAT, Chef InSpec"
-last_updated: 2025-07
-tags: ["security-audit", "compliance", "cloud-audit", "container-audit", "network-audit"]
+name: 配置安全审计-configuration-security-audit
+description: 对操作系统、数据库、中间件、网络设备进行安全配置核查，发现配置不当导致的潜在安全风险，依据CIS Benchmarks等基线标准进行评估。
+domain: cybersecurity
 subdomain: security-audit
-nist_csf: ["ID.GV-01", "ID.RM-01", "ID.SC-01"]
-mitre_attack: []
+tags:
+    - 'security-audit'
+    - compliance
+    - 'cloud-audit'
+    - 'container-audit'
+    - 'network-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.RM-01'
+    - 'ID.SC-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔧 配置安全审计 (Configuration Security Audit)
+# original_category: 安全审计
+# original_category_en: Security Audit
+# original_difficulty: ★★★
+# original_tools: Lynis, OpenSCAP, CIS-CAT, Chef InSpec
+# original_last_updated: 2025-07
 # 🔧 配置安全审计 (Configuration Security Audit)
 
 ## 概述

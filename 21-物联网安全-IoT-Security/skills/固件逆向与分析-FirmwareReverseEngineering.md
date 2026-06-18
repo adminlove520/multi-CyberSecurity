@@ -1,16 +1,35 @@
 ---
-id: 21-001
-title: "🔧 固件逆向与分析 (Firmware Reverse Engineering)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★★
-tools: "Binwalk, Firmadyne, Ghidra, QEMU, GDB, JTAGulator"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: 固件逆向与分析-firmware-reverse-engineering
+description: 系统化地对物联网设备固件进行逆向分析，包括固件提取、文件系统分析、架构识别、漏洞发现和后门检测。
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔧 固件逆向与分析 (Firmware Reverse Engineering)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★★
+# original_tools: Binwalk, Firmadyne, Ghidra, QEMU, GDB, JTAGulator
+# original_last_updated: 2025-07
 # 🔧 固件逆向与分析 (Firmware Reverse Engineering)
 
 ## 概述

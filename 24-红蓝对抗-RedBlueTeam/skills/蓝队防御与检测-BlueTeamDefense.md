@@ -1,16 +1,33 @@
 ---
-id: 24-002
-title: "🔵 蓝队防御与检测 (Blue Team Defense & Detection)"
-category: 红蓝对抗
-category_en: "Red/Blue Team"
-difficulty: ★★★★
-tools: "Splunk, Wazuh, Elastic Security, Sentinel, Sigma Rules"
-last_updated: 2025-07
-tags: ["red-team", "blue-team", "purple-team", "bas", "adversary-simulation"]
+name: 蓝队防御与检测-blue-team-defense-detection
+description: '蓝队负责检测、分析和响应安全威胁。基于 **NIST SP 800-61** 和 **MITRE ATT&CK** 框架，构建从日志收集到告警响应的完整检测防御体系，覆盖SIEM规则编写、威胁狩猎、EDR配置和SOC运营。'
+domain: cybersecurity
 subdomain: red-blue-team
-nist_csf: ["DE.AE-02", "RS.AN-01", "ID.RM-01"]
-mitre_attack: ["T1595", "T1562"]
+tags:
+    - 'red-team'
+    - 'blue-team'
+    - 'purple-team'
+    - bas
+    - 'adversary-simulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+    - 'ID.RM-01'
+mitre_attack:
+    - T1595
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔵 蓝队防御与检测 (Blue Team Defense & Detection)
+# original_category: 红蓝对抗
+# original_category_en: Red/Blue Team
+# original_difficulty: ★★★★
+# original_tools: Splunk, Wazuh, Elastic Security, Sentinel, Sigma Rules
+# original_last_updated: 2025-07
 # 🔵 蓝队防御与检测 (Blue Team Defense & Detection)
 
 ## 概述

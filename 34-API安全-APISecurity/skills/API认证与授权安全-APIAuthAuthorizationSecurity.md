@@ -1,17 +1,37 @@
 ---
-id: "34-002"
-title: "API认证与授权安全 (API Authentication & Authorization Security)"
-category: "API安全"
-category_en: "API Security"
-difficulty: "★★★★"
-tools: "OAuth 2.0, OIDC, JWT, Keycloak, Auth0"
-last_updated: "2026-05"
-tags: [api-security, authentication, authorization, oauth, jwt, oidc]
+name: api认证与授权安全-api-authentication-authorization-security
+description: API 认证和授权是 API 安全的基石。严重的漏洞往往来自认证机制缺陷或授权控制不当。本技能覆盖 OAuth 2.0 流程安全、JWT 安全实现、OIDC 配置和 API Key 管理。
+domain: cybersecurity
 subdomain: api-security
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-07, PR.DS-05]
-mitre_attack: [T1528, T1550, T1556, T1606]
+tags:
+    - 'api-security'
+    - authentication
+    - authorization
+    - oauth
+    - jwt
+    - oidc
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-07'
+    - 'PR.DS-05'
+mitre_attack:
+    - T1528
+    - T1550
+    - T1556
+    - T1606
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: API认证与授权安全 (API Authentication & Authorization Security)
+# original_category: API安全
+# original_category_en: API Security
+# original_difficulty: ★★★★
+# original_tools: OAuth 2.0, OIDC, JWT, Keycloak, Auth0
+# original_last_updated: 2026-05
 # API认证与授权安全 (API Authentication & Authorization Security)
 
 ## 概述

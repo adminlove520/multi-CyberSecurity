@@ -1,16 +1,33 @@
 ---
-id: 23-005
-title: "📊 员工安全意识评估 (Security Awareness Assessment)"
-category: 社会工程学
-category_en: "Social Engineering"
-difficulty: ★★★
-tools: "KnowBe4, Phish Insight, CyberArk, PhishLabs, Wizer"
-last_updated: 2025-07
-tags: ["social-engineering", "phishing", "vishing", "physical-security", "awareness"]
+name: 员工安全意识评估-security-awareness-assessment
+description: 员工安全意识评估通过钓鱼模拟、知识测试、行为分析等方法测量组织的安全文化成熟度，识别高风险人群，指导针对性培训。
+domain: cybersecurity
 subdomain: social-engineering
-nist_csf: ["PR.AT-01", "PR.AT-02"]
-mitre_attack: ["T1566", "T1598", "T1204"]
+tags:
+    - 'social-engineering'
+    - phishing
+    - vishing
+    - 'physical-security'
+    - awareness
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+mitre_attack:
+    - T1566
+    - T1598
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📊 员工安全意识评估 (Security Awareness Assessment)
+# original_category: 社会工程学
+# original_category_en: Social Engineering
+# original_difficulty: ★★★
+# original_tools: KnowBe4, Phish Insight, CyberArk, PhishLabs, Wizer
+# original_last_updated: 2025-07
 # 📊 员工安全意识评估 (Security Awareness Assessment)
 
 ## 概述

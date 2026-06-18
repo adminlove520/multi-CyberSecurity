@@ -1,17 +1,37 @@
 ---
-id: "32-004"
-title: "AD域安全与攻击路径分析 (AD Security & Attack Path Analysis)"
-category: "身份与访问管理"
-category_en: "Identity & Access Management"
-difficulty: "★★★★★"
-tools: "BloodHound, PingCastle, Purple Knight, AD Explorer, PowerView"
-last_updated: "2026-05"
-tags: [active-directory, domain-security, attack-path, bloodhound, acl-abuse]
+name: ad域安全与攻击路径分析-ad-security-attack-path-analysis
+description: Active Directory 是企业身份认证的核心，也是攻击者横向移动的关键目标。AD 中的权限配置错误和信任关系常被利用来提升权限。本技能覆盖 AD 安全评估工具使用、攻击路径分析、ACL 滥用检测和域安全加固。
+domain: cybersecurity
 subdomain: identity-access-management
-nist_csf: [DE.AE-02, DE.AE-05, PR.AC-01, PR.AC-05]
-mitre_attack: [T1003, T1207, T1484, T1550, T1611]
+tags:
+    - 'active-directory'
+    - 'domain-security'
+    - 'attack-path'
+    - bloodhound
+    - 'acl-abuse'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.AE-05'
+    - 'PR.AC-01'
+    - 'PR.AC-05'
+mitre_attack:
+    - T1003
+    - T1207
+    - T1484
+    - T1550
+    - T1611
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: AD域安全与攻击路径分析 (AD Security & Attack Path Analysis)
+# original_category: 身份与访问管理
+# original_category_en: Identity & Access Management
+# original_difficulty: ★★★★★
+# original_tools: BloodHound, PingCastle, Purple Knight, AD Explorer, PowerView
+# original_last_updated: 2026-05
 # AD域安全与攻击路径分析 (AD Security & Attack Path Analysis)
 
 ## 概述

@@ -1,17 +1,35 @@
 ---
-id: "36-003"
-title: "ZTNA解决方案与IAM集成 (ZTNA Solutions & IAM Integration)"
-category: "零信任架构"
-category_en: "Zero Trust Architecture"
-difficulty: "★★★★"
-tools: "Zscaler ZPA, Cloudflare Access, Perimeter 81, Appgate, Twingate"
-last_updated: "2026-05"
-tags: [ztna, zero-trust, iam-integration, sso, identity-aware-proxy]
+name: ztna解决方案与iam集成-ztna-solutions-iam-integration
+description: ZTNA（Zero Trust Network Access）是零信任理念在网络访问层的落地。它隐藏应用基础设施，确保只有经过认证和授权的用户才能访问指定应用。本技能覆盖 ZTNA 架构、IAM 集成、身份感知代理部署和策略配置。
+domain: cybersecurity
 subdomain: zero-trust
-nist_csf: [PR.AC-01, PR.AC-04, PR.AC-06, PR.AC-07]
-mitre_attack: [T1078, T1550, T1556]
+tags:
+    - ztna
+    - 'zero-trust'
+    - 'iam-integration'
+    - sso
+    - 'identity-aware-proxy'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.AC-04'
+    - 'PR.AC-06'
+    - 'PR.AC-07'
+mitre_attack:
+    - T1078
+    - T1550
+    - T1556
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: ZTNA解决方案与IAM集成 (ZTNA Solutions & IAM Integration)
+# original_category: 零信任架构
+# original_category_en: Zero Trust Architecture
+# original_difficulty: ★★★★
+# original_tools: Zscaler ZPA, Cloudflare Access, Perimeter 81, Appgate, Twingate
+# original_last_updated: 2026-05
 # ZTNA解决方案与IAM集成 (ZTNA Solutions & IAM Integration)
 
 ## 概述

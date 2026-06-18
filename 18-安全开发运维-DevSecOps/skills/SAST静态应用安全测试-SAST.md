@@ -1,16 +1,33 @@
 ---
-id: 18-003
-title: "🔍 SAST静态应用安全测试 (Static Application Security Testing)"
-category: 安全开发运维
-category_en: DevSecOps
-difficulty: ★★★★
-tools: "SonarQube, Semgrep, CodeQL, Fortify, Checkmarx"
-last_updated: 2025-07
-tags: ["devsecops", "ci-cd", "sast", "dast", "iac-security", "supply-chain"]
+name: sast静态应用安全测试-static-application-security-testing
+description: 在开发阶段对源码进行自动安全扫描，识别SQL注入、XSS、命令注入、安全配置错误等漏洞，实现左移安全。
+domain: cybersecurity
 subdomain: devsecops
-nist_csf: ["PR.IP-12", "ID.RA-01", "DE.CM-08"]
-mitre_attack: []
+tags:
+    - devsecops
+    - 'ci-cd'
+    - sast
+    - dast
+    - 'iac-security'
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1505
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔍 SAST静态应用安全测试 (Static Application Security Testing)
+# original_category: 安全开发运维
+# original_category_en: DevSecOps
+# original_difficulty: ★★★★
+# original_tools: SonarQube, Semgrep, CodeQL, Fortify, Checkmarx
+# original_last_updated: 2025-07
 # 🔍 SAST静态应用安全测试 (Static Application Security Testing)
 
 ## 概述

@@ -1,16 +1,31 @@
 ---
-id: 20-001
-title: "📝 智能合约安全审计 (Smart Contract Audit)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★★
-tools: "Slither, Mythril, Certora, Echidna, Foundry, Hardhat"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: 智能合约安全审计-smart-contract-audit
+description: 对Ethereum及其他EVM兼容链上的智能合约进行安全审计，涵盖重入攻击、访问控制、整数溢出、闪电贷攻击等漏洞分析与静态/动态测试。
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 智能合约安全审计 (Smart Contract Audit)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★★
+# original_tools: Slither, Mythril, Certora, Echidna, Foundry, Hardhat
+# original_last_updated: 2025-07
 # 📝 智能合约安全审计 (Smart Contract Audit)
 
 ## 概述

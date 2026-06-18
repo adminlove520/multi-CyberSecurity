@@ -1,17 +1,36 @@
 ---
-id: "38-002"
-title: "勒索软件应急响应与恢复 (Ransomware Incident Response & Recovery)"
-category: "勒索软件防御"
-category_en: "Ransomware Defense"
-difficulty: "★★★★★"
-tools: "EDR, SIEM, KAPE, Velociraptor, CyberReason"
-last_updated: "2026-05"
-tags: [ransomware, incident-response, containment, recovery, IR-playbook]
+name: 勒索软件应急响应与恢复-ransomware-incident-response-recovery
+description: 勒索软件攻击的黄金响应时间通常以分钟计算。快速隔离、准确评估、有效恢复是减少损失的关键。本技能覆盖勒索软件应急响应全流程，从初始检测到隔离遏制、取证分析、解密恢复和事后复盘。
+domain: cybersecurity
 subdomain: ransomware-defense
-nist_csf: [RS.RP-01, RS.CO-02, RS.AN-01, RS.MI-01, RC.RP-01]
-mitre_attack: [T1486, T1490, T1485]
+tags:
+    - ransomware
+    - 'incident-response'
+    - containment
+    - recovery
+    - 'IR-playbook'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+    - 'RC.RP-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 勒索软件应急响应与恢复 (Ransomware Incident Response & Recovery)
+# original_category: 勒索软件防御
+# original_category_en: Ransomware Defense
+# original_difficulty: ★★★★★
+# original_tools: EDR, SIEM, KAPE, Velociraptor, CyberReason
+# original_last_updated: 2026-05
 # 勒索软件应急响应与恢复 (Ransomware Incident Response & Recovery)
 
 ## 概述

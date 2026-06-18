@@ -1,16 +1,36 @@
 ---
-id: 22-006
-title: "📝 隐私影响评估(PIA) (Privacy Impact Assessment)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★★
-tools: "CNIL PIA Tool, OneTrust DPIA, PIA Template, DPIA Toolkit"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: 隐私影响评估-pia-privacy-impact-assessment
+description: 隐私影响评估（PIA）/ 数据保护影响评估（DPIA）是识别和降低个人数据处理活动隐私风险的系统性方法。GDPR Art.35 要求在高风险处理前必须进行DPIA。中国《个人信息保护法》第五十五条也要求在自动化决策、委托处理等场景进行影响评估。
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 隐私影响评估(PIA) (Privacy Impact Assessment)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★★
+# original_tools: CNIL PIA Tool, OneTrust DPIA, PIA Template, DPIA Toolkit
+# original_last_updated: 2025-07
 # 📝 隐私影响评估(PIA) (Privacy Impact Assessment)
 
 ## 概述

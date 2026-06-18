@@ -1,16 +1,31 @@
 ---
-id: 12-004
-title: "🐹 Go代码审计 (Go Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★
-tools: "gosec, staticcheck, govulncheck, Semgrep"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: go代码审计-go-code-audit
+description: Go语言以内存安全（带GC、无野指针）和并发原语著称，但依然存在Web安全漏洞、配置错误、加密API误用、竞争条件和逻辑漏洞等风险。Go代码审计的重点在于数据流安全、并发安全和配置安全。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🐹 Go代码审计 (Go Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★
+# original_tools: gosec, staticcheck, govulncheck, Semgrep
+# original_last_updated: 2025-07
 # 🐹 Go代码审计 (Go Code Audit)
 
 ## 概述

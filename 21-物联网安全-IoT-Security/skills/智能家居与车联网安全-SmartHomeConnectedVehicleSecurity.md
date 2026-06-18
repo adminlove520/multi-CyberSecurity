@@ -1,16 +1,35 @@
 ---
-id: 21-006
-title: "🏠 智能家居与车联网安全 (Smart Home & Connected Vehicle Security)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★
-tools: "Home Assistant, CANtact, UDSim, ICSim, OpenVehicles"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: 智能家居与车联网安全-smart-home-connected-vehicle-security
+description: '评估智能家居生态系统和车联网系统的安全性，包括智能家电漏洞分析、Matter协议安全、CAN总线测试和OBD-II安全评估。'
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🏠 智能家居与车联网安全 (Smart Home & Connected Vehicle Security)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★
+# original_tools: Home Assistant, CANtact, UDSim, ICSim, OpenVehicles
+# original_last_updated: 2025-07
 # 🏠 智能家居与车联网安全 (Smart Home & Connected Vehicle Security)
 
 ## 概述

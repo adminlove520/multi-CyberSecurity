@@ -1,16 +1,31 @@
 ---
-id: 20-003
-title: "🔗 共识机制安全分析 (Consensus Mechanism Security)"
-category: 区块链安全
-category_en: "Blockchain/Web3 Security"
-difficulty: ★★★★
-tools: "Prysm, Lighthouse, Teku, Eth2, Cosmos SDK Security"
-last_updated: 2025-07
-tags: ["blockchain-security", "web3", "smart-contract", "defi", "solidity"]
+name: 共识机制安全分析-consensus-mechanism-security
+description: '分析区块链共识层的安全威胁，涵盖PoW 51%攻击、PoS长程攻击、账本分叉、验证器安全、MEV安全等。'
+domain: cybersecurity
 subdomain: blockchain-web3-security
-nist_csf: ["PR.AC-01", "PR.DS-01"]
-mitre_attack: []
+tags:
+    - 'blockchain-security'
+    - web3
+    - 'smart-contract'
+    - defi
+    - solidity
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔗 共识机制安全分析 (Consensus Mechanism Security)
+# original_category: 区块链安全
+# original_category_en: Blockchain/Web3 Security
+# original_difficulty: ★★★★
+# original_tools: Prysm, Lighthouse, Teku, Eth2, Cosmos SDK Security
+# original_last_updated: 2025-07
 # 🔗 共识机制安全分析 (Consensus Mechanism Security)
 
 ## 概述

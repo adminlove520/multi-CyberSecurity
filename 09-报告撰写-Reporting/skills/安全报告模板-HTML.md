@@ -1,16 +1,31 @@
 ---
-id: 09-001
-title: "🌐 安全报告模板 - HTML格式 (Security Report Template - HTML)"
-category: 报告撰写
-category_en: Reporting
-difficulty: ★★★
-tools: "Chart.js, HTML/CSS, Python, JavaScript"
-last_updated: 2025-07
-tags: ["reporting", "documentation", "cvss", "pentest-report", "markdown"]
+name: 安全报告模板---html格式-security-report-template---html
+description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **特性**: 响应式设计、Chart.js图表、暗色模式、侧边栏导航、打印/PDF导出、AI Agent原生接口'
+domain: cybersecurity
 subdomain: reporting
-nist_csf: ["ID.GV-01", "ID.SC-03"]
-mitre_attack: []
+tags:
+    - reporting
+    - documentation
+    - cvss
+    - 'pentest-report'
+    - markdown
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.SC-03'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 安全报告模板 - HTML格式 (Security Report Template - HTML)
+# original_category: 报告撰写
+# original_category_en: Reporting
+# original_difficulty: ★★★
+# original_tools: Chart.js, HTML/CSS, Python, JavaScript
+# original_last_updated: 2025-07
 # 🌐 安全报告模板 - HTML格式 (Security Report Template - HTML)
 
 > **版本**: v2.0 | **更新**: 2025-Q1 | **特性**: 响应式设计、Chart.js图表、暗色模式、侧边栏导航、打印/PDF导出、AI Agent原生接口

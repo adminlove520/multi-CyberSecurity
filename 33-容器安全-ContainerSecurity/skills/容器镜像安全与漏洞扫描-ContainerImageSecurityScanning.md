@@ -1,17 +1,36 @@
 ---
-id: "33-001"
-title: "容器镜像安全与漏洞扫描 (Container Image Security & Scanning)"
-category: "容器安全"
-category_en: "Container Security"
-difficulty: "★★★"
-tools: "Trivy, Grype, Docker Scout, Clair, Cosign, Syft"
-last_updated: "2026-05"
-tags: [container-security, image-scanning, vulnerability, sbom, supply-chain]
+name: 容器镜像安全与漏洞扫描-container-image-security-scanning
+description: 容器镜像安全是云原生安全的第一道防线。镜像中隐藏的漏洞、恶意软件和配置错误是攻击者进入容器环境的常见入口。本技能覆盖镜像漏洞扫描、Dockerfile 安全最佳实践、SBOM 生成、镜像签名和供应链安全。
+domain: cybersecurity
 subdomain: container-security
-nist_csf: [ID.RA-01, PR.DS-03, PR.DS-06, DE.CM-08]
-mitre_attack: [T1204, T1525, T1578, T1610]
+tags:
+    - 'container-security'
+    - 'image-scanning'
+    - vulnerability
+    - sbom
+    - 'supply-chain'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.RA-01'
+    - 'PR.DS-03'
+    - 'PR.DS-06'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1204
+    - T1525
+    - T1578
+    - T1610
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 容器镜像安全与漏洞扫描 (Container Image Security & Scanning)
+# original_category: 容器安全
+# original_category_en: Container Security
+# original_difficulty: ★★★
+# original_tools: Trivy, Grype, Docker Scout, Clair, Cosign, Syft
+# original_last_updated: 2026-05
 # 容器镜像安全与漏洞扫描 (Container Image Security & Scanning)
 
 ## 概述

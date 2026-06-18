@@ -1,17 +1,36 @@
 ---
-id: "38-001"
-title: "勒索软件攻击链分析与检测 (Ransomware Attack Chain Analysis & Detection)"
-category: "勒索软件防御"
-category_en: "Ransomware Defense"
-difficulty: "★★★★"
-tools: "YARA, Sigma, Elastic, Splunk, Any.Run, Joe Sandbox"
-last_updated: "2026-05"
-tags: [ransomware, detection, attack-chain, behavior-analysis, threat-hunting]
+name: 勒索软件攻击链分析与检测-ransomware-attack-chain-analysis-detection
+description: 勒索软件（Ransomware）是最具破坏性的网络威胁之一。理解勒索软件的攻击链，在每个阶段建立检测能力，是有效防御的关键。本技能覆盖勒索软件攻击生命周期分析、行为检测指标、YARA 规则编写和早期预警。
+domain: cybersecurity
 subdomain: ransomware-defense
-nist_csf: [DE.AE-02, DE.CM-01, DE.CM-04, RS.AN-01]
-mitre_attack: [T1486, T1490, T1485, T1561]
+tags:
+    - ransomware
+    - detection
+    - 'attack-chain'
+    - 'behavior-analysis'
+    - 'threat-hunting'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'DE.CM-01'
+    - 'DE.CM-04'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1561
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 勒索软件攻击链分析与检测 (Ransomware Attack Chain Analysis & Detection)
+# original_category: 勒索软件防御
+# original_category_en: Ransomware Defense
+# original_difficulty: ★★★★
+# original_tools: YARA, Sigma, Elastic, Splunk, Any.Run, Joe Sandbox
+# original_last_updated: 2026-05
 # 勒索软件攻击链分析与检测 (Ransomware Attack Chain Analysis & Detection)
 
 ## 概述

@@ -1,16 +1,35 @@
 ---
-id: 17-005
-title: "💾 云存储安全配置审计 (Cloud Storage Security)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★
-tools: "S3 Scanner, CloudSploit, gsutil, Azure Storage Explorer"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: 云存储安全配置审计-cloud-storage-security
+description: 全面审计三大云平台的存储服务安全配置，包括AWS S3、Azure Blob Storage和GCP Cloud Storage的公开访问、加密、版本管理和访问日志检查。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 💾 云存储安全配置审计 (Cloud Storage Security)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★
+# original_tools: S3 Scanner, CloudSploit, gsutil, Azure Storage Explorer
+# original_last_updated: 2025-07
 # 💾 云存储安全配置审计 (Cloud Storage Security)
 
 ## 概述

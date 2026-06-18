@@ -1,16 +1,33 @@
 ---
-id: 08-004
-title: "AMSI绕过与EDR规避 (AMSI Bypass & EDR Evasion)"
-category: 痕迹清除
-category_en: "Covering Tracks"
-difficulty: ★★★★★
-tools: "AMSI, ETW, Sysmon, EDR, Bypass Tools"
-last_updated: 2026-05
-tags: ["covering-tracks", "anti-forensics", "process-injection", "obfuscation"]
+name: amsi绕过与edr规避-amsi-bypass-edr-evasion
+description: AMSI（Windows Antimalware Scan Interface）和 EDR（Endpoint Detection and Response）是现代 Windows 环境中主要的检测防御层。AMSI 实时扫描脚本执行内容，EDR 监控系统调用和进程行为。本技能覆盖 AMSI/ETW 绕过技术、EDR 规避方法以及 Sysmon 检测绕过。
+domain: cybersecurity
 subdomain: covering-tracks
-nist_csf: ["DE.CM-01", "PR.PT-01"]
-mitre_attack: ["T1070", "T1562", "T1055", "T1027"]
+tags:
+    - 'covering-tracks'
+    - 'anti-forensics'
+    - 'process-injection'
+    - obfuscation
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1070
+    - T1562
+    - T1055
+    - T1027
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: AMSI绕过与EDR规避 (AMSI Bypass & EDR Evasion)
+# original_category: 痕迹清除
+# original_category_en: Covering Tracks
+# original_difficulty: ★★★★★
+# original_tools: AMSI, ETW, Sysmon, EDR, Bypass Tools
+# original_last_updated: 2026-05
 # AMSI绕过与EDR规避 (AMSI Bypass & EDR Evasion)
 
 ## 概述

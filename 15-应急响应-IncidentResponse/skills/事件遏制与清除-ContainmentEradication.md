@@ -1,16 +1,36 @@
 ---
-id: 15-005
-title: "🛑 事件遏制与清除 (Containment & Eradication)"
-category: 应急响应
-category_en: "Incident Response"
-difficulty: ★★★★
-tools: "Firewall ACL, EDR隔离, GPO, 网络分段"
-last_updated: 2025-07
-tags: ["incident-response", "forensics", "memory-forensics", "threat-hunting", "ransomware"]
+name: 事件遏制与清除-containment-eradication
+description: 事件遏制（Containment）与清除（Eradication）是应急响应中最关键的阶段。目标是在最小化业务影响的前提下，阻止攻击者进一步活动，并从受影响的系统中彻底清除威胁。
+domain: cybersecurity
 subdomain: incident-response
-nist_csf: ["RS.RP-01", "RS.CO-02", "RS.AN-01", "RS.MI-01"]
-mitre_attack: ["T1486", "T1490", "T1485", "T1562"]
+tags:
+    - 'incident-response'
+    - forensics
+    - 'memory-forensics'
+    - 'threat-hunting'
+    - ransomware
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.RP-01'
+    - 'RS.CO-02'
+    - 'RS.AN-01'
+    - 'RS.MI-01'
+mitre_attack:
+    - T1486
+    - T1490
+    - T1485
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🛑 事件遏制与清除 (Containment & Eradication)
+# original_category: 应急响应
+# original_category_en: Incident Response
+# original_difficulty: ★★★★
+# original_tools: Firewall ACL, EDR隔离, GPO, 网络分段
+# original_last_updated: 2025-07
 # 🛑 事件遏制与清除 (Containment & Eradication)
 
 ## 概述

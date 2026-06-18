@@ -1,16 +1,34 @@
 ---
-id: 10-001
-title: "📱 Android安全测试 (Android Security Testing)"
-category: 移动安全
-category_en: "Mobile Security"
-difficulty: ★★★
-tools: "drozer, Frida, APKTool, MobSF, Jadx"
-last_updated: 2025-07
-tags: ["mobile-security", "android", "ios", "mobile-audit"]
+name: android安全测试-android-security-testing
+description: 对Android应用程序进行安全评估，包括静态分析、动态调试、逆向工程和API安全测试。
+domain: cybersecurity
 subdomain: mobile-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1475", "T1514", "T1529", "T1204"]
+tags:
+    - 'mobile-security'
+    - android
+    - ios
+    - 'mobile-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1475
+    - T1514
+    - T1529
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📱 Android安全测试 (Android Security Testing)
+# original_category: 移动安全
+# original_category_en: Mobile Security
+# original_difficulty: ★★★
+# original_tools: drozer, Frida, APKTool, MobSF, Jadx
+# original_last_updated: 2025-07
 # 📱 Android安全测试 (Android Security Testing)
 
 ## 概述

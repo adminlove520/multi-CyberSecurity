@@ -1,17 +1,33 @@
 ---
-id: "29-002"
-title: "MISP平台部署与威胁情报共享 (MISP Deployment & Threat Intel Sharing)"
-category: "威胁情报"
-category_en: "Threat Intelligence"
-difficulty: "★★★★"
-tools: "MISP, Docker, Cortex, MISP Galaxy, PyMISP"
-last_updated: "2026-05"
-tags: [misp, threat-intelligence, sharing, galaxy, cortex]
+name: misp平台部署与威胁情报共享-misp-deployment-threat-intel-sharing
+description: MISP（Malware Information Sharing Platform）是目前全球应用最广泛的开源威胁情报共享平台。本技能覆盖 MISP 平台部署、事件管理、Galaxy 使用、自动化导入导出、Cortex 集成联动等技术。
+domain: cybersecurity
 subdomain: threat-intelligence
-nist_csf: [DE.AE-01, ID.RA-02, RS.CO-04]
-mitre_attack: [T1583, T1597]
+tags:
+    - misp
+    - 'threat-intelligence'
+    - sharing
+    - galaxy
+    - cortex
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-01'
+    - 'ID.RA-02'
+    - 'RS.CO-04'
+mitre_attack:
+    - T1583
+    - T1597
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: MISP平台部署与威胁情报共享 (MISP Deployment & Threat Intel Sharing)
+# original_category: 威胁情报
+# original_category_en: Threat Intelligence
+# original_difficulty: ★★★★
+# original_tools: MISP, Docker, Cortex, MISP Galaxy, PyMISP
+# original_last_updated: 2026-05
 # MISP平台部署与威胁情报共享 (MISP Deployment & Threat Intel Sharing)
 
 ## 概述

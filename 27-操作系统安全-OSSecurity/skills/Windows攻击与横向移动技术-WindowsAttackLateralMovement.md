@@ -1,16 +1,34 @@
 ---
-id: 27-002
-title: "Windows攻击与横向移动技术 (Windows Attack & Lateral Movement)"
-category: 操作系统安全
-category_en: "OS Security"
-difficulty: ★★★★
-tools: "Impacket, Mimikatz, Rubeus, BloodHound, CrackMapExec, Responder, Certify"
-last_updated: 2026-05
-tags: ["os-security", "windows-hardening", "linux-hardening", "macos", "privilege-escalation"]
+name: windows攻击与横向移动技术-windows-attack-lateral-movement
+description: 'Windows 域环境攻击是红队评估和渗透测试的核心能力。本技能覆盖 Active Directory 攻击技术、Kerberos 协议滥用、NTLM 中继攻击、ACL 滥用、域横向移动等关键技术，帮助安全测试人员深入理解 Windows 身份认证机制和安全缺陷，同时为蓝队防御提供检测视角。参考 MITRE ATT&CK 框架和等保2.0 中对域控安全的防护要求。'
+domain: cybersecurity
 subdomain: os-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T1548", "T1552", "T1562"]
+tags:
+    - 'os-security'
+    - 'windows-hardening'
+    - 'linux-hardening'
+    - macos
+    - 'privilege-escalation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1548
+    - T1552
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Windows攻击与横向移动技术 (Windows Attack & Lateral Movement)
+# original_category: 操作系统安全
+# original_category_en: OS Security
+# original_difficulty: ★★★★
+# original_tools: Impacket, Mimikatz, Rubeus, BloodHound, CrackMapExec, Responder, Certify
+# original_last_updated: 2026-05
 # Windows攻击与横向移动技术 (Windows Attack & Lateral Movement)
 
 ## 概述

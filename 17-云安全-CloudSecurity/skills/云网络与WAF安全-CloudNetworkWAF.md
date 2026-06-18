@@ -1,16 +1,35 @@
 ---
-id: 17-006
-title: "🌐 云网络与WAF安全 (Cloud Network & WAF Security)"
-category: 云安全
-category_en: "Cloud Security"
-difficulty: ★★★★
-tools: "AWS WAF, Azure WAF, Cloud Armor, Security Groups, CloudSploit"
-last_updated: 2025-07
-tags: ["cloud-security", "aws", "azure", "gcp", "cloud-iam", "cloud-network"]
+name: 云网络与waf安全-cloud-network-waf-security
+description: 评估云平台网络层面的安全控制，包括VPC网络分段、安全组与防火墙规则审查、WAF策略配置审计、DDoS防护和私有连接安全。
+domain: cybersecurity
 subdomain: cloud-security
-nist_csf: ["PR.AC-01", "PR.DS-05", "PR.PT-01"]
-mitre_attack: ["T1525", "T1613", "T1537"]
+tags:
+    - 'cloud-security'
+    - aws
+    - azure
+    - gcp
+    - 'cloud-iam'
+    - 'cloud-network'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-05'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1525
+    - T1613
+    - T1537
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🌐 云网络与WAF安全 (Cloud Network & WAF Security)
+# original_category: 云安全
+# original_category_en: Cloud Security
+# original_difficulty: ★★★★
+# original_tools: AWS WAF, Azure WAF, Cloud Armor, Security Groups, CloudSploit
+# original_last_updated: 2025-07
 # 🌐 云网络与WAF安全 (Cloud Network & WAF Security)
 
 ## 概述

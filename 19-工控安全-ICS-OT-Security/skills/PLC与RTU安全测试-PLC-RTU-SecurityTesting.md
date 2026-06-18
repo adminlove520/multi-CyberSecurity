@@ -1,16 +1,36 @@
 ---
-id: 19-002
-title: "🔧 PLC与RTU安全测试 (PLC & RTU Security Testing)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★★
-tools: "ISF (ICS Exploitation Framework), Metasploit, Industrial Exploitation Suite, C0br4.sh"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: plc与rtu安全测试-plc-rtu-security-testing
+description: 对可编程逻辑控制器(PLC)和远程终端单元(RTU)进行深入安全测试，包括固件分析、逻辑注入、Ladder Logic安全审查和物理接口安全评估。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔧 PLC与RTU安全测试 (PLC & RTU Security Testing)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★★
+# original_tools: ISF (ICS Exploitation Framework), Metasploit, Industrial Exploitation Suite, C0br4.sh
+# original_last_updated: 2025-07
 # 🔧 PLC与RTU安全测试 (PLC & RTU Security Testing)
 
 ## 概述

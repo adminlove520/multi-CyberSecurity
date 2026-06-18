@@ -1,16 +1,31 @@
 ---
-id: 12-010
-title: "☕ Java 代码审计进阶 (Java Audit Advanced)"
-category: 代码审计
-category_en: Code Audit
-difficulty: ★★★★
-tools: "CFR, java-route-mapper, java-sql-audit"
-last_updated: 2026-05
-tags: ["java", "code-audit", "static-analysis", "vulnerability-research"]
+name: java-代码审计进阶-java-audit-advanced
+description: 专注于 Java 代码审计的进阶技能集合，提供自动化源码分析、路由提取、参数映射等功能，辅助安全研究人员进行 Java Web 应用的深度安全审计。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "DE.CM-08"]
-mitre_attack: ["T1059.003", "T1190"]
+tags:
+    - java
+    - 'code-audit'
+    - 'static-analysis'
+    - 'vulnerability-research'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'DE.CM-08'
+mitre_attack:
+    - T1059.003
+    - T1190
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ☕ Java 代码审计进阶 (Java Audit Advanced)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: CFR, java-route-mapper, java-sql-audit
+# original_last_updated: 2026-05
 # ☕ Java 代码审计进阶 (Java Audit Advanced)
 
 ## 概述

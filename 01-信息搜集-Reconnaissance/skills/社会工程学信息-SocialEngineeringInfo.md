@@ -1,16 +1,35 @@
 ---
-id: 01-005
-title: "👥 社会工程学信息收集 (Social Engineering Information Gathering)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★★★
-tools: "theHarvester, Sherlock, Maltego"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 社会工程学信息收集-social-engineering-information-gathering
+description: 收集目标组织的人员信息、组织结构、联系方式，为社会工程学攻击或暴力破解提供素材。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 👥 社会工程学信息收集 (Social Engineering Information Gathering)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★★★
+# original_tools: theHarvester, Sherlock, Maltego
+# original_last_updated: 2025-07
 # 👥 社会工程学信息收集 (Social Engineering Information Gathering)
 
 ## 概述

@@ -1,17 +1,36 @@
 ---
-id: "31-002"
-title: "SOC事件分级与响应流程 (SOC Triage & Response)"
-category: "SOC运营"
-category_en: "SOC Operations"
-difficulty: "★★★"
-tools: "TheHive, ServiceNow, Jira, Splunk, IR Framework"
-last_updated: "2026-05"
-tags: [soc, incident-response, triage, severity-classification, playbook]
+name: soc事件分级与响应流程-soc-triage-response
+description: 安全运营中心（SOC）的核心职能是对安全事件进行高效的分级、分类和响应。本技能覆盖 SOC 事件处理流程，包括告警分类分级、三级处置流程、响应手册（Playbook）以及事件上报和复盘机制。
+domain: cybersecurity
 subdomain: soc-operations
-nist_csf: [RS.AN-01, RS.AN-04, RS.AN-05, RS.MI-03]
-mitre_attack: [T1580, T1585, T1586, T1590]
+tags:
+    - soc
+    - 'incident-response'
+    - triage
+    - 'severity-classification'
+    - playbook
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'RS.AN-01'
+    - 'RS.AN-04'
+    - 'RS.AN-05'
+    - 'RS.MI-03'
+mitre_attack:
+    - T1580
+    - T1585
+    - T1586
+    - T1590
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: SOC事件分级与响应流程 (SOC Triage & Response)
+# original_category: SOC运营
+# original_category_en: SOC Operations
+# original_difficulty: ★★★
+# original_tools: TheHive, ServiceNow, Jira, Splunk, IR Framework
+# original_last_updated: 2026-05
 # SOC事件分级与响应流程 (SOC Triage & Response)
 
 ## 概述

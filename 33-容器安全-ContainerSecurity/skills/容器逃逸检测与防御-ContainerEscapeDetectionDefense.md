@@ -1,17 +1,36 @@
 ---
-id: "33-004"
-title: "容器逃逸检测与防御 (Container Escape Detection & Defense)"
-category: "容器安全"
-category_en: "Container Security"
-difficulty: "★★★★★"
-tools: "Falco, AppArmor, Seccomp, gVisor, kata-containers"
-last_updated: "2026-05"
-tags: [container-security, escape-detection, sandbox, privilege-escalation, defense]
+name: 容器逃逸检测与防御-container-escape-detection-defense
+description: 容器逃逸是容器安全中最严重的威胁之一。攻击者利用容器引擎漏洞、配置错误或内核漏洞突破容器隔离，获取宿主机权限。本技能覆盖容器逃逸技术分析、逃逸检测方法和多层防御策略。
+domain: cybersecurity
 subdomain: container-security
-nist_csf: [PR.AC-05, PR.PT-01, DE.CM-08, DE.CM-01]
-mitre_attack: [T1525, T1578, T1610, T1611]
+tags:
+    - 'container-security'
+    - 'escape-detection'
+    - sandbox
+    - 'privilege-escalation'
+    - defense
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-05'
+    - 'PR.PT-01'
+    - 'DE.CM-08'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1525
+    - T1578
+    - T1610
+    - T1611
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 容器逃逸检测与防御 (Container Escape Detection & Defense)
+# original_category: 容器安全
+# original_category_en: Container Security
+# original_difficulty: ★★★★★
+# original_tools: Falco, AppArmor, Seccomp, gVisor, kata-containers
+# original_last_updated: 2026-05
 # 容器逃逸检测与防御 (Container Escape Detection & Defense)
 
 ## 概述

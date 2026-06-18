@@ -1,16 +1,35 @@
 ---
-id: 01-004
-title: "🖥️ 目标技术栈识别 (Technology Stack Fingerprinting)"
-category: 信息搜集
-category_en: Reconnaissance
-difficulty: ★★★
-tools: "WhatWeb, Wappalyzer, Nmap NSE, BuiltWith"
-last_updated: 2025-07
-tags: ["reconnaissance", "osint", "information-gathering", "dns-enumeration", "passive-recon"]
+name: 目标技术栈识别-technology-stack-fingerprinting
+description: 识别目标网站/系统使用的 Web 服务器、后端语言、前端框架、CMS、CDN、WAF 等技术组件，为后续漏洞利用提供方向。
+domain: cybersecurity
 subdomain: reconnaissance
-nist_csf: ["ID.AM-01", "ID.AM-04", "DE.CM-01"]
-mitre_attack: ["T1595", "T1592", "T1590", "T1596"]
+tags:
+    - reconnaissance
+    - osint
+    - 'information-gathering'
+    - 'dns-enumeration'
+    - 'passive-recon'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.AM-01'
+    - 'ID.AM-04'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1595
+    - T1592
+    - T1590
+    - T1596
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🖥️ 目标技术栈识别 (Technology Stack Fingerprinting)
+# original_category: 信息搜集
+# original_category_en: Reconnaissance
+# original_difficulty: ★★★
+# original_tools: WhatWeb, Wappalyzer, Nmap NSE, BuiltWith
+# original_last_updated: 2025-07
 # 🖥️ 目标技术栈识别 (Technology Stack Fingerprinting)
 
 ## 概述

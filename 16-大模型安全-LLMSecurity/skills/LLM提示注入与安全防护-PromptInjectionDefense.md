@@ -1,16 +1,32 @@
 ---
-id: 16-004
-title: "🧪 LLM提示注入与安全防护 (Prompt Injection & Defense)"
-category: 大模型安全
-category_en: "LLM Security"
-difficulty: ★★★★
-tools: "提示注入检测工具, Garak, LLM Guard, NVIDIA NeMo"
-last_updated: 2025-07
-tags: ["llm-security", "ai-security", "prompt-injection", "model-security", "ai-agent"]
+name: llm提示注入与安全防护-prompt-injection-defense
+description: '提示注入（Prompt Injection）是大语言模型应用最严重的安全威胁之一（OWASP LLM-01）。攻击者通过精心构造的输入，覆盖或绕过系统预设指令，诱导模型执行非预期行为。本技能覆盖直接提示注入、间接提示注入、越狱攻击等类型及防护方案。'
+domain: cybersecurity
 subdomain: llm-security
-nist_csf: ["PR.AC-01", "PR.DS-01", "DE.CM-01"]
-mitre_attack: []
+tags:
+    - 'llm-security'
+    - 'ai-security'
+    - 'prompt-injection'
+    - 'model-security'
+    - 'ai-agent'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-01'
+    - 'DE.CM-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🧪 LLM提示注入与安全防护 (Prompt Injection & Defense)
+# original_category: 大模型安全
+# original_category_en: LLM Security
+# original_difficulty: ★★★★
+# original_tools: 提示注入检测工具, Garak, LLM Guard, NVIDIA NeMo
+# original_last_updated: 2025-07
 # 🧪 LLM提示注入与安全防护 (Prompt Injection & Defense)
 
 ## 概述

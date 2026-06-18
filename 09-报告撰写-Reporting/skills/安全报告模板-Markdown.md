@@ -1,16 +1,31 @@
 ---
-id: 09-002
-title: "📄 安全报告模板 - Markdown格式 (Security Report Template - Markdown)"
-category: 报告撰写
-category_en: Reporting
-difficulty: ★★
-tools: "Typora, VS Code, Mermaid, Python"
-last_updated: 2025-07
-tags: ["reporting", "documentation", "cvss", "pentest-report", "markdown"]
+name: 安全报告模板---markdown格式-security-report-template---markdown
+description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **兼容**: CVSS 3.1 / 4.0, OWASP Top 10 2021, CWE, PCI DSS, 等保2.0'
+domain: cybersecurity
 subdomain: reporting
-nist_csf: ["ID.GV-01", "ID.SC-03"]
-mitre_attack: []
+tags:
+    - reporting
+    - documentation
+    - cvss
+    - 'pentest-report'
+    - markdown
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.SC-03'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📄 安全报告模板 - Markdown格式 (Security Report Template - Markdown)
+# original_category: 报告撰写
+# original_category_en: Reporting
+# original_difficulty: ★★
+# original_tools: Typora, VS Code, Mermaid, Python
+# original_last_updated: 2025-07
 # 📄 安全报告模板 - Markdown格式 (Security Report Template - Markdown)
 
 > **版本**: v2.0 | **更新**: 2025-Q1 | **兼容**: CVSS 3.1 / 4.0, OWASP Top 10 2021, CWE, PCI DSS, 等保2.0

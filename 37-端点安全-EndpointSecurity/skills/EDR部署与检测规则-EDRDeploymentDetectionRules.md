@@ -1,17 +1,37 @@
 ---
-id: "37-001"
-title: "EDR部署与检测规则 (EDR Deployment & Detection Rules)"
-category: "端点安全"
-category_en: "Endpoint Security"
-difficulty: "★★★★"
-tools: "CrowdStrike Falcon, Microsoft Defender, SentinelOne, Elastic EDR, Velociraptor"
-last_updated: "2026-05"
-tags: [edr, endpoint-detection, response, detection-rules, endpoint-security]
+name: edr部署与检测规则-edr-deployment-detection-rules
+description: 端点检测与响应（EDR）是企业安全防御的核心产品。EDR 通过在端点采集大量数据，结合规则和算法检测恶意行为。本技能覆盖 EDR 部署架构、检测规则编写、事件调查和响应行动。
+domain: cybersecurity
 subdomain: endpoint-security
-nist_csf: [DE.CM-01, DE.CM-04, DE.AE-02, RS.AN-01]
-mitre_attack: [T1059, T1071, T1546, T1562, T1564]
+tags:
+    - edr
+    - 'endpoint-detection'
+    - response
+    - 'detection-rules'
+    - 'endpoint-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.CM-01'
+    - 'DE.CM-04'
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+mitre_attack:
+    - T1059
+    - T1071
+    - T1546
+    - T1562
+    - T1564
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: EDR部署与检测规则 (EDR Deployment & Detection Rules)
+# original_category: 端点安全
+# original_category_en: Endpoint Security
+# original_difficulty: ★★★★
+# original_tools: CrowdStrike Falcon, Microsoft Defender, SentinelOne, Elastic EDR, Velociraptor
+# original_last_updated: 2026-05
 # EDR部署与检测规则 (EDR Deployment & Detection Rules)
 
 ## 概述

@@ -1,16 +1,35 @@
 ---
-id: 21-005
-title: "☁️ 物联网平台与云安全 (IoT Platform & Cloud Security)"
-category: 物联网安全
-category_en: "IoT Security"
-difficulty: ★★★★
-tools: "AWS IoT Auditor, Azure IoT Hub Security, GCP IoT Core, TLS Notary"
-last_updated: 2025-07
-tags: ["iot-security", "firmware", "embedded", "ble", "zigbee", "hardware-security"]
+name: 物联网平台与云安全-iot-platform-cloud-security
+description: 评估主流IoT云平台的安全性，包括AWS IoT Core、Azure IoT Hub、GCP IoT Core的认证机制、设备影子安全、OTA更新策略和规则引擎配置。
+domain: cybersecurity
 subdomain: iot-security
-nist_csf: ["PR.AC-01", "PR.DS-03", "PR.PT-01"]
-mitre_attack: ["T1465", "T1559", "T1524"]
+tags:
+    - 'iot-security'
+    - firmware
+    - embedded
+    - ble
+    - zigbee
+    - 'hardware-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-03'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1465
+    - T1559
+    - T1524
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ☁️ 物联网平台与云安全 (IoT Platform & Cloud Security)
+# original_category: 物联网安全
+# original_category_en: IoT Security
+# original_difficulty: ★★★★
+# original_tools: AWS IoT Auditor, Azure IoT Hub Security, GCP IoT Core, TLS Notary
+# original_last_updated: 2025-07
 # ☁️ 物联网平台与云安全 (IoT Platform & Cloud Security)
 
 ## 概述

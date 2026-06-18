@@ -1,16 +1,33 @@
 ---
-id: 04-001
-title: "🐧 Linux权限提升 (Linux Privilege Escalation)"
-category: 权限提升
-category_en: "Privilege Escalation"
-difficulty: ★★★
-tools: "LinPEAS, Linux Exploit Suggester, GTFO Bins"
-last_updated: 2025-07
-tags: ["privilege-escalation", "linux-privilege", "windows-privilege", "credential-theft"]
+name: linux权限提升-linux-privilege-escalation
+description: Linux系统中的权限提升技术，利用内核漏洞、配置错误、SUID/SGID、特权滥用等方式从普通用户提升到root权限。
+domain: cybersecurity
 subdomain: privilege-escalation
-nist_csf: ["PR.AC-01", "DE.CM-04"]
-mitre_attack: ["T1068", "T1548", "T1055", "T1003"]
+tags:
+    - 'privilege-escalation'
+    - 'linux-privilege'
+    - 'windows-privilege'
+    - 'credential-theft'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-04'
+mitre_attack:
+    - T1068
+    - T1548
+    - T1055
+    - T1003
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🐧 Linux权限提升 (Linux Privilege Escalation)
+# original_category: 权限提升
+# original_category_en: Privilege Escalation
+# original_difficulty: ★★★
+# original_tools: LinPEAS, Linux Exploit Suggester, GTFO Bins
+# original_last_updated: 2025-07
 # 🐧 Linux权限提升 (Linux Privilege Escalation)
 
 ## 概述

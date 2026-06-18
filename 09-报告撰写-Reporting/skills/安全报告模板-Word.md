@@ -1,16 +1,31 @@
 ---
-id: 09-003
-title: "📝 安全报告模板 - Word/PDF格式 (Security Report Template - Word/PDF)"
-category: 报告撰写
-category_en: Reporting
-difficulty: ★★★
-tools: "python-docx, LibreOffice, Word"
-last_updated: 2025-07
-tags: ["reporting", "documentation", "cvss", "pentest-report", "markdown"]
+name: 安全报告模板---word-pdf格式-security-report-template---word-pdf
+description: '> **版本**: v2.0 | **更新**: 2025-Q1 | **依赖**: python-docx | **输出**: .docx → 可转为 PDF'
+domain: cybersecurity
 subdomain: reporting
-nist_csf: ["ID.GV-01", "ID.SC-03"]
-mitre_attack: []
+tags:
+    - reporting
+    - documentation
+    - cvss
+    - 'pentest-report'
+    - markdown
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'ID.GV-01'
+    - 'ID.SC-03'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 📝 安全报告模板 - Word/PDF格式 (Security Report Template - Word/PDF)
+# original_category: 报告撰写
+# original_category_en: Reporting
+# original_difficulty: ★★★
+# original_tools: python-docx, LibreOffice, Word
+# original_last_updated: 2025-07
 # 📝 安全报告模板 - Word/PDF格式 (Security Report Template - Word/PDF)
 
 > **版本**: v2.0 | **更新**: 2025-Q1 | **依赖**: python-docx | **输出**: .docx → 可转为 PDF

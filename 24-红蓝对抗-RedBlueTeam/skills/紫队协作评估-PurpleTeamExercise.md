@@ -1,16 +1,33 @@
 ---
-id: 24-003
-title: "🟣 紫队协作评估 (Purple Team Exercise)"
-category: 红蓝对抗
-category_en: "Red/Blue Team"
-difficulty: ★★★★★
-tools: "CALDERA, SCYTHE, AttackIQ, Atomic Red Team, PurpleSharp"
-last_updated: 2025-07
-tags: ["red-team", "blue-team", "purple-team", "bas", "adversary-simulation"]
+name: 紫队协作评估-purple-team-exercise
+description: '紫队是红队和蓝队的协作机制，通过共同演练和验证安全控制有效性，实现防御能力的持续提升。紫队评估关注**检测覆盖验证**、**响应流程检验**和**防御能力度量**。'
+domain: cybersecurity
 subdomain: red-blue-team
-nist_csf: ["DE.AE-02", "RS.AN-01", "ID.RM-01"]
-mitre_attack: ["T1595", "T1562"]
+tags:
+    - 'red-team'
+    - 'blue-team'
+    - 'purple-team'
+    - bas
+    - 'adversary-simulation'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'DE.AE-02'
+    - 'RS.AN-01'
+    - 'ID.RM-01'
+mitre_attack:
+    - T1595
+    - T1562
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🟣 紫队协作评估 (Purple Team Exercise)
+# original_category: 红蓝对抗
+# original_category_en: Red/Blue Team
+# original_difficulty: ★★★★★
+# original_tools: CALDERA, SCYTHE, AttackIQ, Atomic Red Team, PurpleSharp
+# original_last_updated: 2025-07
 # 🟣 紫队协作评估 (Purple Team Exercise)
 
 ## 概述

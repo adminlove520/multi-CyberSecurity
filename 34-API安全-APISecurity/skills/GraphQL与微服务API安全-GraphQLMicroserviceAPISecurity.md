@@ -1,17 +1,36 @@
 ---
-id: "34-003"
-title: "GraphQL与微服务API安全 (GraphQL & Microservice API Security)"
-category: "API安全"
-category_en: "API Security"
-difficulty: "★★★★"
-tools: "GraphQL Inspector, GraphQL Armor, WAF, Istio, Envoy"
-last_updated: "2026-05"
-tags: [graphql, microservices, api-security, federation, service-mesh]
+name: graphql与微服务api安全-graphql-microservice-api-security
+description: GraphQL 和微服务架构给 API 安全带来了新的挑战。GraphQL 的灵活性可能导致复杂查询攻击，而微服务的分布式特性扩大了攻击面。本技能覆盖 GraphQL 安全防护、微服务间认证、服务网格安全通信和 API Gateway 安全配置。
+domain: cybersecurity
 subdomain: api-security
-nist_csf: [PR.AC-04, PR.AC-07, DE.CM-08, PR.PT-01]
-mitre_attack: [T1071, T1190, T1578, T1613]
+tags:
+    - graphql
+    - microservices
+    - 'api-security'
+    - federation
+    - 'service-mesh'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-04'
+    - 'PR.AC-07'
+    - 'DE.CM-08'
+    - 'PR.PT-01'
+mitre_attack:
+    - T1071
+    - T1190
+    - T1578
+    - T1613
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: GraphQL与微服务API安全 (GraphQL & Microservice API Security)
+# original_category: API安全
+# original_category_en: API Security
+# original_difficulty: ★★★★
+# original_tools: GraphQL Inspector, GraphQL Armor, WAF, Istio, Envoy
+# original_last_updated: 2026-05
 # GraphQL与微服务API安全 (GraphQL & Microservice API Security)
 
 ## 概述

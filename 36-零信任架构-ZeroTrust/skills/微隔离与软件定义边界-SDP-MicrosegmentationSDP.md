@@ -1,17 +1,35 @@
 ---
-id: "36-002"
-title: "微隔离与软件定义边界 (Microsegmentation & Software-Defined Perimeter)"
-category: "零信任架构"
-category_en: "Zero Trust Architecture"
-difficulty: "★★★★"
-tools: "Illumio, NSX, Calico, Tailscale, WireGuard"
-last_updated: "2026-05"
-tags: [zero-trust, microsegmentation, sdp, network-security, east-west-traffic]
+name: 微隔离与软件定义边界-microsegmentation-software-defined-perimeter
+description: 微隔离（Microsegmentation）是零信任网络的核心技术，将数据中心/云网络分为细粒度的安全段，限制东西向流量。软件定义边界（SDP）隐藏网络基础设施，只有经过认证的用户才能访问。本技能覆盖微隔离策略设计、SDP 部署和网络可视化。
+domain: cybersecurity
 subdomain: zero-trust
-nist_csf: [PR.AC-04, PR.AC-05, PR.PT-01, PR.PT-03]
-mitre_attack: [T1046, T1090, T1557]
+tags:
+    - 'zero-trust'
+    - microsegmentation
+    - sdp
+    - 'network-security'
+    - 'east-west-traffic'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-04'
+    - 'PR.AC-05'
+    - 'PR.PT-01'
+    - 'PR.PT-03'
+mitre_attack:
+    - T1046
+    - T1090
+    - T1557
 ---
 
+# === 原始信息（向下兼容）===
+# original_title: 微隔离与软件定义边界 (Microsegmentation & Software-Defined Perimeter)
+# original_category: 零信任架构
+# original_category_en: Zero Trust Architecture
+# original_difficulty: ★★★★
+# original_tools: Illumio, NSX, Calico, Tailscale, WireGuard
+# original_last_updated: 2026-05
 # 微隔离与软件定义边界 (Microsegmentation & Software-Defined Perimeter)
 
 ## 概述

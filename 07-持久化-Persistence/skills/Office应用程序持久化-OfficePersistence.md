@@ -1,16 +1,33 @@
 ---
-id: 07-004
-title: "Office应用程序持久化 (Office Application Persistence)"
-category: 持久化
-category_en: Persistence
-difficulty: ★★★★
-tools: "Office, VBA, COM, Outlook, Add-in"
-last_updated: 2026-05
-tags: ["persistence", "bootkit", "startup-autostart", "account-persistence"]
+name: office应用程序持久化-office-application-persistence
+description: Microsoft Office 应用程序提供了丰富的扩展机制，包括 COM 加载项、VBA 宏、Outlook 规则和表单等。攻击者可利用这些功能在 Office 程序启动时自动执行恶意代码，隐蔽性强且难以检测。
+domain: cybersecurity
 subdomain: persistence
-nist_csf: ["PR.AC-01", "DE.CM-01"]
-mitre_attack: ["T1543", "T1547", "T1136", "T1053"]
+tags:
+    - persistence
+    - bootkit
+    - 'startup-autostart'
+    - 'account-persistence'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-01'
+mitre_attack:
+    - T1543
+    - T1547
+    - T1136
+    - T1053
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: Office应用程序持久化 (Office Application Persistence)
+# original_category: 持久化
+# original_category_en: Persistence
+# original_difficulty: ★★★★
+# original_tools: Office, VBA, COM, Outlook, Add-in
+# original_last_updated: 2026-05
 # Office应用程序持久化 (Office Application Persistence)
 
 ## 概述

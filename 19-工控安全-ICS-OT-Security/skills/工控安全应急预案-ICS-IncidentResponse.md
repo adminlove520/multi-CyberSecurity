@@ -1,16 +1,36 @@
 ---
-id: 19-005
-title: "🚨 工控安全应急预案 (ICS Incident Response)"
-category: 工控安全
-category_en: "ICS/OT Security"
-difficulty: ★★★★★
-tools: "Dragos Platform, Claroty, Nozomi, Wireshark, YARA"
-last_updated: 2025-07
-tags: ["ics-security", "ot-security", "scada", "plc", "iec-62443", "industrial-security"]
+name: 工控安全应急预案-ics-incident-response
+description: 针对工业控制系统和OT环境的应急响应方法论，涵盖工控特有的安全事件检测、响应策略、系统恢复和工控取证分析。
+domain: cybersecurity
 subdomain: ics-ot-security
-nist_csf: ["PR.AC-01", "PR.DS-07", "PR.PT-01"]
-mitre_attack: ["T0843", "T0839", "T0881", "T0855"]
+tags:
+    - 'ics-security'
+    - 'ot-security'
+    - scada
+    - plc
+    - 'iec-62443'
+    - 'industrial-security'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'PR.DS-07'
+    - 'PR.PT-01'
+mitre_attack:
+    - T0843
+    - T0839
+    - T0881
+    - T0855
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🚨 工控安全应急预案 (ICS Incident Response)
+# original_category: 工控安全
+# original_category_en: ICS/OT Security
+# original_difficulty: ★★★★★
+# original_tools: Dragos Platform, Claroty, Nozomi, Wireshark, YARA
+# original_last_updated: 2025-07
 # 🚨 工控安全应急预案 (ICS Incident Response)
 
 ## 概述

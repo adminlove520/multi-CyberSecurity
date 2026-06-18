@@ -1,16 +1,36 @@
 ---
-id: 22-003
-title: "🔏 数据脱敏与匿名化 (Data Masking & Anonymization)"
-category: 数据安全与隐私
-category_en: "Data Security & Privacy"
-difficulty: ★★★★
-tools: "ARX Data Anonymizer, Privacy Analytics, Oracle DPM, PostgreSQL Anonymizer, Delphix"
-last_updated: 2025-07
-tags: ["data-security", "privacy", "dlp", "gdpr", "encryption", "data-classification"]
+name: 数据脱敏与匿名化-data-masking-anonymization
+description: '数据脱敏和匿名化是通过变形、替换、泛化等技术，在保留数据可用性的前提下消除敏感信息的技术手段。用于测试环境、数据共享、分析和合规场景。关键技术包括：**k-匿名**、**l-多样性**、**t-紧密性**和**差分隐私**。'
+domain: cybersecurity
 subdomain: data-security-privacy
-nist_csf: ["PR.DS-01", "PR.DS-02", "PR.DS-05", "ID.GV-03"]
-mitre_attack: ["T1530", "T1048", "T1567"]
+tags:
+    - 'data-security'
+    - privacy
+    - dlp
+    - gdpr
+    - encryption
+    - 'data-classification'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.DS-01'
+    - 'PR.DS-02'
+    - 'PR.DS-05'
+    - 'ID.GV-03'
+mitre_attack:
+    - T1530
+    - T1048
+    - T1567
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🔏 数据脱敏与匿名化 (Data Masking & Anonymization)
+# original_category: 数据安全与隐私
+# original_category_en: Data Security & Privacy
+# original_difficulty: ★★★★
+# original_tools: ARX Data Anonymizer, Privacy Analytics, Oracle DPM, PostgreSQL Anonymizer, Delphix
+# original_last_updated: 2025-07
 # 🔏 数据脱敏与匿名化 (Data Masking & Anonymization)
 
 ## 概述

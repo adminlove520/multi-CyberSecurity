@@ -1,16 +1,33 @@
 ---
-id: 23-003
-title: "🏢 物理渗透与社会工程 (Physical Social Engineering)"
-category: 社会工程学
-category_en: "Social Engineering"
-difficulty: ★★★★
-tools: "Pretexting Framework, Badge Clone, Lockpick Set, RFID Cloner"
-last_updated: 2025-07
-tags: ["social-engineering", "phishing", "vishing", "physical-security", "awareness"]
+name: 物理渗透与社会工程-physical-social-engineering
+description: 物理渗透测试通过伪装身份、尾随进入、物理设备植入等方式评估组织的物理安全控制。结合社会工程技术，突破人员、流程和技术的防线。
+domain: cybersecurity
 subdomain: social-engineering
-nist_csf: ["PR.AT-01", "PR.AT-02"]
-mitre_attack: ["T1566", "T1598", "T1204"]
+tags:
+    - 'social-engineering'
+    - phishing
+    - vishing
+    - 'physical-security'
+    - awareness
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AT-01'
+    - 'PR.AT-02'
+mitre_attack:
+    - T1566
+    - T1598
+    - T1204
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: 🏢 物理渗透与社会工程 (Physical Social Engineering)
+# original_category: 社会工程学
+# original_category_en: Social Engineering
+# original_difficulty: ★★★★
+# original_tools: Pretexting Framework, Badge Clone, Lockpick Set, RFID Cloner
+# original_last_updated: 2025-07
 # 🏢 物理渗透与社会工程 (Physical Social Engineering)
 
 ## 概述

@@ -1,16 +1,31 @@
 ---
-id: 12-003
-title: "⚙️ C代码审计 (C Code Audit)"
-category: 代码审计
-category_en: "Code Audit"
-difficulty: ★★★★
-tools: "Flawfinder, Cppcheck, ASan, Valgrind"
-last_updated: 2025-07
-tags: ["code-audit", "static-analysis", "php-audit", "java-audit", "javascript-audit"]
+name: c代码审计-c-code-audit
+description: C语言因其底层内存操作能力而广泛应用于系统软件、嵌入式、内核模块和网络服务中。C代码的安全审计重点在于内存安全、未定义行为和危险的库函数使用。
+domain: cybersecurity
 subdomain: code-audit
-nist_csf: ["PR.IP-12", "ID.RA-01"]
-mitre_attack: []
+tags:
+    - 'code-audit'
+    - 'static-analysis'
+    - 'php-audit'
+    - 'java-audit'
+    - 'javascript-audit'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.IP-12'
+    - 'ID.RA-01'
+mitre_attack:
+  []
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⚙️ C代码审计 (C Code Audit)
+# original_category: 代码审计
+# original_category_en: Code Audit
+# original_difficulty: ★★★★
+# original_tools: Flawfinder, Cppcheck, ASan, Valgrind
+# original_last_updated: 2025-07
 # ⚙️ C代码审计 (C Code Audit)
 
 ## 概述

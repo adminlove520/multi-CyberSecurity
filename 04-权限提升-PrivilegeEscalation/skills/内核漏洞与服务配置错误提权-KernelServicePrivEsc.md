@@ -1,16 +1,33 @@
 ---
-id: 04-003
-title: "⬆️ 内核漏洞与服务配置错误提权 (Kernel Exploit & Service Misconfig PrivEsc)"
-category: 权限提升
-category_en: "Privilege Escalation"
-difficulty: ★★★★
-tools: "漏洞利用代码, MSF模块, 自定义exp"
-last_updated: 2025-07
-tags: ["privilege-escalation", "linux-privilege", "windows-privilege", "credential-theft"]
+name: 内核漏洞与服务配置错误提权-kernel-exploit-service-misconfig-privesc
+description: 利用操作系统内核漏洞和系统服务配置错误进行权限提升。
+domain: cybersecurity
 subdomain: privilege-escalation
-nist_csf: ["PR.AC-01", "DE.CM-04"]
-mitre_attack: ["T1068", "T1548", "T1055", "T1003"]
+tags:
+    - 'privilege-escalation'
+    - 'linux-privilege'
+    - 'windows-privilege'
+    - 'credential-theft'
+version: '1.0.0'
+author: multi-cybersecurity
+license: Apache-2.0
+nist_csf:
+    - 'PR.AC-01'
+    - 'DE.CM-04'
+mitre_attack:
+    - T1068
+    - T1548
+    - T1055
+    - T1003
 ---
+
+# === 原始信息（向下兼容）===
+# original_title: ⬆️ 内核漏洞与服务配置错误提权 (Kernel Exploit & Service Misconfig PrivEsc)
+# original_category: 权限提升
+# original_category_en: Privilege Escalation
+# original_difficulty: ★★★★
+# original_tools: 漏洞利用代码, MSF模块, 自定义exp
+# original_last_updated: 2025-07
 # ⬆️ 内核漏洞与服务配置错误提权 (Kernel Exploit & Service Misconfig PrivEsc)
 
 ## 概述
